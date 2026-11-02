@@ -1,0 +1,59 @@
+[
+  {
+    "id": "biologie",
+    "name": "Biologie",
+    "title": "Die Welt der Pflanzen",
+    "text": "Blütenpflanzen, Wurzelhaare, Bestäubung und Befruchtung – vom Aufbau bis zur Aufgabe.",
+    "topics": [
+      "Blüten & Lebensformen",
+      "Wurzelhaare",
+      "Bestäubung"
+    ],
+    "color": "#287c60",
+    "tint": "#e8f4eb",
+    "icon": "leaf",
+    "stats": {
+      "chapters": 3,
+      "lessons": 10,
+      "questions": 43
+    }
+  },
+  {
+    "id": "chemie",
+    "name": "Chemie",
+    "title": "Kleine Teilchen, große Ideen",
+    "text": "Teilchenmodell, Aggregatzustände, Diffusion und Gemische – mit beweglichen Modellen.",
+    "topics": [
+      "Teilchenmodell",
+      "Aggregatzustände",
+      "Diffusion"
+    ],
+    "color": "#596bb5",
+    "tint": "#eef0ff",
+    "icon": "particles",
+    "stats": {
+      "chapters": 4,
+      "lessons": 11,
+      "questions": 44
+    }
+  },
+  {
+    "id": "werte-und-normen",
+    "name": "Werte und Normen",
+    "title": "Dem Glück auf der Spur",
+    "text": "Glück, Zukunftswünsche, Erfolg und Verantwortung – entdecken und mit eigenen Worten begründen.",
+    "topics": [
+      "Glück & Zukunft",
+      "Erfolg & Rückschläge",
+      "Verantwortung"
+    ],
+    "color": "#a66334",
+    "tint": "#fff1db",
+    "icon": "sun",
+    "stats": {
+      "chapters": 4,
+      "lessons": 12,
+      "questions": 36
+    }
+  }
+]
