@@ -55,5 +55,27 @@
       "lessons": 12,
       "questions": 36
     }
+  },
+  {
+    "id": "franzoesisch",
+    "name": "Französisch",
+    "title": "Bonjour! Französisch verstehen",
+    "text": "Grammatik Schritt für Schritt. Modul 1 mit fünf ausführlichen Lektionen.",
+    "topics": [
+      "Erste Gespräche",
+      "Grammatik verstehen",
+      "Keine Vokabeltests"
+    ],
+    "color": "#315b9d",
+    "tint": "#e9eff9",
+    "icon": "dialogue",
+    "href": "franzoesisch/index.html",
+    "download": "franzoesisch/offline.html",
+    "status": "M1 vollständig; M2–M9 geplant",
+    "stats": {
+      "chapters": 1,
+      "lessons": 5,
+      "questions": 35
+    }
   }
 ]

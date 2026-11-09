@@ -2,3 +2,5 @@
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}@media print{.intro-art,.jump,.download,.save-note{display:none}header{padding:10px 0}.intro{padding:25px 0}main{padding:0}.cards{grid-template-columns:1fr}.subject{break-inside:avoid}.subject-main{display:grid;grid-template-columns:120px 1fr}.how{break-inside:avoid}body{background:white}}
 /* Gut lesbare Begleittexte auf den hellen Flächen. */
 .lead,.subject-copy>p{color:#687667}.eyebrow,.grade,.course-meta,.download,.art-note,.save-note,.section-head>span{color:#68765f}.brand small,.how p,footer{color:#6d7965}
+
+.french{--color:#315b9d;--tint:#e9eff9;border-color:#d7e0ee}@media(min-width:751px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
