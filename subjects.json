@@ -60,22 +60,22 @@
     "id": "franzoesisch",
     "name": "Französisch",
     "title": "Bonjour! Französisch verstehen",
-    "text": "Grammatik Schritt für Schritt. M1–M5 mit 24 ausführlichen Lektionen, fünf Modulprüfungen und einem gemischten Check.",
+    "text": "Grammatik Schritt für Schritt. M1–M7 mit 33 Lektionen, sieben Modulprüfungen und zwei gemischten Checks.",
     "topics": [
-      "Artikel & Mehrzahl",
       "Pronomen & être",
-      "Fragen & Antworten"
+      "Herkunft & Wohnort",
+      "Interaktiver Stadtplan"
     ],
     "color": "#315b9d",
     "tint": "#e9eff9",
     "icon": "dialogue",
     "href": "franzoesisch/index.html",
     "download": "franzoesisch/offline.html",
-    "status": "M1–M5 vollständig; M6–M9 geplant",
+    "status": "M1–M7 vollständig; M8–M9 geplant",
     "stats": {
-      "chapters": 5,
-      "lessons": 24,
-      "questions": 168
+      "chapters": 7,
+      "lessons": 33,
+      "questions": 231
     }
   }
 ]

@@ -3,7 +3,7 @@
  const SUBJECT='franzoesisch-klasse6', KEY='bonjour-franzoesisch-klasse6-v1', SCHEMA=1;
  const normalise=value=>String(value??'').normalize('NFC').replace(/[‘’ʼ`]/g,"'").replace(/\s+/g,' ').trim().toLocaleLowerCase('fr');
  const emptyExam=()=>({draft:{},submitted:false,self:[]});
- function freshState(){const m1=emptyExam();return {schema:SCHEMA,subject:SUBJECT,contentVersion:3,route:'#home',read:{},answers:{},exam:m1,exams:{m1}};}
+ function freshState(){const m1=emptyExam();return {schema:SCHEMA,subject:SUBJECT,contentVersion:4,route:'#home',read:{},answers:{},exam:m1,exams:{m1}};}
  const valuePresent=value=>Array.isArray(value)?value.length>0:typeof value==='number'||(typeof value==='string'&&value.trim().length>0);
  function isAnswered(q,value){
   if(q.type==='slots')return Array.isArray(value)&&value.length===q.slots.length&&value.every((v,i)=>Number.isInteger(v)&&v>=0&&v<q.slots[i].options.length);
@@ -78,12 +78,14 @@
   state.contentVersion=Number.isInteger(raw.contentVersion)?raw.contentVersion:1;
   return state;
  }
- function exportSave(state){return {schema:SCHEMA,subject:SUBJECT,contentVersion:3,savedAt:new Date().toISOString(),state};}
+ function exportSave(state){return {schema:SCHEMA,subject:SUBJECT,contentVersion:4,savedAt:new Date().toISOString(),state};}
  function articleModel(card,plural){const article=plural?'les':card.elision?'l’':card.gender==='masculin'?'le':'la',noun=plural?card.plural:card.word;return {article,noun,phrase:article+(article==='l’'?'':' ')+noun};}
  function etreChain(card,forms){const verb=forms[card.pronoun];if(!verb)throw Error('Unbekanntes Pronomen');return {pronoun:card.pronoun,verb,sentence:card.pronoun.charAt(0).toUpperCase()+card.pronoun.slice(1)+' '+verb+' à Paris.'};}
+ function profileModel(card,self=false){const p=self?'Je':card.pronoun==='elle'?'Elle':'Il',be=self?'suis':'est',from=/^[AEIOUYÀÂÉÈÊÎÏÔÖÙÛÜ]/i.test(card.origin)?'d’':'de ';return {origin:p+' '+be+' '+from+card.origin+'.',home:(self?'J’habite':p+' habite')+' à '+card.home+', '+card.country+'.',school:p+' '+be+' '+card.school+'.'};}
+ function cityModel(card,count,mode='exist',exact=false){if(!Number.isInteger(count)||count<1||count>3)throw Error('Ungültige Anzahl');const plural=count>1,noun=plural?card.plural:card.word,def=plural?'les':card.elision?'l’':card.gender==='masculin'?'le':'la',ind=plural?'des':card.gender==='masculin'?'un':'une';const named=def+(def==='l’'?'':' ')+noun;const quantity=exact?['','un','deux','trois'][count]:ind;const group=exact&&count===1?(card.gender==='masculin'?'un':'une')+' '+noun:quantity+' '+noun;return {noun,article:ind,group,definite:named,sentence:mode==='point'?(plural?'Ce sont ':'C’est ')+named+'.':mode==='locate'?named.charAt(0).toUpperCase()+named.slice(1)+(plural?' sont là.':' est là.'):'Il y a '+group+'.'};}
  function readStorage(storage){
   try{const raw=storage.getItem(KEY);return {state:raw?validateSave(JSON.parse(raw)):freshState(),error:null};}
   catch(e){return {state:freshState(),error:'Der gespeicherte Stand konnte nicht gelesen werden. Er wurde nicht überschrieben. Du kannst eine Sicherung laden oder einen neuen Stand ausdrücklich speichern.'};}
  }
- root.FrenchCore={SUBJECT,KEY,SCHEMA,normalise,emptyExam,freshState,valuePresent,isAnswered,evaluate,recordAttempt,lessonStatus,gradeExam,validateSave,exportSave,articleModel,etreChain,readStorage};
+ root.FrenchCore={SUBJECT,KEY,SCHEMA,normalise,emptyExam,freshState,valuePresent,isAnswered,evaluate,recordAttempt,lessonStatus,gradeExam,validateSave,exportSave,articleModel,etreChain,profileModel,cityModel,readStorage};
 })(globalThis);
