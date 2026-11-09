@@ -1,12 +1,12 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const root=path.resolve(__dirname,'..'),ctx=vm.createContext({});
-for(const file of ['modules/m1.js','modules/m2.js','modules/m3.js','modules/mix1.js','core.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ctx,{filename:file});
+for(const file of ['modules/m1.js','modules/m2.js','modules/m3.js','modules/mix1.js','modules/m4.js','modules/m5.js','core.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ctx,{filename:file});
 const C=ctx.FrenchCore,D=ctx.FRENCH_COURSE,plain=x=>JSON.parse(JSON.stringify(x));
 const all=D.lessons.flatMap(l=>[l.discover,...l.practice,l.transfer,...l.check]),ex=D.exam.questions,allExams=Object.values(D.exams).flatMap(e=>e.questions);
 function answer(q){if(q.type==='choice')return q.answer;if(q.type==='short')return q.answers[0];if(q.type==='slots')return q.slots.map(s=>s.answer);if(q.type==='build')return q.solution.map(s=>q.tokens.indexOf(s));return q.sample;}
-test('fourteen complete lessons, four checks and honest exercise counts',()=>{
- assert.equal(D.lessons.length,14);assert.equal(all.length,98);assert.equal(ex.length,10);assert.equal(D.modules.filter(m=>m.available).length,3);assert.equal(allExams.length,42);
- assert.equal(new Set([...all,...allExams].map(q=>q.id)).size,140);
+test('twenty-four complete lessons, six checks and honest exercise counts',()=>{
+ assert.equal(D.lessons.length,24);assert.equal(all.length,168);assert.equal(ex.length,10);assert.equal(D.modules.filter(m=>m.available).length,5);assert.equal(allExams.length,64);
+ assert.equal(new Set([...all,...allExams].map(q=>q.id)).size,232);
  for(const l of D.lessons){assert.ok(l.explain.length>=4);assert.ok(l.explain.every(e=>e[0]&&e[1]));assert.equal(l.worked.steps.length,4);assert.equal(l.check.length,2);assert.ok(l.card.rule);}
 });
 test('every closed exercise accepts its authored solution and rejects an explicit wrong answer',()=>{
@@ -61,8 +61,8 @@ test('unavailable or broken browser storage returns an explicit recoverable stat
  assert.equal(C.readStorage({getItem(){return null;}}).error,null);
 });
 test('bundled offline page is self-contained and contains identical course code',()=>{
- const h=fs.readFileSync(path.join(root,'offline.html'),'utf8');assert.ok(!/<script[^>]+src=/.test(h));assert.ok(!/<link[^>]+stylesheet/.test(h));assert.ok(h.includes('Offline · Module 1–3'));
- for(const file of ['modules/m1.js','modules/m2.js','modules/m3.js','modules/mix1.js','core.js'])assert.ok(h.includes(fs.readFileSync(path.join(root,file),'utf8')));
+ const h=fs.readFileSync(path.join(root,'offline.html'),'utf8');assert.ok(!/<script[^>]+src=/.test(h));assert.ok(!/<link[^>]+stylesheet/.test(h));assert.ok(h.includes('Offline · Module 1–5'));
+ for(const file of ['modules/m1.js','modules/m2.js','modules/m3.js','modules/mix1.js','modules/m4.js','modules/m5.js','core.js'])assert.ok(h.includes(fs.readFileSync(path.join(root,file),'utf8')));
  for(const match of h.matchAll(/<script>([\s\S]*?)<\/script>/g))new vm.Script(match[1]);
 });
 test('real version-one save migrates M1 exam, confidence and open text without losing data',()=>{
@@ -73,7 +73,7 @@ test('real version-one save migrates M1 exam, confidence and open text without l
  s.answers['m2-l1-d']={value:1};s.exams.m2=C.emptyExam();s.exams.m2.draft['m2-e1']=1;
  const again=C.validateSave(C.exportSave(s));assert.equal(C.gradeExam(D.exams.m1,again.exams.m1.draft).points,9);assert.equal(again.exams.m2.draft['m2-e1'],1);assert.equal(again.answers['m2-l1-d'].value,1);
 });
-test('four exam drafts and results remain isolated across save and reload',()=>{
+test('six exam drafts and results remain isolated across save and reload',()=>{
  const s=C.freshState();
  for(const [key,e] of Object.entries(D.exams))s.exams[key]={draft:Object.fromEntries(e.questions.map(q=>[q.id,answer(q)])),submitted:key!=='m2',self:key==='m2'?[]:[0,1]};
  s.exam=s.exams.m1;const r=C.validateSave(C.exportSave(s));
@@ -98,6 +98,14 @@ test('multi-module routes and all stable M1 IDs survive an update',()=>{
 });
 test('every hosted script and stylesheet has a matching content version to avoid mixed cached releases',()=>{
  const html=fs.readFileSync(path.join(root,'index.html'),'utf8'),crypto=require('node:crypto');
- const refs=[...html.matchAll(/(?:src|href)="\.\/([^"?]+)\?v=([a-f0-9]+)"/g)];assert.equal(refs.length,7);
+ const refs=[...html.matchAll(/(?:src|href)="\.\/([^"?]+)\?v=([a-f0-9]+)"/g)];assert.equal(refs.length,9);
  for(const [,file,hash] of refs){assert.equal(hash,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex').slice(0,12),file);}
 });
+test('all pronouns and exceptional meanings retain the correct être form',()=>{
+ assert.deepEqual(plain(D.etreForms),{je:'suis',tu:'es',il:'est',elle:'est',on:'est',nous:'sommes',vous:'êtes',ils:'sont',elles:'sont'});
+ for(const [id,p,v] of [['on','on','est'],['wir','nous','sommes'],['hoeflich','vous','êtes'],['ihr','vous','êtes'],['gemischt','ils','sont'],['maedchenplural','elles','sont'],['museum','il','est'],['turm','elle','est']]){const m=C.etreChain(D.pronounCases.find(c=>c.id===id),D.etreForms);assert.equal(m.pronoun,p);assert.equal(m.verb,v);assert.ok(m.sentence.endsWith('à Paris.'));}
+ assert.equal(D.pronounCases.find(c=>c.id==='hoeflich').count,1);
+});
+test('new diagnostics separate pronoun-role errors and verb errors',()=>{const q=all.find(q=>q.id==='m5-l3-p1');assert.match(C.evaluate(q,[0,2]).message,/Pronomen.*Sprecherin/);assert.match(C.evaluate(q,[1,0]).message,/Verb.*Ich/);assert.match(C.evaluate(all.find(q=>q.id==='m4-l5-p1'),'sommes').message,/nous/);});
+test('answer perspectives and significant accents are enforced',()=>{assert.deepEqual(plain(answer(all.find(q=>q.id==='m5-l3-p1'))),[1,2]);assert.deepEqual(plain(answer(all.find(q=>q.id==='m5-l3-p2'))),[0,1]);assert.equal(C.evaluate(all.find(q=>q.id==='m5-l2-p2'),'ou').correct,false);assert.equal(C.evaluate(all.find(q=>q.id==='m5-l2-p2'),'où').correct,true);assert.equal(C.evaluate(all.find(q=>q.id==='m4-l3-t'),'etes').correct,false);assert.equal(C.evaluate(all.find(q=>q.id==='m4-l3-t'),'êtes').correct,true);assert.equal(C.gradeExam(D.exams.m4,{}).max,11);assert.equal(C.gradeExam(D.exams.m5,{}).max,9);});
+test('stage-two save preserves all assessments when new drafts and incomplete slots are added',()=>{const s=C.freshState();for(const id of ['m1','m2','m3','mix1'])s.exams[id]={draft:Object.fromEntries(D.exams[id].questions.map(q=>[q.id,answer(q)])),submitted:true,self:[0,2]};s.answers['m3-l4-t']={value:'Eigener Text é',compared:true,self:[0,3]};const old=C.exportSave(s);old.contentVersion=2;const r=C.validateSave(old);r.exams.m4={draft:{'m4-e2':[1,-1]},submitted:false,self:[]};r.exams.m5={draft:{'m5-e10':'Mein Dialog'},submitted:false,self:[]};r.route='#exam/m5';const n=C.validateSave(C.exportSave(r));assert.equal(n.answers['m3-l4-t'].value,'Eigener Text é');assert.equal(n.exams.mix1.submitted,true);assert.deepEqual(plain(n.exams.m4.draft['m4-e2']),[1,-1]);n.exams.m4=C.emptyExam();assert.equal(n.exams.m5.draft['m5-e10'],'Mein Dialog');for(const id of ['m1','m2','m3','mix1'])assert.equal(C.gradeExam(D.exams[id],n.exams[id].draft).points,D.exams[id].questions.filter(q=>q.type!=='open').length);});

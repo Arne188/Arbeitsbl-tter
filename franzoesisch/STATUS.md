@@ -84,3 +84,19 @@ Im Repository-Stamm:
 
     node franzoesisch/tools/bundle.cjs
     node --test franzoesisch/tests/core.test.cjs
+
+## Update Schritt 3 · 9. November 2026
+
+**Schritt 3 implementiert; Veröffentlichung und abschließende Browserprüfung laufen. Als Nächstes: Schritt 4 (M6/M7).** Dieser Abschnitt ersetzt die ältere Zusammenfassung oben.
+
+- M4: sechs Lektionen zu Subjekt, il/elle, sämtlichen être-Präsensformen, nous/ils/elles, on und höflichem bzw. pluralischem vous, eigener Text und Fehlerkorrektur.
+- M5: vier Lektionen zu Intonationsfragen, Fragebausteinen, gesuchter Information und Antwortperspektive; eigener Dialog. Keine zusätzlichen Inversions-/est-ce-que- oder vollständigen avoir-Kurse.
+- Insgesamt 24 Lektionen mit je acht Schritten, 168 Lernaufgaben (164 geschlossen, vier offene Texte), 24 Merkkarten.
+- Fünf Modulprüfungen plus gemischter Check M1–M3. Zusammen 64 Prüfungsaufgaben: 59 automatisch geprüft, fünf offene Selbstbewertungen. M4: zwölf Aufgaben (elf geschlossen), M5: zehn (neun geschlossen).
+- Neue Pronomen-/être-Werkstatt mit 13 ausdrücklich beschriebenen Situationen und aufdeckbarem Denkweg. Vollständige Formtabelle. Fragewerkstatt mit acht Situationen und aufdeckbarer Antwort/Begründung. Beide sind erklärend, unbenotet.
+- Mehrteilige Aufgaben melden getrennt Fehler beim Pronomen und bei der Verbform. Erklärungen unterscheiden Bedeutung/Kopfzahl von grammatischer Form und direkte Anrede vom Sprechen über Personen.
+- Speicherbereich und Schema 1 unverändert, Inhaltsversion 3. Alle sechs Prüfungen haben unabhängige Entwürfe/Abgaben/Selbstbewertungen. M1–M3 und der erste gemischte Check behalten ihre IDs. Offline-Datei auf M1–M5 erweitert. Inhaltskennungen schützen vor gemischten Cache-Fassungen.
+- 24 automatische Prüfungen bestanden: Lösungsschlüssel aller geschlossenen Aufgaben, Schriftzeichen, gezielte Diagnose, alte Sicherungen, unabhängige Prüfungen, unvollständige Auswahlfelder, Formenmodell, Online-Dateiversionen, Offline-Bündel und unveränderte bisherige Fächer.
+- Bisherige Browserprüfung: on est, höfliches vous êtes, Antwortlabor mit je suis, gezielte Pronomen-/Verbfehler und korrigierte Wiederherstellung; M4-Prüfung vollständig 11/11 nach Entwurfsneuladen.
+
+Noch offen: M6–M9, weitere gemischte Checks, Gesamtabfrage und zwei Probeklausuren. Schritt 4 ergänzt Herkunft/Wohnort/Klasse, il y a und un/une/des, Orts-/Personenkarten und zweiten gemischten Check nach M6. Ein eventuell benötigter kurzer Präpositionshinweis bleibt auf bereitgestellte Städte/Länder begrenzt.

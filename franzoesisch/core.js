@@ -3,7 +3,7 @@
  const SUBJECT='franzoesisch-klasse6', KEY='bonjour-franzoesisch-klasse6-v1', SCHEMA=1;
  const normalise=value=>String(value??'').normalize('NFC').replace(/[‘’ʼ`]/g,"'").replace(/\s+/g,' ').trim().toLocaleLowerCase('fr');
  const emptyExam=()=>({draft:{},submitted:false,self:[]});
- function freshState(){const m1=emptyExam();return {schema:SCHEMA,subject:SUBJECT,contentVersion:2,route:'#home',read:{},answers:{},exam:m1,exams:{m1}};}
+ function freshState(){const m1=emptyExam();return {schema:SCHEMA,subject:SUBJECT,contentVersion:3,route:'#home',read:{},answers:{},exam:m1,exams:{m1}};}
  const valuePresent=value=>Array.isArray(value)?value.length>0:typeof value==='number'||(typeof value==='string'&&value.trim().length>0);
  function isAnswered(q,value){
   if(q.type==='slots')return Array.isArray(value)&&value.length===q.slots.length&&value.every((v,i)=>Number.isInteger(v)&&v>=0&&v<q.slots[i].options.length);
@@ -23,7 +23,7 @@
   let message='Prüfe deine Antwort noch einmal. '+(q.type==='build'?'Achte auf Reihenfolge und Gesprächsrolle.':q.type==='short'?'Die erwartete Fassung passt noch nicht. Achte auch auf Apostrophe und Akzente.':'Welche Information und welche Gesprächsrolle passen?');
   if(q.type==='choice'&&q.errors?.[value])message=q.errors[value];
   if(q.type==='short')for(const m of q.mistakes||[]){if(normalise(value).includes(normalise(m.includes))){message=m.message;break;}}
-  if(q.type==='slots'){const wrong=q.slots.find((s,i)=>value[i]!==s.answer);message='Prüfe den Teil „'+wrong.label+'“. Nutze Anzahl, Genus und Wortanfang aus der Hilfe.';}
+  if(q.type==='slots'){const wrong=q.slots.find((s,i)=>value[i]!==s.answer);message='Prüfe den Teil „'+wrong.label+'“. '+(wrong.feedback||'Nutze Anzahl, Genus und Wortanfang aus der Hilfe.');}
   return {correct:false,message};
  }
  function recordAttempt(q,previous={},value){
@@ -78,11 +78,12 @@
   state.contentVersion=Number.isInteger(raw.contentVersion)?raw.contentVersion:1;
   return state;
  }
- function exportSave(state){return {schema:SCHEMA,subject:SUBJECT,contentVersion:2,savedAt:new Date().toISOString(),state};}
+ function exportSave(state){return {schema:SCHEMA,subject:SUBJECT,contentVersion:3,savedAt:new Date().toISOString(),state};}
  function articleModel(card,plural){const article=plural?'les':card.elision?'l’':card.gender==='masculin'?'le':'la',noun=plural?card.plural:card.word;return {article,noun,phrase:article+(article==='l’'?'':' ')+noun};}
+ function etreChain(card,forms){const verb=forms[card.pronoun];if(!verb)throw Error('Unbekanntes Pronomen');return {pronoun:card.pronoun,verb,sentence:card.pronoun.charAt(0).toUpperCase()+card.pronoun.slice(1)+' '+verb+' à Paris.'};}
  function readStorage(storage){
   try{const raw=storage.getItem(KEY);return {state:raw?validateSave(JSON.parse(raw)):freshState(),error:null};}
   catch(e){return {state:freshState(),error:'Der gespeicherte Stand konnte nicht gelesen werden. Er wurde nicht überschrieben. Du kannst eine Sicherung laden oder einen neuen Stand ausdrücklich speichern.'};}
  }
- root.FrenchCore={SUBJECT,KEY,SCHEMA,normalise,emptyExam,freshState,valuePresent,isAnswered,evaluate,recordAttempt,lessonStatus,gradeExam,validateSave,exportSave,articleModel,readStorage};
+ root.FrenchCore={SUBJECT,KEY,SCHEMA,normalise,emptyExam,freshState,valuePresent,isAnswered,evaluate,recordAttempt,lessonStatus,gradeExam,validateSave,exportSave,articleModel,etreChain,readStorage};
 })(globalThis);
