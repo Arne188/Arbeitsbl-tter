@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "subject": "franzoesisch-klasse6",
+  "contentVersion": 1,
+  "state": {
+    "schema": 1,
+    "subject": "franzoesisch-klasse6",
+    "contentVersion": 1,
+    "route": "#exam",
+    "read": {"m1-l1": true},
+    "answers": {
+      "m1-l1-c1": {"value": 2, "attempts": 1, "checked": true, "correct": true, "firstTry": true},
+      "m1-l1-c2": {"value": 0, "attempts": 1, "checked": true, "correct": true, "firstTry": true},
+      "m1-l1-p3": {"value": [2, 1, 0], "attempts": 2, "hints": 1, "revealed": false, "checked": true, "correct": true, "firstTry": false, "hadError": true},
+      "m1-l5-t": {"value": "Alex : Salut ! Je m’appelle Alex.\nLou : Salut ! Je m’appelle Lou.", "compared": true, "self": [0, 1]}
+    },
+    "exam": {
+      "draft": {
+        "m1-e1": 1,
+        "m1-e2": 0,
+        "m1-e3": "Je m'appelle Salomé.",
+        "m1-e4": 0,
+        "m1-e5": 2,
+        "m1-e6": [1, 0, 2],
+        "m1-e7": 1,
+        "m1-e8": "Je m'appelle Hugo.",
+        "m1-e9": 1,
+        "m1-e10": "Lou : Salut ! Tu t’appelles comment ?\nCamille : Je m’appelle Camille. Et toi ?\nLou : Je m’appelle Lou. Tu as quel âge ?\nCamille : J’ai treize ans. À plus !\nLou : À plus !"
+      },
+      "submitted": true,
+      "self": [0, 2]
+    }
+  }
+}

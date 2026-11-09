@@ -5,7 +5,7 @@ Gemeinsame Fächerauswahl für die interaktiven Lernseiten:
 - **Biologie:** Blütenpflanzen, Blütenaufbau und Lebensformen, Wurzelhaare, Bestäubung und Befruchtung. 10 Einheiten, 43 Übungen und Probeklausur.
 - **Chemie:** Teilchenmodell, Aggregatzustände, Diffusion, Lösen, Gemische und Trennverfahren. 11 Einheiten, 44 Übungen und Probeklausur.
 - **Werte und Normen:** Glück und Lebensgestaltung, Zukunftswünsche, Erfolg und Misserfolg, Verantwortung. 12 Einheiten, 36 Übungen, vier Prüfungsmodule, Gesamtabfrage und eine Probeklausur mit 60 Punkten.
-- **Französisch:** Ausbaustufe 1 mit fünf ausführlichen Lektionen zu ersten Gesprächen, 35 Lernaufgaben, Merkkarten und einer Modulprüfung mit zehn Aufgaben. M2–M9, Gesamtabfrage und zwei Probeklausuren sind geplant. Kein Vokabeltrainer.
+- **Französisch:** Ausbaustufe 2 mit 14 ausführlichen Lektionen: erste Gespräche, bestimmte Artikel und Mehrzahl, Personen vorstellen. 98 Lernaufgaben, 14 Merkkarten, drei Modulprüfungen mit je zehn Aufgaben und ein gemischter Check mit zwölf Aufgaben. M4–M9, Gesamtabfrage und zwei Probeklausuren sind geplant. Kein Vokabeltrainer.
 
 ## Öffnen
 
