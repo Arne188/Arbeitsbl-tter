@@ -1,6 +1,6 @@
 # Französisch · Arbeitsstand
 
-Stand: 9. November 2026. **Schritt 6 umgesetzt und lokal geprüft; öffentliche Bereitstellung wird abschließend verifiziert. Nächste Etappe: Schritt 7, abschließende Gesamtprüfung.**
+Stand: 9. November 2026. **Schritt 6 umgesetzt, veröffentlicht und öffentlich geprüft. Nächste Etappe: Schritt 7, abschließende Gesamtprüfung.**
 
 ## Fertiger Umfang
 
@@ -58,7 +58,7 @@ Im Repository-Stamm:
 
 ## Öffentliche Veröffentlichung
 
-Wird nach erfolgreicher Bereitstellung ergänzt.
+Quellcommit 2c46a0ab66029c07c6611f773cc177b8e6ded62e; GitHub-Pages-Lauf 42695166388 erfolgreich. Öffentliche Auswahl mit allen drei Abschlusskarten geprüft. Probeklausur A und B mit je 20 Aufgaben und 40 + 20 getrennten Punkten geöffnet; Gesamtabfrage mit 24 Aufgaben geöffnet. Öffentlicher Link #exams bestätigt.
 
 Kurs: https://arne188.github.io/Arbeitsbl-tter/franzoesisch/index.html#home
 Prüfungen: https://arne188.github.io/Arbeitsbl-tter/franzoesisch/index.html#exams
