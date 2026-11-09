@@ -27,7 +27,7 @@ Je m’appelle / tu t’appelles sowie j’ai … ans sind zunächst erklärter 
 - Browser: Einstieg und Lektionsschritte, falsche/richtige Antwort mit Tipp, Satzbausteine, Neu laden mit Wiederherstellung, Akzentleiste, komplette Modulprüfung (9/9), getrennte Selbsteinschätzung und Wiederherstellung nach Neu laden.
 - Dateiexport und erneuter Import einschließlich Vorschau und Bestätigung im Browser erfolgreich.
 - Schmale Ansicht mit 390-Pixel-Frame (375 Pixel Inhaltsbreite wegen Scrollleiste): Einstieg, Erklärung, Navigation und beide Mini-Check-Aufgaben getestet; kein seitliches Überlaufen des Dokuments. Fortschrittsanzeige nach Prüfung direkt aktualisiert.
-- Weitere Prüfung vor Abschluss: Online-Veröffentlichungsstatus wird gesondert dokumentiert; Repository-Upload allein gilt nicht als Nachweis einer laufenden GitHub Page.
+- GitHub Pages erfolgreich veröffentlicht (Lauf 42640264274, Quellcommit 9b589d0c2aa81fc51594b53d126472c62ce17025). Öffentliche Fächerauswahl mit vier Fächern und der darin verlinkte Französischkurs im Browser geprüft; erste Lektion auf der öffentlichen Seite geöffnet. Direktlink: https://arne188.github.io/Arbeitsbl-tter/franzoesisch/index.html.
 
 ## Bekannte Grenzen
 
