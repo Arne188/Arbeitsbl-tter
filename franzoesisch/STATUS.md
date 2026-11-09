@@ -1,6 +1,6 @@
 # Französisch · Arbeitsstand
 
-Stand: 9. November 2026. **Schritt 4 implementiert und lokal geprüft; Veröffentlichung läuft. Als Nächstes: Schritt 5 (M8/M9).**
+Stand: 9. November 2026. **Schritt 4 ist umgesetzt, veröffentlicht und öffentlich geprüft. Als Nächstes: Schritt 5 (M8/M9).**
 
 ## Fertiger Umfang
 
@@ -45,3 +45,10 @@ Im Repository-Stamm:
     node --test franzoesisch/tests/core.test.cjs
 
 Die Kernprüfung umfasst 25 Tests. Drei zusätzliche lokale Portalprüfungen ergeben die Gesamtzahl 28. Die Test-Sicherung enthält nur erfundene Daten.
+
+## Öffentliche Veröffentlichung geprüft
+
+Quellcommit 20474b674c2175868426dff6efdee8ffd0ec46b6, GitHub-Pages-Lauf 42684224429 erfolgreich. Öffentlicher Kurs nach Neuladen mit 33 Lektionen und 231 Lernaufgaben; M6-Personenkarte Noé und Fremdperspektive, M7-Hotelanzahl und genauer Existenzsatz sowie alle neun Prüfungsangebote geprüft.
+
+Kurs: https://arne188.github.io/Arbeitsbl-tter/franzoesisch/index.html#home
+Stadtplan in M7: https://arne188.github.io/Arbeitsbl-tter/franzoesisch/index.html#module/m7
