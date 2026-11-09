@@ -1,12 +1,12 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const root=path.resolve(__dirname,'..'),ctx=vm.createContext({});
-for(const file of ['modules/m1.js','modules/m2.js','modules/m3.js','modules/mix1.js','modules/m4.js','modules/m5.js','modules/m6.js','modules/m7.js','modules/mix2.js','core.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ctx,{filename:file});
+for(const file of ['modules/m1.js','modules/m2.js','modules/m3.js','modules/mix1.js','modules/m4.js','modules/m5.js','modules/m6.js','modules/m7.js','modules/mix2.js','modules/m8.js','modules/m9.js','modules/mix3.js','core.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ctx,{filename:file});
 const C=ctx.FrenchCore,D=ctx.FRENCH_COURSE,plain=x=>JSON.parse(JSON.stringify(x));
 const all=D.lessons.flatMap(l=>[l.discover,...l.practice,l.transfer,...l.check]),ex=D.exam.questions,allExams=Object.values(D.exams).flatMap(e=>e.questions);
 function answer(q){if(q.type==='choice')return q.answer;if(q.type==='short')return q.answers[0];if(q.type==='slots')return q.slots.map(s=>s.answer);if(q.type==='build')return q.solution.map(s=>q.tokens.indexOf(s));return q.sample;}
-test('thirty-three complete lessons, nine checks and honest exercise counts',()=>{
- assert.equal(D.lessons.length,33);assert.equal(all.length,231);assert.equal(ex.length,10);assert.equal(D.modules.filter(m=>m.available).length,7);assert.equal(allExams.length,98);
- assert.equal(new Set([...all,...allExams].map(q=>q.id)).size,329);
+test('forty-two complete lessons, twelve checks and honest exercise counts',()=>{
+ assert.equal(D.lessons.length,42);assert.equal(all.length,294);assert.equal(ex.length,10);assert.equal(D.modules.filter(m=>m.available).length,9);assert.equal(allExams.length,135);
+ assert.equal(new Set([...all,...allExams].map(q=>q.id)).size,429);
  for(const l of D.lessons){assert.ok(l.explain.length>=4);assert.ok(l.explain.every(e=>e[0]&&e[1]));assert.equal(l.worked.steps.length,4);assert.equal(l.check.length,2);assert.ok(l.card.rule);}
 });
 test('every closed exercise accepts its authored solution and rejects an explicit wrong answer',()=>{
@@ -61,8 +61,8 @@ test('unavailable or broken browser storage returns an explicit recoverable stat
  assert.equal(C.readStorage({getItem(){return null;}}).error,null);
 });
 test('bundled offline page is self-contained and contains identical course code',()=>{
- const h=fs.readFileSync(path.join(root,'offline.html'),'utf8');assert.ok(!/<script[^>]+src=/.test(h));assert.ok(!/<link[^>]+stylesheet/.test(h));assert.ok(h.includes('Offline · Module 1–7'));
- for(const file of ['modules/m1.js','modules/m2.js','modules/m3.js','modules/mix1.js','modules/m4.js','modules/m5.js','modules/m6.js','modules/m7.js','modules/mix2.js','core.js'])assert.ok(h.includes(fs.readFileSync(path.join(root,file),'utf8')));
+ const h=fs.readFileSync(path.join(root,'offline.html'),'utf8');assert.ok(!/<script[^>]+src=/.test(h));assert.ok(!/<link[^>]+stylesheet/.test(h));assert.ok(h.includes('Offline · Module 1–9'));
+ for(const file of ['modules/m1.js','modules/m2.js','modules/m3.js','modules/mix1.js','modules/m4.js','modules/m5.js','modules/m6.js','modules/m7.js','modules/mix2.js','modules/m8.js','modules/m9.js','modules/mix3.js','core.js'])assert.ok(h.includes(fs.readFileSync(path.join(root,file),'utf8')));
  for(const match of h.matchAll(/<script>([\s\S]*?)<\/script>/g))new vm.Script(match[1]);
 });
 test('real version-one save migrates M1 exam, confidence and open text without losing data',()=>{
@@ -73,7 +73,7 @@ test('real version-one save migrates M1 exam, confidence and open text without l
  s.answers['m2-l1-d']={value:1};s.exams.m2=C.emptyExam();s.exams.m2.draft['m2-e1']=1;
  const again=C.validateSave(C.exportSave(s));assert.equal(C.gradeExam(D.exams.m1,again.exams.m1.draft).points,9);assert.equal(again.exams.m2.draft['m2-e1'],1);assert.equal(again.answers['m2-l1-d'].value,1);
 });
-test('nine exam drafts and results remain isolated across save and reload',()=>{
+test('twelve exam drafts and results remain isolated across save and reload',()=>{
  const s=C.freshState();
  for(const [key,e] of Object.entries(D.exams))s.exams[key]={draft:Object.fromEntries(e.questions.map(q=>[q.id,answer(q)])),submitted:key!=='m2',self:key==='m2'?[]:[0,1]};
  s.exam=s.exams.m1;const r=C.validateSave(C.exportSave(s));
@@ -98,7 +98,7 @@ test('multi-module routes and all stable M1 IDs survive an update',()=>{
 });
 test('every hosted script and stylesheet has a matching content version to avoid mixed cached releases',()=>{
  const html=fs.readFileSync(path.join(root,'index.html'),'utf8'),crypto=require('node:crypto');
- const refs=[...html.matchAll(/(?:src|href)="\.\/([^"?]+)\?v=([a-f0-9]+)"/g)];assert.equal(refs.length,12);
+ const refs=[...html.matchAll(/(?:src|href)="\.\/([^"?]+)\?v=([a-f0-9]+)"/g)];assert.equal(refs.length,15);
  for(const [,file,hash] of refs){assert.equal(hash,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex').slice(0,12),file);}
 });
 test('all pronouns and exceptional meanings retain the correct être form',()=>{
@@ -125,9 +125,27 @@ test('new checks match their taught scope and keep open scoring separate',()=>{
  for(const key of ['m6','m7','mix2']){const e=D.exams[key],draft=Object.fromEntries(e.questions.map(q=>[q.id,answer(q)])),grade=C.gradeExam(e,draft);assert.equal(grade.points,key==='m6'?9:11);assert.equal(e.questions.filter(q=>q.type==='open').length,1);assert.ok(e.questions.every(q=>D.lessons.some(l=>l.id===q.lesson)));}
  assert.ok(D.exams.mix2.questions.every(q=>Number(q.lesson.match(/^m(\d+)/)[1])<=6));
  assert.equal(C.evaluate(all.find(q=>q.id==='m7-l1-p1'),'Ils y a').correct,false);assert.equal(C.evaluate(all.find(q=>q.id==='m7-l3-p3'),'des deux').correct,false);assert.match(C.evaluate(all.find(q=>q.id==='m6-l2-p1'),'je habite').message,/h muet/);
- assert.equal(all.filter(q=>q.type==='open').length,6);assert.equal(allExams.filter(q=>q.type==='open').length,8);
+ assert.equal(all.filter(q=>q.type==='open').length,8);assert.equal(allExams.filter(q=>q.type==='open').length,11);
 });
 test('stage-three results and independent new drafts survive version-four export and reload',()=>{
  const s=C.freshState();for(const id of ['m1','m2','m3','m4','m5','mix1'])s.exams[id]={draft:Object.fromEntries(D.exams[id].questions.map(q=>[q.id,answer(q)])),submitted:true,self:[1,3]};s.answers['m5-l4-t']={value:'Mon texte : é, à, ç',compared:true,self:[0,2]};const old=C.exportSave(s);old.contentVersion=3;
  const n=C.validateSave(old);n.exams.m6={draft:{'m6-e5':[1,-1]},submitted:false,self:[]};n.exams.m7={draft:{'m7-e12':'Texte du quartier'},submitted:false,self:[]};n.exams.mix2={draft:{'mix2-e12':'Texte de Maya'},submitted:false,self:[1]};n.route='#exam/mix2';const next=C.validateSave(C.exportSave(n));assert.deepEqual(plain(next.exams.m6.draft['m6-e5']),[1,-1]);assert.equal(next.route,'#exam/mix2');assert.equal(next.answers['m5-l4-t'].value,'Mon texte : é, à, ç');next.exams.m6=C.emptyExam();assert.equal(next.exams.mix2.draft['mix2-e12'],'Texte de Maya');assert.equal(next.exams.m7.draft['m7-e12'],'Texte du quartier');for(const id of ['m1','m2','m3','m4','m5','mix1'])assert.equal(C.gradeExam(D.exams[id],next.exams[id].draft).points,D.exams[id].questions.filter(q=>q.type!=='open').length);
+});
+
+test('preference model preserves supplied articles, person forms and the negative bracket',()=>{
+ for(const card of D.tasteCards)for(const person of ['je','tu'])for(const negative of [false,true]){
+  const m=C.preferenceModel(card,person,negative);const start=person==='je'?(negative?'Je n’aime pas ':'J’aime '):(negative?'Tu n’aimes pas ':'Tu aimes ');assert.equal(m.sentence,start+card.group+'.');assert.equal(m.parts.map(p=>p.text).join(''),m.sentence);assert.equal(m.parts.filter(p=>p.kind==='negative').length,negative?2:0);
+ }
+ const q=all.find(q=>q.id==='m8-l2-p3');assert.equal(C.evaluate(q,'Je n’aime le chocolat.').correct,false);assert.match(C.evaluate(q,'Je n’aime le chocolat.').message,/zweiten Teil pas/);assert.equal(C.evaluate(q,'Je n’aime pas le chocolat.').correct,true);
+});
+test('spelling retains accents, cedilla, apostrophes and canonical Unicode equivalence',()=>{
+ for(const w of D.spellWords){const a=C.spellWord(w.word,D.alphabet);assert.equal(a.map(x=>x.char).join(''),w.word);assert.deepEqual(plain(a),plain(C.spellWord(w.word.normalize('NFD'),D.alphabet)));}
+ assert.equal(C.spellWord('café',D.alphabet)[3].label,'e accent aigu');assert.equal(C.spellWord('garçon',D.alphabet)[3].label,'cé cédille');assert.equal(C.spellWord('hôtel',D.alphabet)[1].label,'o accent circonflexe');assert.equal(C.spellWord('l’ami',D.alphabet)[1].label,'apostrophe');assert.equal(D.alphabet.length,26);assert.equal(D.alphabet.find(x=>x.letter==='G').name,'gé');assert.equal(D.alphabet.find(x=>x.letter==='J').name,'ji');
+});
+test('new assessments cover M8, M9 and all taught modules without pretending to grade speech',()=>{
+ for(const [id,max] of [['m8',9],['m9',11],['mix3',14]]){const e=D.exams[id];assert.equal(C.gradeExam(e,Object.fromEntries(e.questions.map(q=>[q.id,answer(q)]))).points,max);assert.equal(e.questions.filter(q=>q.type==='open').length,1);assert.ok(e.questions.every(q=>D.lessons.some(l=>l.id===q.lesson)));}
+ assert.deepEqual([...new Set(D.exams.mix3.questions.map(q=>q.lesson.split('-')[0]))].sort(),['m1','m2','m3','m4','m5','m6','m7','m8','m9']);for(const c of D.soundCards)for(const x of c.examples)assert.equal(x.parts.map(p=>p[0]).join(''),x.word);assert.equal(C.evaluate(D.exams.m9.questions.find(q=>q.type==='open'),'Eigenes Sprechen').correct,null);
+});
+test('stage-four saved results coexist with unfinished new checks in version five',()=>{
+ const s=C.freshState();for(const id of ['m6','m7','mix2'])s.exams[id]={draft:Object.fromEntries(D.exams[id].questions.map(q=>[q.id,answer(q)])),submitted:true,self:[0,3]};s.answers['m7-l5-t']={value:'Mon texte é',compared:true,self:[1]};const old=C.exportSave(s);old.contentVersion=4;const x=C.validateSave(old);x.exams.m8={draft:{'m8-e4':[2,-1]},submitted:false,self:[]};x.exams.m9={draft:{'m9-e12':'Texte Noé'},submitted:false,self:[0]};x.exams.mix3={draft:{'mix3-e15':'Texte Lina'},submitted:false,self:[]};const y=C.validateSave(C.exportSave(x));assert.deepEqual(plain(y.exams.m8.draft['m8-e4']),[2,-1]);y.exams.m8=C.emptyExam();assert.equal(y.exams.m9.draft['m9-e12'],'Texte Noé');assert.equal(y.exams.mix3.draft['mix3-e15'],'Texte Lina');assert.equal(y.answers['m7-l5-t'].value,'Mon texte é');assert.equal(y.exams.mix2.submitted,true);assert.equal(C.exportSave(y).contentVersion,5);
 });
