@@ -5,7 +5,7 @@ Gemeinsame Fächerauswahl für die interaktiven Lernseiten:
 - **Biologie:** Blütenpflanzen, Blütenaufbau und Lebensformen, Wurzelhaare, Bestäubung und Befruchtung. 10 Einheiten, 43 Übungen und Probeklausur.
 - **Chemie:** Teilchenmodell, Aggregatzustände, Diffusion, Lösen, Gemische und Trennverfahren. 11 Einheiten, 44 Übungen und Probeklausur.
 - **Werte und Normen:** Glück und Lebensgestaltung, Zukunftswünsche, Erfolg und Misserfolg, Verantwortung. 12 Einheiten, 36 Übungen, vier Prüfungsmodule, Gesamtabfrage und eine Probeklausur mit 60 Punkten.
-- **Französisch:** Ausbaustufe 5 mit 42 ausführlichen Lektionen: erste Gespräche, Artikel/Mehrzahl, Vorstellungen, Pronomen/être, Fragen, Herkunft/Wohnort/Klasse, il y a und un/une/des, Vorlieben/Verneinung sowie Laute/Schrift. 294 Lernaufgaben, 42 Merkkarten, neun Modulprüfungen und drei gemischte Checks. Interaktive Artikel-, Pronomen-, Frage-, Steckbrief-, Stadt-, Vorlieben- und Lautwerkstätten. Gesamtabfrage und zwei Probeklausuren folgen in Schritt 6. Kein Vokabeltrainer.
+- **Französisch:** Ausbaustufe 6 mit 42 ausführlichen Lektionen: erste Gespräche, Artikel/Mehrzahl, Vorstellungen, Pronomen/être, Fragen, Herkunft/Wohnort/Klasse, il y a und un/une/des, Vorlieben/Verneinung sowie Laute/Schrift. 294 Lernaufgaben, 42 Merkkarten, neun Modulprüfungen und drei gemischte Checks. Interaktive Artikel-, Pronomen-, Frage-, Steckbrief-, Stadt-, Vorlieben- und Lautwerkstätten. Zusätzliche Gesamtabfrage (24 Aufgaben) und zwei Probeklausuren (je 20 Aufgaben). Klausuren: je 40 automatische Punkte plus bis zu 20 separat selbst eingeschätzte Schreibpunkte; gewichtete Auswahlfelder mit Teilpunkten. Insgesamt 199 Prüfungsaufgaben. Schritt 7: abschließende Gesamtprüfung. Kein Vokabeltrainer.
 
 ## Öffnen
 

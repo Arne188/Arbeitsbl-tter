@@ -1,6 +1,6 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..');
-const files=['modules/m1.js','modules/m2.js','modules/m3.js','modules/mix1.js','modules/m4.js','modules/m5.js','modules/m6.js','modules/m7.js','modules/mix2.js','modules/m8.js','modules/m9.js','modules/mix3.js','core.js','app.js'];
+const files=['modules/m1.js','modules/m2.js','modules/m3.js','modules/mix1.js','modules/m4.js','modules/m5.js','modules/m6.js','modules/m7.js','modules/mix2.js','modules/m8.js','modules/m9.js','modules/mix3.js','modules/abschluss.js','core.js','app.js'];
 const codes=new Map(files.map(file=>[file,fs.readFileSync(path.join(root,file),'utf8')]));
 const css=fs.readFileSync(path.join(root,'style.css'),'utf8');
 const version=code=>crypto.createHash('sha256').update(code).digest('hex').slice(0,12);

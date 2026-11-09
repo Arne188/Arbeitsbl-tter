@@ -2,8 +2,8 @@
  'use strict';
  const SUBJECT='franzoesisch-klasse6', KEY='bonjour-franzoesisch-klasse6-v1', SCHEMA=1;
  const normalise=value=>String(value??'').normalize('NFC').replace(/[‘’ʼ`]/g,"'").replace(/\s+/g,' ').trim().toLocaleLowerCase('fr');
- const emptyExam=()=>({draft:{},submitted:false,self:[]});
- function freshState(){const m1=emptyExam();return {schema:SCHEMA,subject:SUBJECT,contentVersion:5,route:'#home',read:{},answers:{},exam:m1,exams:{m1}};}
+ const emptyExam=()=>({draft:{},submitted:false,self:[],selfByQuestion:{}});
+ function freshState(){const m1=emptyExam();return {schema:SCHEMA,subject:SUBJECT,contentVersion:6,route:'#home',read:{},answers:{},exam:m1,exams:{m1}};}
  const valuePresent=value=>Array.isArray(value)?value.length>0:typeof value==='number'||(typeof value==='string'&&value.trim().length>0);
  function isAnswered(q,value){
   if(q.type==='slots')return Array.isArray(value)&&value.length===q.slots.length&&value.every((v,i)=>Number.isInteger(v)&&v>=0&&v<q.slots[i].options.length);
@@ -41,8 +41,16 @@
  }
  function gradeExam(exam,draft){
   const closed=exam.questions.filter(q=>q.type!=='open');
-  const results=closed.map(q=>({id:q.id,lesson:q.lesson,...evaluate(q,draft[q.id])}));
-  return {points:results.filter(r=>r.correct).length,max:closed.length,results,review:[...new Set(results.filter(r=>!r.correct).map(r=>r.lesson))]};
+  const results=closed.map(q=>{const result=evaluate(q,draft[q.id]),max=q.points||1;let earned=result.correct?max:0;
+   if(q.type==='slots'&&q.slotPoints){const v=draft[q.id];earned=q.slots.reduce((n,s,i)=>n+(Array.isArray(v)&&Number.isInteger(v[i])&&v[i]===s.answer?q.slotPoints[i]:0),0);}
+   return {id:q.id,lesson:q.lesson,section:q.section||'',max,earned,...result};
+  });
+  const sections=(exam.sections||[]).map(s=>({...s,points:results.filter(x=>x.section===s.id).reduce((n,x)=>n+x.earned,0),max:results.filter(x=>x.section===s.id).reduce((n,x)=>n+x.max,0)}));
+  return {points:results.reduce((n,r)=>n+r.earned,0),max:results.reduce((n,r)=>n+r.max,0),results,sections,review:[...new Set(results.filter(r=>!r.correct).map(r=>r.lesson))]};
+ }
+ function selfAssessment(exam,saved){
+  const tasks=exam.questions.filter(q=>q.type==='open'&&q.rubric).map(q=>{const values=saved.selfByQuestion?.[q.id]||[],valid=q.rubric.map((levels,i)=>Number.isInteger(values[i])&&values[i]>=0&&values[i]<levels.length?values[i]:-1);return {id:q.id,points:valid.reduce((n,v)=>n+Math.max(v,0),0),max:q.rubric.reduce((n,x)=>n+x.length-1,0),rated:valid.filter(v=>v>=0).length,count:valid.length,values:valid};});
+  return {tasks,points:tasks.reduce((n,x)=>n+x.points,0),max:tasks.reduce((n,x)=>n+x.max,0),rated:tasks.reduce((n,x)=>n+x.rated,0),count:tasks.reduce((n,x)=>n+x.count,0)};
  }
  function cleanValue(value){
   if(typeof value==='string')return value.slice(0,12000);
@@ -57,28 +65,29 @@
   const state=freshState(),src=raw.state||raw;
   if(!src||typeof src!=='object'||!src.answers||typeof src.answers!=='object'||Array.isArray(src.answers))throw Error('In dieser Datei fehlen die Antwortdaten.');
   if(Object.keys(src.answers).length>2000)throw Error('Die Datei enthält zu viele Einträge.');
-  const idPattern=/^(?:m\d+-(?:l\d+-(?:d|p\d+|t|c\d+)|e\d+)|mix\d+-e\d+)$/;
+  const idPattern=/^(?:m\d+-(?:l\d+-(?:d|p\d+|t|c\d+)|e\d+)|(?:mix|final|mock)\d+-e\d+)$/;
   for(const [id,r] of Object.entries(src.answers)){
    if(!idPattern.test(id)||!r||typeof r!=='object')continue;
    state.answers[id]={value:cleanValue(r.value),attempts:Math.min(999,Math.max(0,Math.floor(Number(r.attempts)||0))),hints:Math.min(2,Math.max(0,Math.floor(Number(r.hints)||0))),revealed:r.revealed===true,checked:r.checked===true,correct:r.correct===true?true:r.correct===false?false:null,firstTry:r.firstTry===true,hadError:r.hadError===true,compared:r.compared===true,self:Array.isArray(r.self)?r.self.filter(n=>Number.isInteger(n)&&n>=0&&n<20):[]};
   }
   for(const [id,read] of Object.entries(src.read||{}))if(/^m\d+-l\d+$/.test(id)&&read===true)state.read[id]=true;
-  if(typeof src.route==='string'&&/^#(?:home|cards|about|exams|exam(?:\/(?:m\d+|mix\d+))?|module\/m\d+|lesson\/m\d+-l\d+\/[0-7])$/.test(src.route))state.route=src.route;
+  if(typeof src.route==='string'&&/^#(?:home|cards|about|exams|exam(?:\/(?:m\d+|(?:mix|final|mock)\d+))?|module\/m\d+|lesson\/m\d+-l\d+\/[0-7])$/.test(src.route))state.route=src.route;
   const savedExams={...(src.exams&&typeof src.exams==='object'&&!Array.isArray(src.exams)?src.exams:{})};
   if(!savedExams.m1&&src.exam)savedExams.m1=src.exam;
   for(const [id,exam] of Object.entries(savedExams)){
-   if(!/^(?:m\d+|mix\d+)$/.test(id)||!exam||typeof exam!=='object')continue;
+   if(!/^(?:m\d+|(?:mix|final|mock)\d+)$/.test(id)||!exam||typeof exam!=='object')continue;
    const clean=emptyExam();
-   for(const [qid,value] of Object.entries(exam.draft||{}))if(qid.startsWith(id+'-e')&&/^(?:m\d+|mix\d+)-e\d+$/.test(qid))clean.draft[qid]=cleanValue(value);
+   for(const [qid,value] of Object.entries(exam.draft||{}))if(qid.startsWith(id+'-e')&&/^(?:m\d+|(?:mix|final|mock)\d+)-e\d+$/.test(qid))clean.draft[qid]=cleanValue(value);
    clean.submitted=exam.submitted===true;
    clean.self=Array.isArray(exam.self)?[...new Set(exam.self.filter(n=>Number.isInteger(n)&&n>=0&&n<20))]:[];
+   for(const [qid,values] of Object.entries(exam.selfByQuestion||{}))if(qid.startsWith(id+'-e')&&/^(?:m\d+|(?:mix|final|mock)\d+)-e\d+$/.test(qid)&&Array.isArray(values)&&values.length<=20)clean.selfByQuestion[qid]=values.map(v=>Number.isInteger(v)&&v>=0&&v<=2?v:-1);
    state.exams[id]=clean;
   }
   state.exam=state.exams.m1;
   state.contentVersion=Number.isInteger(raw.contentVersion)?raw.contentVersion:1;
   return state;
  }
- function exportSave(state){return {schema:SCHEMA,subject:SUBJECT,contentVersion:5,savedAt:new Date().toISOString(),state};}
+ function exportSave(state){return {schema:SCHEMA,subject:SUBJECT,contentVersion:6,savedAt:new Date().toISOString(),state};}
  function articleModel(card,plural){const article=plural?'les':card.elision?'l’':card.gender==='masculin'?'le':'la',noun=plural?card.plural:card.word;return {article,noun,phrase:article+(article==='l’'?'':' ')+noun};}
  function etreChain(card,forms){const verb=forms[card.pronoun];if(!verb)throw Error('Unbekanntes Pronomen');return {pronoun:card.pronoun,verb,sentence:card.pronoun.charAt(0).toUpperCase()+card.pronoun.slice(1)+' '+verb+' à Paris.'};}
  function profileModel(card,self=false){const p=self?'Je':card.pronoun==='elle'?'Elle':'Il',be=self?'suis':'est',from=/^[AEIOUYÀÂÉÈÊÎÏÔÖÙÛÜ]/i.test(card.origin)?'d’':'de ';return {origin:p+' '+be+' '+from+card.origin+'.',home:(self?'J’habite':p+' habite')+' à '+card.home+', '+card.country+'.',school:p+' '+be+' '+card.school+'.'};}
@@ -93,5 +102,5 @@
   try{const raw=storage.getItem(KEY);return {state:raw?validateSave(JSON.parse(raw)):freshState(),error:null};}
   catch(e){return {state:freshState(),error:'Der gespeicherte Stand konnte nicht gelesen werden. Er wurde nicht überschrieben. Du kannst eine Sicherung laden oder einen neuen Stand ausdrücklich speichern.'};}
  }
- root.FrenchCore={SUBJECT,KEY,SCHEMA,normalise,emptyExam,freshState,valuePresent,isAnswered,evaluate,recordAttempt,lessonStatus,gradeExam,validateSave,exportSave,articleModel,etreChain,profileModel,cityModel,preferenceModel,spellWord,readStorage};
+ root.FrenchCore={SUBJECT,KEY,SCHEMA,normalise,emptyExam,freshState,valuePresent,isAnswered,evaluate,recordAttempt,lessonStatus,gradeExam,selfAssessment,validateSave,exportSave,articleModel,etreChain,profileModel,cityModel,preferenceModel,spellWord,readStorage};
 })(globalThis);

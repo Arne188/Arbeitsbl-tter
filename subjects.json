@@ -60,7 +60,7 @@
     "id": "franzoesisch",
     "name": "Französisch",
     "title": "Bonjour! Französisch verstehen",
-    "text": "Grammatik Schritt für Schritt. M1–M9 mit 42 Lektionen, neun Modulprüfungen und drei gemischten Checks.",
+    "text": "Grammatik Schritt für Schritt. 42 Lektionen, neun Modulprüfungen, drei gemischte Checks, Gesamtabfrage und zwei Probeklausuren.",
     "topics": [
       "Grammatik & Dialoge",
       "Vorlieben & Verneinung",
@@ -71,7 +71,7 @@
     "icon": "dialogue",
     "href": "franzoesisch/index.html",
     "download": "franzoesisch/offline.html",
-    "status": "Alle neun Fachmodule nutzbar; Gesamtabfrage und Probeklausuren folgen.",
+    "status": "M1–M9 und Abschlussprüfungen vollständig nutzbar",
     "stats": {
       "chapters": 9,
       "lessons": 42,
