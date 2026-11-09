@@ -1,6 +1,6 @@
 # Französisch · Arbeitsstand
 
-Stand: 9. November 2026. **Schritt 5 umgesetzt und lokal geprüft; Veröffentlichung wird abschließend verifiziert. Als Nächstes: Schritt 6 (Gesamtabfrage und zwei Probeklausuren).**
+Stand: 9. November 2026. **Schritt 5 umgesetzt, veröffentlicht und öffentlich geprüft. Als Nächstes: Schritt 6 (Gesamtabfrage und zwei Probeklausuren).**
 
 ## Fertiger Umfang
 
@@ -47,6 +47,6 @@ Im Repository-Stamm:
 
 ## Öffentliche Veröffentlichung
 
-Wird nach erfolgreicher Bereitstellung mit Quellcommit und Pages-Lauf ergänzt.
+Quellcommit f10447e9809f466dc1ed23fd09ed1b71cca37442; GitHub-Pages-Lauf 42689817866 erfolgreich. Im öffentlichen Browser nach Neuladen 42 Lektionen, 294 Lernaufgaben, zwölf Prüfungsangebote; M8 mit je n’aime pas l’art und M9 mit u/ou sowie hôtel-Buchstabierhilfe geprüft.
 
 Kurs: https://arne188.github.io/Arbeitsbl-tter/franzoesisch/index.html#home
