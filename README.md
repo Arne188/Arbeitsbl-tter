@@ -41,4 +41,4 @@ node franzoesisch/tools/bundle.cjs
 node --test franzoesisch/tests/core.test.cjs
 ```
 
-Die erste Zeile aktualisiert die Offline-Fassung; die zweite prüft Auswertung, Speicherformat und Paket. Die veröffentlichte Webseite selbst benötigt weder Node noch einen Build auf GitHub Pages.
+Die erste Zeile aktualisiert die Offline-Fassung und die automatisch berechneten Versionskennungen der Online-Dateien, damit Browser bei Updates passende Fassungen laden; die zweite prüft Auswertung, Speicherformat und Paket. Die veröffentlichte Webseite selbst benötigt weder Node noch einen Build auf GitHub Pages.

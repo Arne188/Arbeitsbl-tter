@@ -40,12 +40,13 @@ Schlüssel bleibt bonjour-franzoesisch-klasse6-v1, Dateischema bleibt 1, Inhalts
 
 ## Geprüft in Schritt 2
 
-- **19 automatische Prüfungen bestanden:** 16 für Unterrichtsstruktur, alle geschlossenen Lösungsschlüssel, Apostrophe/NFC/signifikante Akzente, gezielte Fehler, Hilfe/Erstversuch, Speicherung, alte M1-Sicherung, unabhängige Prüfungen, unvollständige/gleiche Auswahlindizes, Artikelmodell, stabile IDs und Offline-Datei; drei weitere für Portal und unveränderte bisherige Fächer.
+- **20 automatische Prüfungen bestanden:** 17 für Unterrichtsstruktur, alle geschlossenen Lösungsschlüssel, Apostrophe/NFC/signifikante Akzente, gezielte Fehler, Hilfe/Erstversuch, Speicherung, alte M1-Sicherung, unabhängige Prüfungen, unvollständige/gleiche Auswahlindizes, Artikelmodell, stabile IDs, Offline-Datei und passende Inhaltsversionen aller geladenen Programm-/Stildateien; drei weitere für Portal und unveränderte bisherige Fächer.
 - Browser: bisheriger M1-Prüfungsstand aus Ausbaustufe 1 weiterhin 9/9 mit 2/4 Selbstbewertungskriterien.
 - Artikelwerkstatt Einzahl/Mehrzahl und Wortwechsel; Artikel/Nomen mit falscher Antwort, gezielter Rückmeldung, Korrektur und Wiederherstellung nach Neu laden.
 - M2-Prüfung vollständig 10/10; M3 vollständig 9/9 mit eigener Textbewertung und Wiederherstellung; gemischter Check vollständig 11/11 mit eigenem Text. Alle vier Prüfungen gleichzeitig als getrennte Auswertungen erreichbar.
 - Schmaler Frame: 390 Pixel, durch Scrollleiste 375 Pixel Inhaltsbreite. M3-Navigation, Werkstatt, beide Auswahlfelder einer Anwendung, Prüfen und Tipp im Mini-Check getestet. Kein horizontales Überlaufen des Dokuments.
 - Erweiterte eigenständige Offline-Fassung im Browser geöffnet; M3-Werkstatt und Sammlung mit 14 Merkkarten vorhanden.
+- Öffentliche Erstprüfung zeigte gemischte alte/neue Browserdateien. Die Online-Dateiverweise erhalten deshalb automatisch berechnete Inhaltskennungen; die Offline-Datei bleibt unverändert selbständig.
 - GitHub-Pages-Auslieferung dieser Etappe wird nach dem Upload gesondert geprüft. Ein erfolgreicher Repository-Upload allein gilt nicht als geprüfte Veröffentlichung.
 
 ## Grenzen

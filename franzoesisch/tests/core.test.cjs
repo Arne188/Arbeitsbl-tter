@@ -96,3 +96,8 @@ test('multi-module routes and all stable M1 IDs survive an update',()=>{
  assert.equal(C.isAnswered(ex.find(q=>q.type==='build'),[1,1,2]),false);assert.equal(C.isAnswered(ex.find(q=>q.type==='choice'),99),false);
  new vm.Script(fs.readFileSync(path.join(root,'app.js'),'utf8'));
 });
+test('every hosted script and stylesheet has a matching content version to avoid mixed cached releases',()=>{
+ const html=fs.readFileSync(path.join(root,'index.html'),'utf8'),crypto=require('node:crypto');
+ const refs=[...html.matchAll(/(?:src|href)="\.\/([^"?]+)\?v=([a-f0-9]+)"/g)];assert.equal(refs.length,7);
+ for(const [,file,hash] of refs){assert.equal(hash,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex').slice(0,12),file);}
+});
