@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Französisch · Ansichtsprüfung</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px system-ui, sans-serif; background: #edf0f5; color: #243347; }
+  header { padding: 16px; background: white; }
+  h1 { font-size: 20px; margin: 0 0 8px; }
+  p { margin: 8px 0; }
+  select { padding: 8px; font: inherit; }
+  iframe { display: block; border: 1px solid #8993a4; height: 820px; margin: 20px; background: white; }
+</style>
+<header>
+  <h1>Französisch · Ansichtsprüfung</h1>
+  <p>Entwicklungsansicht für echte schmale Inhaltsbreiten. Die Lernseite läuft im Rahmen mit ihrem normalen Browser-Lernstand.</p>
+  <label for="width">Inhaltsbreite</label>
+  <select id="width"><option value="375">375 Pixel</option><option value="390">390 Pixel</option><option value="768">768 Pixel</option><option value="1280">1280 Pixel</option></select>
+  <label for="edition">Fassung</label>
+  <select id="edition"><option value="../index.html">Online</option><option value="../offline.html">Offline-Paket</option></select>
+  <p><a href="../index.html">Kurs ohne Rahmen öffnen</a></p>
+</header>
+<iframe title="Französisch Testansicht" src="../index.html" style="width:375px"></iframe>
+<script>
+  const frame = document.querySelector('iframe');
+  document.querySelector('#width').addEventListener('change', event => { frame.style.width = event.target.value + 'px'; });
+  document.querySelector('#edition').addEventListener('change', event => { frame.src = event.target.value; });
+</script>
+</html>
