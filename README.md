@@ -3,7 +3,7 @@
 Gemeinsame Fächerauswahl für die interaktiven Lernseiten:
 
 - **Biologie:** Blütenpflanzen, Blütenaufbau und Lebensformen, Wurzelhaare, Bestäubung und Befruchtung. 10 Einheiten, 43 Übungen und Probeklausur.
-- **Chemie:** Teilchenmodell, Aggregatzustände, Diffusion, Lösen, Gemische und Trennverfahren. 11 Einheiten, 44 Übungen und Probeklausur.
+- **Chemie:** 13 Einheiten und 62 Lernaufgaben. Ergänzt um Gasdruck, selektive Trennwand, Herauslösen gegenüber Diffusion, homogene/heterogene Gemische, Zutatenlisten und eigene Teilchenzeichnungen. Prüfungsvorbereitung nach dem bereitgestellten Erwartungshorizont mit eigenem 60-Punkte-Training (15 Aufgaben); bisherige 60-Punkte-Vertiefungsprüfung (13 Aufgaben) mit getrenntem Stand erhalten. Freie Texte und Zeichnungen werden mit Kriterien selbst eingeschätzt.
 - **Werte und Normen:** Glück und Lebensgestaltung, Zukunftswünsche, Erfolg und Misserfolg, Verantwortung. 12 Einheiten, 36 Übungen, vier Prüfungsmodule, Gesamtabfrage und eine Probeklausur mit 60 Punkten.
 - **Französisch:** Ausbaustufe 7 mit 42 ausführlichen Lektionen: erste Gespräche, Artikel/Mehrzahl, Vorstellungen, Pronomen/être, Fragen, Herkunft/Wohnort/Klasse, il y a und un/une/des, Vorlieben/Verneinung sowie Laute/Schrift. 294 Lernaufgaben, 42 Merkkarten, neun Modulprüfungen und drei gemischte Checks. Interaktive Artikel-, Pronomen-, Frage-, Steckbrief-, Stadt-, Vorlieben- und Lautwerkstätten. Zusätzliche Gesamtabfrage (24 Aufgaben) und zwei Probeklausuren (je 20 Aufgaben). Klausuren: je 40 automatische Punkte plus bis zu 20 separat selbst eingeschätzte Schreibpunkte; gewichtete Auswahlfelder mit Teilpunkten. Insgesamt 199 Prüfungsaufgaben. Schritt 7: technische Gesamtprüfung abgeschlossen. Kein Vokabeltrainer.
 
@@ -44,3 +44,13 @@ node --test franzoesisch/tests/core.test.cjs
 Die erste Zeile aktualisiert die Offline-Fassung und die automatisch berechneten Versionskennungen der Online-Dateien, damit Browser bei Updates passende Fassungen laden; die zweite prüft Auswertung, Speicherformat und Paket. Die veröffentlichte Webseite selbst benötigt weder Node noch einen Build auf GitHub Pages.
 
 Für schmale Browseransichten: `franzoesisch/tests/viewports.html` über einen lokalen Webserver oder GitHub Pages öffnen. Die Testansicht verwendet den normalen Französisch-Lernstand; Sicherungen vor Testeingaben exportieren.
+
+## Chemie: Prüfungsvorbereitung
+
+`chemie.html#/preparation` führt durch die zehn Lernziele des bereitgestellten Lösungs- und Erwartungshorizonts. Der inhaltliche Abgleich steht in [chemie/ABGLEICH.md](chemie/ABGLEICH.md). Die private PDF wird nicht veröffentlicht.
+
+```sh
+node --test chemie/tests/core.test.cjs
+```
+
+Die eigenständige HTML-Datei enthält auch die neuen Zeichen- und Gaswerkstätten. Bestehende Sicherungen mit Schema 1 bleiben lesbar; das neue Prüfungstraining verwendet einen separaten Datensatz `prepExam`.

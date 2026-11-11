@@ -22,20 +22,21 @@
     "id": "chemie",
     "name": "Chemie",
     "title": "Kleine Teilchen, große Ideen",
-    "text": "Teilchenmodell, Aggregatzustände, Diffusion und Gemische – mit beweglichen Modellen.",
+    "text": "Teilchenmodell, Gasdruck und Gemische – mit Teilchenzeichnungen und Prüfungsvorbereitung.",
     "topics": [
-      "Teilchenmodell",
-      "Aggregatzustände",
-      "Diffusion"
+      "Teilchenmodell & Zeichnen",
+      "Gasdruck & Diffusion",
+      "Gemische & Zutatenlisten"
     ],
     "color": "#596bb5",
     "tint": "#eef0ff",
     "icon": "particles",
     "stats": {
       "chapters": 4,
-      "lessons": 11,
-      "questions": 44
-    }
+      "lessons": 13,
+      "questions": 62
+    },
+    "status": "Mit Prüfungsvorbereitung zum bereitgestellten Erwartungshorizont"
   },
   {
     "id": "werte-und-normen",

@@ -19,8 +19,20 @@
 @media print{.drawing-board{width:160mm;max-width:100%}.trace-alternative,.order-buttons,.question-actions,.score-select{display:none!important}}
 .particle-lab{border:1px solid #d9e1f4;background:#f4f7ff;padding:22px;border-radius:20px;margin:25px 0}.lab-title>span{font-size:.65rem;font-weight:850;letter-spacing:.13em;color:#6976a9}.lab-title h3{font-size:1.25rem;margin:8px 0 16px;color:#435584}.lab-mode{display:flex;gap:7px;margin-bottom:15px;flex-wrap:wrap}.lab-mode button{border:1px solid #cdd8f0;border-radius:11px;padding:9px 16px;background:white;color:#566a9e;font-size:.82rem;font-weight:750}.lab-mode button[aria-pressed=true]{background:#6578c7;color:white;border-color:#6578c7}.particle-canvas{display:block;width:100%;height:auto;border:1px solid #d2dcf1;border-radius:12px;background:white}.lab-description{font-family:system-ui,sans-serif;font-size:.85rem;line-height:1.7;padding:13px 0;color:#4e6087;min-height:55px}.lab-controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.lab-controls>label{display:grid;grid-template-columns:1fr auto;font-size:.75rem;color:#6678a0;gap:3px 10px;flex-basis:100%;margin-bottom:6px}.lab-controls input{grid-column:1;accent-color:#6578c7;width:100%;max-width:320px}.lab-controls output{grid-row:2;grid-column:2;align-self:center}.reading p.lab-note,.lab-note{font-size:.71rem!important;line-height:1.7!important;color:#7b87a2;margin:16px 0 0!important}.chem-diagram{background:#f8faff;border-color:#dfe6f5}.hero h1{font-size:clamp(2rem,3.5vw,3.35rem)}.chapter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-tag.one{left:3%;top:14%}.hero-tag.two{right:0;bottom:10%}
 @media(max-width:580px){.particle-lab{padding:15px 12px}.lab-title h3{font-size:1.1rem}.lab-mode button{padding:8px 12px}.lab-description{font-size:.8rem}.hero h1{font-size:2.35rem}.chapter-grid{grid-template-columns:1fr}.hero-art{height:190px}.lab-controls>.button{flex:1;min-width:100px}}
+
+/* Prüfungsvorbereitung: Zeichenwerkstatt und Gasvergleich. */
+.prep-callout h2{font-size:1.35rem;margin-bottom:12px}.prep-callout p{margin-bottom:16px}.prep-list{padding-left:24px}.prep-list li{padding:14px 0;border-bottom:1px solid var(--line);line-height:1.6}.prep-list .button-row{margin-top:9px}.particle-editor{min-width:0}.drawing-goal{font-size:.85rem;line-height:1.7}.drawing-tools{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0!important}.drawing-tools label{display:flex;align-items:center;gap:7px;padding:7px;border:1px solid var(--line);border-radius:9px;font-size:.8rem}.drawing-tools svg{width:26px;height:26px}.particle-editor-grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:3px;max-width:600px;margin:14px 0;border:2px solid #8796b2;padding:5px;background:#f9fbff}.particle-editor-grid button{border:1px solid #dfe6ef;background:white;aspect-ratio:1;min-width:0;padding:0;border-radius:3px}.particle-editor-grid button:disabled{opacity:1;background:#eef0f5}.particle-editor-grid button svg{width:100%;height:100%;max-height:54px}.compressed-grid button:nth-child(8n+4){border-right:4px solid #485773}.gas-workshop{border:1px solid #d5dcec;border-radius:15px;padding:18px;background:#f6f8ff;margin:20px 0}.gas-controls{display:grid;gap:14px;margin:16px 0}.gas-controls label{display:grid;gap:7px;font-size:.85rem}.gas-controls select{max-width:100%;padding:10px;border:1px solid #aab8d0;border-radius:8px;background:white}.gas-controls input{width:100%}.drawing-count{display:block;color:#4b6186}.particle-editor .written-answer{min-height:100px}.particle-editor svg{max-width:100%}
+@media(max-width:600px){.drawing-tools label{font-size:.75rem;padding:5px}.particle-editor-grid{gap:2px;padding:3px}.question-card{min-width:0}.gas-workshop{padding:12px}.prep-list{padding-left:18px}}
+@media print{.drawing-tools,.particle-editor-grid+button,.gas-controls{display:none!important}.particle-editor-grid{max-width:420px;break-inside:avoid}.particle-editor-grid button{print-color-adjust:exact}.prep-callout{break-inside:avoid}}
+
 </style>
-<style>.portal-link{display:inline-flex;align-items:center;color:#59645e;font:700 12px/1.3 system-ui,sans-serif;text-decoration:none;padding:8px 10px;border:1px solid #dce2d9;border-radius:10px;background:white;white-space:nowrap}.portal-link:hover{background:#f5f7ef}.portal-link:focus-visible{outline:3px solid #c38930;outline-offset:3px}@media(max-width:580px){.top-actions .save-status{display:none}.portal-link{font-size:11px;padding:7px 8px}.top-actions{gap:8px}}@media print{.portal-link{display:none}}</style></head>
+<style>.portal-link{display:inline-flex;align-items:center;color:#59645e;font:700 12px/1.3 system-ui,sans-serif;text-decoration:none;padding:8px 10px;border:1px solid #dce2d9;border-radius:10px;background:white;white-space:nowrap}.portal-link:hover{background:#f5f7ef}.portal-link:focus-visible{outline:3px solid #c38930;outline-offset:3px}@media(max-width:580px){.top-actions .save-status{display:none}.portal-link{font-size:11px;padding:7px 8px}.top-actions{gap:8px}}@media print{.portal-link{display:none}}
+/* Prüfungsvorbereitung: Zeichenwerkstatt und Gasvergleich. */
+.prep-callout h2{font-size:1.35rem;margin-bottom:12px}.prep-callout p{margin-bottom:16px}.prep-list{padding-left:24px}.prep-list li{padding:14px 0;border-bottom:1px solid var(--line);line-height:1.6}.prep-list .button-row{margin-top:9px}.particle-editor{min-width:0}.drawing-goal{font-size:.85rem;line-height:1.7}.drawing-tools{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0!important}.drawing-tools label{display:flex;align-items:center;gap:7px;padding:7px;border:1px solid var(--line);border-radius:9px;font-size:.8rem}.drawing-tools svg{width:26px;height:26px}.particle-editor-grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:3px;max-width:600px;margin:14px 0;border:2px solid #8796b2;padding:5px;background:#f9fbff}.particle-editor-grid button{border:1px solid #dfe6ef;background:white;aspect-ratio:1;min-width:0;padding:0;border-radius:3px}.particle-editor-grid button:disabled{opacity:1;background:#eef0f5}.particle-editor-grid button svg{width:100%;height:100%;max-height:54px}.compressed-grid button:nth-child(8n+4){border-right:4px solid #485773}.gas-workshop{border:1px solid #d5dcec;border-radius:15px;padding:18px;background:#f6f8ff;margin:20px 0}.gas-controls{display:grid;gap:14px;margin:16px 0}.gas-controls label{display:grid;gap:7px;font-size:.85rem}.gas-controls select{max-width:100%;padding:10px;border:1px solid #aab8d0;border-radius:8px;background:white}.gas-controls input{width:100%}.drawing-count{display:block;color:#4b6186}.particle-editor .written-answer{min-height:100px}.particle-editor svg{max-width:100%}
+@media(max-width:600px){.drawing-tools label{font-size:.75rem;padding:5px}.particle-editor-grid{gap:2px;padding:3px}.question-card{min-width:0}.gas-workshop{padding:12px}.prep-list{padding-left:18px}}
+@media print{.drawing-tools,.particle-editor-grid+button,.gas-controls{display:none!important}.particle-editor-grid{max-width:420px;break-inside:avoid}.particle-editor-grid button{print-color-adjust:exact}.prep-callout{break-inside:avoid}}
+
+</style></head>
 <body>
 <a class="skip" href="#main">Direkt zum Inhalt</a>
 <header class="topbar">
@@ -179,6 +191,42 @@ const chapters=[
             "answer": 0,
             "explain": "Luft ist selbst ein Stoffgemisch aus Teilchen. Man darf sie nicht automatisch als Füllung aller Modellzwischenräume ergänzen.",
             "points": 1
+          },
+          {
+            "id": "k45",
+            "type": "match",
+            "points": 4,
+            "prompt": "Beobachtung (B) oder Erklärung mit dem Modell (E)?",
+            "labels": [
+              "Das Kandisstück wird sichtbar kleiner.",
+              "Zuckerteilchen verlassen den Verband.",
+              "Eine Färbung ist nach zwei Minuten weiter ausgebreitet.",
+              "Die Teilchen bewegen sich im Mittel schneller."
+            ],
+            "options": [
+              "B: Beobachtung",
+              "E: Modellerklärung"
+            ],
+            "answer": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "explain": "Beobachtungen beschreiben Sichtbares oder Messbares. Aussagen über einzelne Teilchen sind hier Modellerklärungen."
+          },
+          {
+            "id": "k46",
+            "type": "written",
+            "points": 4,
+            "prompt": "Eine feine Trennwand hält im Modell große Dreiecke zurück, kleine Kreise können sie passieren. Erkläre die Darstellung und nenne eine Grenze.",
+            "model": "Kreise und Dreiecke stehen mit einer Legende für zwei Teilchenarten. Die kleinen Zeichen passen durch die Modellöffnungen. Die Zeichnung ist kein Foto; Farben, Formen und Größenverhältnisse sind frei gewählte Modellzeichen.",
+            "rubric": [
+              "Zwei Teilchenarten und Legende genannt (1 P.).",
+              "Größenunterschied erklärt Durchtritt beziehungsweise Rückhalten (1 P.).",
+              "Beobachtung und Modellerklärung unterschieden (1 P.).",
+              "Eine Modellgrenze genannt (1 P.)."
+            ]
           }
         ]
       }
@@ -340,6 +388,71 @@ const chapters=[
         ]
       },
       {
+        "id": "gase-druck",
+        "page": "gase-druck",
+        "title": "Gas zusammendrücken und erwärmen",
+        "time": 15,
+        "questions": [
+          {
+            "id": "k55",
+            "type": "drawing",
+            "points": 4,
+            "prompt": "Zeichne das Gas nach dem Zusammendrücken: genau 10 gleich große Zeichen im kleinen Gasraum. Begründe die veränderten Abstände.",
+            "modelKind": "compressed",
+            "expected": 10,
+            "legend": [
+              "Gasteilchen"
+            ],
+            "model": "Es bleiben zehn gleich große Teilchen. Sie sind nur im kleineren Gasraum links vom Kolben verteilt. Ihre mittleren Abstände sind kleiner. Es verschwinden keine Teilchen.",
+            "rubric": [
+              "Genau 10 gleich große Zeichen (1 P.).",
+              "Alle Zeichen im kleineren Gasraum links vom Kolben (1 P.).",
+              "Kleinere mittlere Abstände erklärt (1 P.).",
+              "Anzahl und Zeichengröße als unverändert beschrieben (1 P.)."
+            ]
+          },
+          {
+            "id": "k56",
+            "type": "written",
+            "points": 6,
+            "prompt": "Vergleiche das Erwärmen eines Gases im nachgiebigen Behälter und im starren geschlossenen Gefäß. Erkläre den Druck.",
+            "model": "Im nachgiebigen Behälter kann das Gas mehr Raum einnehmen; die mittleren Abstände werden größer. Im starren Gefäß bleiben Volumen und mittlere Teilchendichte bei gleicher Teilchenzahl unverändert. Die Teilchen bewegen sich im Mittel schneller und stoßen häufiger und heftiger gegen die Wand. Dadurch steigt der Druck. Druck ist Kraft pro Fläche. Teilchenzahl, -art und -größe bleiben gleich.",
+            "rubric": [
+              "Nachgiebiger Behälter: Volumenzunahme und größere mittlere Abstände (2 P.).",
+              "Starres Gefäß: Volumen bleibt gleich (1 P.).",
+              "Schnellere Bewegung und häufigere/heftigere Wandstöße (2 P.).",
+              "Druckanstieg und Kraft pro Fläche erklärt (1 P.)."
+            ]
+          },
+          {
+            "id": "k57",
+            "type": "choice",
+            "points": 1,
+            "prompt": "Ein Eisenstab dehnt sich beim gewöhnlichen Erwärmen etwas aus. Was passt zum einfachen Modell?",
+            "options": [
+              "Die Eisenteilchen selbst werden größer.",
+              "Es entstehen zusätzliche Eisenteilchen.",
+              "Die Teilchen schwingen stärker; ihre mittleren Abstände werden größer."
+            ],
+            "answer": 2,
+            "explain": "Bei der üblichen Wärmeausdehnung eines Feststoffs ändern sich die mittleren Abstände. Die Teilchen selbst werden im Modell nicht größer."
+          },
+          {
+            "id": "k58",
+            "type": "written",
+            "points": 4,
+            "prompt": "Warum kannst du eine verschlossene Spritze mit Luft deutlich stärker zusammendrücken als eine mit Wasser? Was befindet sich zwischen den Teilchen?",
+            "model": "Im Gas sind die mittleren Abstände groß und lassen sich deutlich verkleinern. Wasserteilchen sind bereits dicht beieinander; ihre Abstände können nur wenig kleiner werden. Zwischen Teilchen liegt im einfachen Modell leerer Raum, keine Luft als Füllstoff.",
+            "rubric": [
+              "Große Abstände im Gas (1 P.).",
+              "Verkleinerung der Gasabstände (1 P.).",
+              "Bereits kleine Abstände im Wasser (1 P.).",
+              "Leerer Raum statt Luft als Füllstoff (1 P.)."
+            ]
+          }
+        ]
+      },
+      {
         "id": "uebergaenge",
         "title": "Schmelzen, Verdampfen und zurück",
         "page": "uebergaenge",
@@ -413,6 +526,65 @@ const chapters=[
             "answer": 0,
             "explain": "Wasserdampf als Gas ist unsichtbar. Die sichtbare Wolke entsteht aus fein verteilten Tröpfchen nach Kondensation.",
             "points": 1
+          }
+        ]
+      },
+      {
+        "id": "teilchenbilder",
+        "page": "teilchenbilder",
+        "title": "Teilchenbilder selbst zeichnen",
+        "time": 15,
+        "questions": [
+          {
+            "id": "k52",
+            "type": "drawing",
+            "points": 3,
+            "prompt": "Zeichne den Zustand Feststoff: Setze genau 12 gleich große Zeichen einer Teilchenart. Ergänze unter dem Bild, wie sie sich bewegen.",
+            "modelKind": "solid",
+            "expected": 12,
+            "legend": [
+              "Teilchen desselben Stoffs"
+            ],
+            "model": "Stark zusammenhängende, dicht und regelmäßig angeordnete Zeichen. Teilchen schwingen am Platz; sie sind nicht völlig unbeweglich.",
+            "rubric": [
+              "Genau 12 gleich große Zeichen einer Teilchenart (1 P.).",
+              "Stark zusammenhängende, dicht und regelmäßig angeordnete Zeichen. (1 P.).",
+              "Teilchen schwingen am Platz; sie sind nicht völlig unbeweglich. (1 P.)."
+            ]
+          },
+          {
+            "id": "k53",
+            "type": "drawing",
+            "points": 3,
+            "prompt": "Zeichne den Zustand Flüssigkeit: Setze genau 12 gleich große Zeichen einer Teilchenart. Ergänze unter dem Bild, wie sie sich bewegen.",
+            "modelKind": "liquid",
+            "expected": 12,
+            "legend": [
+              "Teilchen desselben Stoffs"
+            ],
+            "model": "Dicht und ungeordnet angeordnete Zeichen. Teilchen wechseln Plätze und bewegen sich aneinander vorbei.",
+            "rubric": [
+              "Genau 12 gleich große Zeichen einer Teilchenart (1 P.).",
+              "Dicht und ungeordnet angeordnete Zeichen. (1 P.).",
+              "Teilchen wechseln Plätze und bewegen sich aneinander vorbei. (1 P.)."
+            ]
+          },
+          {
+            "id": "k54",
+            "type": "drawing",
+            "points": 3,
+            "prompt": "Zeichne den Zustand Gas: Setze genau 12 gleich große Zeichen einer Teilchenart. Ergänze unter dem Bild, wie sie sich bewegen.",
+            "modelKind": "gas",
+            "expected": 12,
+            "legend": [
+              "Teilchen desselben Stoffs"
+            ],
+            "model": "Weit im verfügbaren Raum verteilte Zeichen. Freie ungeordnete Bewegung im verfügbaren Raum.",
+            "rubric": [
+              "Genau 12 gleich große Zeichen einer Teilchenart (1 P.).",
+              "Weit im verfügbaren Raum verteilte Zeichen. (1 P.).",
+              "Freie ungeordnete Bewegung im verfügbaren Raum. (1 P.)."
+            ]
           }
         ]
       }
@@ -623,6 +795,32 @@ const chapters=[
             "answer": 0,
             "explain": "Temperaturunterschiede können in echtem Wasser auch Strömungen erzeugen. Ein einfacher Versuch trennt die Ursachen nicht automatisch.",
             "points": 1
+          },
+          {
+            "id": "k50",
+            "type": "choice",
+            "points": 1,
+            "prompt": "Ein schon gelöster Farbstoff verteilt sich bei höherer Temperatur schneller. Welche Behauptung ist damit noch nicht belegt?",
+            "options": [
+              "Die Temperatur war unterschiedlich.",
+              "Die Färbung war nach zwei Minuten unterschiedlich weit ausgebreitet.",
+              "Von jedem Stoff lässt sich bei Wärme grundsätzlich mehr lösen."
+            ],
+            "answer": 2,
+            "explain": "Verteilungsgeschwindigkeit und maximal lösbare Menge sind unterschiedliche Größen. Aus einem Stoff folgt keine Regel für alle Stoffe."
+          },
+          {
+            "id": "k51",
+            "type": "written",
+            "points": 4,
+            "prompt": "Bewerte: „Das warme Glas wird schneller gleichmäßig farbig. Damit ist bewiesen, dass sich von jedem Stoff bei Wärme mehr löst.“",
+            "model": "Die Schlussfolgerung ist nicht belegt. Der Farbstoff war bereits gelöst; untersucht wurde seine Verteilung. Die maximal lösbare Menge wurde nicht gemessen. Die Aussage gilt auch nicht automatisch für alle Stoffe, und Strömungen können die Ausbreitung beeinflussen.",
+            "rubric": [
+              "Verteilung bereits gelöster Teilchen erkannt (1 P.).",
+              "Maximal lösbare Menge nicht untersucht (1 P.).",
+              "Unzulässige Verallgemeinerung auf alle Stoffe erkannt (1 P.).",
+              "Zusätzlichen Einfluss von Strömungen genannt (1 P.)."
+            ]
           }
         ]
       }
@@ -692,6 +890,54 @@ const chapters=[
             "answer": 0,
             "explain": "Rühren fördert den Stofftransport. Es ist eine zusätzliche Durchmischung und nicht mit reiner Diffusion gleichzusetzen.",
             "points": 1
+          },
+          {
+            "id": "k47",
+            "type": "match",
+            "points": 3,
+            "prompt": "Welcher Vorgang ist jeweils gemeint?",
+            "labels": [
+              "Teilchen verlassen das feste Kandisstück.",
+              "Bereits gelöste Zuckerteilchen verteilen sich durch Eigenbewegung.",
+              "Eis geht ohne Lösungsmittel in flüssiges Wasser über."
+            ],
+            "options": [
+              "Herauslösen",
+              "Diffusion",
+              "Schmelzen"
+            ],
+            "answer": [
+              0,
+              1,
+              2
+            ],
+            "explain": "Herauslösen und Diffusion können sich zeitlich überlappen; Schmelzen ist ein Zustandswechsel."
+          },
+          {
+            "id": "k48",
+            "type": "written",
+            "points": 6,
+            "prompt": "Erkläre in drei Sätzen: Was beobachtest du beim Kandis? Was bedeutet Herauslösen? Was bedeutet Diffusion?",
+            "model": "Das Kandisstück wird kleiner und ist später nicht mehr sichtbar. Zuckerteilchen verlassen den Verband und werden von Wasserteilchen umgeben. Bereits gelöste Teilchen verteilen sich durch ständige ungeordnete Eigenbewegung; das heißt Diffusion. Die Teilchen bleiben dabei erhalten.",
+            "rubric": [
+              "Sichtbare Beobachtung beschrieben (1 P.).",
+              "Verlassen des festen Verbands und Umgeben durch Wasserteilchen erklärt (2 P.).",
+              "Diffusion als Verteilung durch ungeordnete Eigenbewegung erklärt (2 P.).",
+              "Erhaltung der Zuckerteilchen genannt (1 P.)."
+            ]
+          },
+          {
+            "id": "k49",
+            "type": "choice",
+            "points": 1,
+            "prompt": "Welche Aussage trennt Lösen und Schmelzen richtig?",
+            "options": [
+              "Zucker schmilzt beim Einrühren in kaltes Wasser.",
+              "Beim Lösen entsteht eine Mischung; Schmelzen braucht kein Lösungsmittel.",
+              "Beim Lösen werden Zuckerteilchen zu Wasserteilchen."
+            ],
+            "answer": 1,
+            "explain": "Zucker und Wasser bleiben beim Lösen als Bestandteile der Mischung vorhanden. Schmelzen bedeutet fest → flüssig."
           }
         ]
       },
@@ -766,6 +1012,79 @@ const chapters=[
             "rubric": [
               "Farben sind Modellzeichen (1 P.).",
               "Keine direkte Übertragung auf sichtbare Stofffarbe (1 P.)."
+            ]
+          },
+          {
+            "id": "k59",
+            "type": "match",
+            "points": 6,
+            "prompt": "R = Reinstoff, H = homogenes Gemisch, G = heterogenes Gemisch. Ordne die genau beschriebenen Proben zu.",
+            "labels": [
+              "Reiner Zucker",
+              "Reiner Sauerstoff",
+              "Luft ohne Staub und Tröpfchen",
+              "Müsli mit Flocken und Rosinen",
+              "Klares Meerwasser ohne Schwebstoffe",
+              "Vollständig gelöster Zucker in Wasser"
+            ],
+            "options": [
+              "R",
+              "H",
+              "G"
+            ],
+            "answer": [
+              0,
+              0,
+              1,
+              2,
+              1,
+              1
+            ],
+            "explain": "R: ein Stoff. H: mehrere Stoffe, einheitlich. G: unterscheidbare Bestandteile oder Bereiche."
+          },
+          {
+            "id": "k60",
+            "type": "choice",
+            "points": 1,
+            "prompt": "Zutaten: Wasser, Zucker, gelöste Zitronensäure. Das Getränk ist klar, ohne Blasen und Schwebstoffe. Wie ordnest du es ein?",
+            "options": [
+              "Reinstoff, weil es überall gleich aussieht.",
+              "Homogenes Gemisch, weil mehrere Stoffe einheitlich vermischt sind.",
+              "Heterogenes Gemisch, weil drei Zutaten genannt sind."
+            ],
+            "answer": 1,
+            "explain": "Mehrere Stoffe bedeuten Gemisch. Die beschriebene Probe ist einheitlich; deshalb homogen."
+          },
+          {
+            "id": "k61",
+            "type": "written",
+            "points": 4,
+            "prompt": "Auf der Packung steht „Salz“. Die Zutatenliste nennt Kochsalz und einen weiteren Stoff. Ist die Probe ein Reinstoff? Begründe.",
+            "model": "Die Probe ist ein Gemisch, weil sie Kochsalz und mindestens einen weiteren Stoff enthält. Reines Kochsalz wäre ein Reinstoff. Aus dem Produktnamen allein kann man die Reinheit nicht ableiten.",
+            "rubric": [
+              "Mehrere Stoffe erkannt (1 P.).",
+              "Gemisch begründet (1 P.).",
+              "Reines Kochsalz als Reinstoff unterschieden (1 P.).",
+              "Produktname allein genügt nicht (1 P.)."
+            ]
+          },
+          {
+            "id": "k62",
+            "type": "drawing",
+            "points": 4,
+            "prompt": "Zeichne eine homogene Mischung mit genau 6 Kreisen und 6 Dreiecken. Ergänze die Bedeutung der Zeichen und begründe ihre Verteilung.",
+            "modelKind": "homogeneous",
+            "expected": 12,
+            "legend": [
+              "Teilchenart A",
+              "Teilchenart B"
+            ],
+            "model": "Zwei unterscheidbare Teilchenarten werden mit Legende in einem einheitlichen Bereich durchmischt. Es gibt keine getrennten Schichten. Sechs Kreise und sechs Dreiecke sind eine Modellvorgabe, keine allgemeine Zusammensetzung aller Gemische.",
+            "rubric": [
+              "6 Kreise und 6 Dreiecke, gleich große Zeichen je Art (1 P.).",
+              "Beide Teilchenarten mit Legende beschrieben (1 P.).",
+              "Durchmischt in einem einheitlichen Bereich (1 P.).",
+              "Keine getrennten Bereiche; passende Begründung (1 P.)."
             ]
           }
         ]
@@ -1158,14 +1477,301 @@ const glossary=[
   [
     "Chromatografie",
     "Trennverfahren, das unter anderem unterschiedliches Mitwandern und Haften nutzt."
+  ],
+  [
+    "Herauslösen",
+    "Teilchen verlassen beim Lösen den festen Verband und werden vom Lösungsmittel umgeben."
+  ],
+  [
+    "Homogenes Gemisch",
+    "Mehrere Stoffe, die auf Stoffebene einheitlich erscheinen."
+  ],
+  [
+    "Heterogenes Gemisch",
+    "Gemisch mit unterscheidbaren Bestandteilen oder Bereichen."
+  ],
+  [
+    "Komprimieren",
+    "Zusammendrücken: bei einem Gas werden vor allem die mittleren Teilchenabstände kleiner."
+  ],
+  [
+    "Druck",
+    "Kraft pro Fläche; beim Gas üben Wandstöße der Teilchen Kräfte aus."
+  ],
+  [
+    "Legende",
+    "Erklärt, wofür die Zeichen einer Modellzeichnung stehen."
   ]
+];
+const prepExam=[
+  {
+    "id": "ep01",
+    "type": "match",
+    "points": 4,
+    "prompt": "Beobachtung oder Modellerklärung?",
+    "labels": [
+      "Das Kandisstück ist kleiner geworden.",
+      "Teilchen verlassen den festen Verband.",
+      "Der Farbstoff ist weiter ausgebreitet.",
+      "Zwischen den Teilchen liegt leerer Raum."
+    ],
+    "options": [
+      "Beobachtung",
+      "Modellerklärung"
+    ],
+    "answer": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "explain": "Beobachtungen beschreiben sichtbare oder messbare Eigenschaften; die anderen Sätze erklären mit dem Modell."
+  },
+  {
+    "id": "ep02",
+    "type": "written",
+    "points": 4,
+    "prompt": "Erkläre, warum kleine Modellteilchen eine fein gezeichnete Trennwand passieren können, große aber nicht. Nenne zwei Grenzen dieser Darstellung.",
+    "model": "Die Öffnungen sind für die kleinen Zeichen groß genug, für die großen nicht. Das ist eine Modellvorstellung. Der Versuch liefert keine Fotos einzelner Teilchen. Farben und Zeichenformen sind frei gewählt und die Größenverhältnisse nicht maßstabsgetreu.",
+    "rubric": [
+      "Durchtritt kleiner und Rückhalten großer Zeichen erklärt (2 P.).",
+      "Zwei passende Grenzen genannt (je 1 P.)."
+    ]
+  },
+  {
+    "id": "ep03",
+    "type": "written",
+    "points": 6,
+    "prompt": "Kandis löst sich in Wasser. Trenne Beobachtung, Herauslösen und Diffusion. Erkläre, warum Zucker nicht verschwindet und warum das kein Schmelzen ist.",
+    "model": "Das Stück wird kleiner und später unsichtbar. Zuckerteilchen verlassen den festen Verband und werden von Wasserteilchen umgeben. Bereits gelöste Teilchen verteilen sich durch ständige ungeordnete Eigenbewegung: Diffusion. Sie bleiben zwischen den Wasserteilchen erhalten. Lösen ergibt eine Mischung aus Zucker und Wasser; Schmelzen ist fest → flüssig ohne benötigtes Lösungsmittel.",
+    "rubric": [
+      "Beobachtung ohne Modellteilchen beschrieben (1 P.).",
+      "Herauslösen und Umgeben durch Wasserteilchen erklärt (1 P.).",
+      "Diffusion durch ungeordnete Eigenbewegung erklärt (1 P.).",
+      "Erhaltung und Ort der Zuckerteilchen genannt (1 P.).",
+      "Lösen als Mischung erkannt (1 P.).",
+      "Schmelzen als Zustandswechsel ohne nötiges Lösungsmittel abgegrenzt (1 P.)."
+    ]
+  },
+  {
+    "id": "ep04",
+    "type": "drawing",
+    "points": 2,
+    "prompt": "Zeichne Feststoff mit genau 12 gleich großen Teilchenzeichen. Beschreibe Anordnung, Abstand und Bewegung.",
+    "modelKind": "solid",
+    "expected": 12,
+    "legend": [
+      "Teilchen desselben Stoffs"
+    ],
+    "model": "Stark zusammenhängende, dicht und regelmäßig angeordnete Zeichen. Teilchen schwingen am Platz; sie sind nicht völlig unbeweglich.",
+    "rubric": [
+      "12 gleich große Zeichen, passende Anordnung und Abstände (1 P.).",
+      "Passende Bewegung beschrieben (1 P.)."
+    ]
+  },
+  {
+    "id": "ep05",
+    "type": "drawing",
+    "points": 2,
+    "prompt": "Zeichne Flüssigkeit mit genau 12 gleich großen Teilchenzeichen. Beschreibe Anordnung, Abstand und Bewegung.",
+    "modelKind": "liquid",
+    "expected": 12,
+    "legend": [
+      "Teilchen desselben Stoffs"
+    ],
+    "model": "Dicht und ungeordnet angeordnete Zeichen. Teilchen wechseln Plätze und bewegen sich aneinander vorbei.",
+    "rubric": [
+      "12 gleich große Zeichen, passende Anordnung und Abstände (1 P.).",
+      "Passende Bewegung beschrieben (1 P.)."
+    ]
+  },
+  {
+    "id": "ep06",
+    "type": "drawing",
+    "points": 2,
+    "prompt": "Zeichne Gas mit genau 12 gleich großen Teilchenzeichen. Beschreibe Anordnung, Abstand und Bewegung.",
+    "modelKind": "gas",
+    "expected": 12,
+    "legend": [
+      "Teilchen desselben Stoffs"
+    ],
+    "model": "Weit im verfügbaren Raum verteilte Zeichen. Freie ungeordnete Bewegung im verfügbaren Raum.",
+    "rubric": [
+      "12 gleich große Zeichen, passende Anordnung und Abstände (1 P.).",
+      "Passende Bewegung beschrieben (1 P.)."
+    ]
+  },
+  {
+    "id": "ep07",
+    "type": "match",
+    "points": 6,
+    "prompt": "Ordne die sechs Zustandsänderungen zu.",
+    "labels": [
+      "Fest → flüssig",
+      "Flüssig → fest",
+      "Flüssig → gasförmig",
+      "Gasförmig → flüssig",
+      "Fest → gasförmig",
+      "Gasförmig → fest"
+    ],
+    "options": [
+      "Schmelzen",
+      "Erstarren",
+      "Verdampfen",
+      "Kondensieren",
+      "Sublimieren",
+      "Resublimieren"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "explain": "Verdunsten gehört ebenfalls zum Übergang flüssig → gasförmig."
+  },
+  {
+    "id": "ep08",
+    "type": "choice",
+    "points": 2,
+    "prompt": "Ein fairer Vergleich untersucht nur den Einfluss der Temperatur auf die Verteilung eines schon gelösten Farbstoffs. Was wird gezielt verändert?",
+    "options": [
+      "Temperatur; die anderen Bedingungen bleiben vergleichbar.",
+      "Temperatur und Farbstoffmenge zugleich.",
+      "Wassermenge und Gefäßform zugleich."
+    ],
+    "answer": 0,
+    "explain": "Nur die Temperatur wird gezielt verändert. Art und Mengen, Gefäße, Anfangsverteilung, Zeit und Rühren bleiben vergleichbar."
+  },
+  {
+    "id": "ep09",
+    "type": "written",
+    "points": 5,
+    "prompt": "Nach zwei Minuten ist der bereits gelöste Farbstoff im wärmeren Glas weiter verteilt. Erkläre die Erwartung, nenne zwei gleich zu haltende Bedingungen und bewerte: „Wärme macht von jedem Stoff mehr löslich.“",
+    "model": "Bei höherer Temperatur bewegen sich Teilchen im Mittel schneller, sodass ihre Verteilung begünstigt wird. Gleich bleiben zum Beispiel Wassermenge und Farbstoffmenge; auch Gefäß, Anfangsverteilung, Zeit und Nicht-Rühren sind wichtig. Eine größere maximal lösbare Menge wurde nicht untersucht. Der Schluss für alle Stoffe ist nicht belegt; Strömungen können die Ausbreitung zusätzlich beeinflussen.",
+    "rubric": [
+      "Schnellere Bewegung und Verteilung verbunden (1 P.).",
+      "Zwei passende Kontrollbedingungen genannt (je 1 P.).",
+      "Löslichkeit nicht aus Verteilungsgeschwindigkeit abgeleitet (1 P.).",
+      "Verallgemeinerung zurückgewiesen und Strömung als Einfluss erkannt (1 P.)."
+    ]
+  },
+  {
+    "id": "ep10",
+    "type": "drawing",
+    "points": 4,
+    "prompt": "Zeichne das Gas nach dem Zusammendrücken: genau 10 gleich große Zeichen im kleinen Gasraum. Begründe die veränderten Abstände.",
+    "modelKind": "compressed",
+    "expected": 10,
+    "legend": [
+      "Gasteilchen"
+    ],
+    "model": "Es bleiben zehn gleich große Teilchen. Sie sind nur im kleineren Gasraum links vom Kolben verteilt. Ihre mittleren Abstände sind kleiner. Es verschwinden keine Teilchen.",
+    "rubric": [
+      "Genau 10 gleich große Zeichen (1 P.).",
+      "Alle Zeichen im kleineren Gasraum links vom Kolben (1 P.).",
+      "Kleinere mittlere Abstände erklärt (1 P.).",
+      "Anzahl und Zeichengröße als unverändert beschrieben (1 P.)."
+    ]
+  },
+  {
+    "id": "ep11",
+    "type": "written",
+    "points": 7,
+    "prompt": "Vergleiche Gas und Wasser beim Zusammendrücken. Erkläre das Erwärmen eines Gases im nachgiebigen und im starren geschlossenen Behälter sowie die gewöhnliche Ausdehnung eines Eisenstabs.",
+    "model": "Gasabstände sind groß und lassen sich verkleinern; Wasserteilchen liegen bereits dicht beieinander. Im nachgiebigen Behälter kann das erwärmte Gas mehr Raum einnehmen und größere mittlere Abstände bekommen. Im starren Gefäß bleibt das Volumen gleich. Schnellere Teilchen stoßen häufiger und heftiger gegen die Wand: Der Druck, Kraft pro Fläche, steigt. Im Eisenstab schwingen die Teilchen stärker; die mittleren Abstände wachsen bei üblicher Wärmeausdehnung. Anzahl, Art und Größe der Teilchen bleiben erhalten.",
+    "rubric": [
+      "Gas und Wasser über ihre Abstände verglichen (1 P.).",
+      "Nachgiebiger Behälter: größere Abstände bei Ausdehnung (1 P.).",
+      "Starres Gefäß: Volumen unverändert (1 P.).",
+      "Schnellere Bewegung, Wandstöße und steigender Druck verbunden (1 P.).",
+      "Druck als Kraft pro Fläche erklärt (1 P.).",
+      "Eisen: stärkeres Schwingen und größere mittlere Abstände (1 P.).",
+      "Anzahl, Art und Teilchengröße bleiben gleich (1 P.)."
+    ]
+  },
+  {
+    "id": "ep12",
+    "type": "match",
+    "points": 6,
+    "prompt": "R = Reinstoff, H = homogenes Gemisch, G = heterogenes Gemisch. Ordne die genau beschriebenen Proben zu.",
+    "labels": [
+      "Reiner Zucker",
+      "Reiner Sauerstoff",
+      "Luft ohne Staub und Tröpfchen",
+      "Müsli mit Flocken und Rosinen",
+      "Klares Meerwasser ohne Schwebstoffe",
+      "Vollständig gelöster Zucker in Wasser"
+    ],
+    "options": [
+      "R",
+      "H",
+      "G"
+    ],
+    "answer": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      1
+    ],
+    "explain": "R: ein Stoff. H: mehrere Stoffe, einheitlich. G: unterscheidbare Bestandteile oder Bereiche."
+  },
+  {
+    "id": "ep13",
+    "type": "choice",
+    "points": 2,
+    "prompt": "Ein klares Getränk ohne Blasen oder Schwebstoffe enthält laut Zutatenliste Wasser, Zucker und gelöste Säure. Welche Einordnung ist begründet?",
+    "options": [
+      "Reinstoff, weil die Probe klar ist.",
+      "Homogenes Gemisch, weil mehrere Stoffe einheitlich vermischt sind.",
+      "Reinstoff, weil es nur eine Flüssigkeit ist."
+    ],
+    "answer": 1,
+    "explain": "Mehrere Stoffe ergeben ein Gemisch. Ein einheitliches Aussehen beweist keine Reinheit."
+  },
+  {
+    "id": "ep14",
+    "type": "drawing",
+    "points": 4,
+    "prompt": "Zeichne eine homogene Mischung mit genau 6 Kreisen und 6 Dreiecken. Ergänze die Bedeutung der Zeichen und begründe ihre Verteilung.",
+    "modelKind": "homogeneous",
+    "expected": 12,
+    "legend": [
+      "Teilchenart A",
+      "Teilchenart B"
+    ],
+    "model": "Zwei unterscheidbare Teilchenarten werden mit Legende in einem einheitlichen Bereich durchmischt. Es gibt keine getrennten Schichten. Sechs Kreise und sechs Dreiecke sind eine Modellvorgabe, keine allgemeine Zusammensetzung aller Gemische.",
+    "rubric": [
+      "6 Kreise und 6 Dreiecke, gleich große Zeichen je Art (1 P.).",
+      "Beide Teilchenarten mit Legende beschrieben (1 P.).",
+      "Durchmischt in einem einheitlichen Bereich (1 P.).",
+      "Keine getrennten Bereiche; passende Begründung (1 P.)."
+    ]
+  },
+  {
+    "id": "ep15",
+    "type": "written",
+    "points": 4,
+    "prompt": "Verbessere beide Behauptungen: „Duftteilchen wissen, wo sie hinmüssen. Wenn sie gleichmäßig verteilt sind, hören sie auf, sich zu bewegen.“ Nenne außerdem einen weiteren Transportmechanismus im Zimmer.",
+    "model": "Die Teilchen bewegen sich ständig ungeordnet und haben kein Ziel. Auch bei gleichmäßiger Verteilung setzt sich ihre Bewegung fort. Luftströmungen durch Fenster oder Ventilator können Duft zusätzlich transportieren. Diffusion und Strömung sind verschiedene Vorgänge.",
+    "rubric": [
+      "Ungeordnete Bewegung ohne Ziel (1 P.).",
+      "Bewegung auch nach Durchmischung (1 P.).",
+      "Beispiel für Luftströmung genannt (1 P.).",
+      "Strömung von Diffusion unterschieden (1 P.)."
+    ]
+  }
 ];
 const experiment={};
 const allLessons=chapters.flatMap(c=>c.lessons.map(l=>({...l,chapter:c.id})));
 
 const SCHEMA=1, STORAGE_KEY='chemie-entdecker-teilchenmodell-v1';
-const isSelfAssessed=q=>q.type==='written';
-const fresh=()=>({version:SCHEMA,subject:'chemie-teilchenmodell',answers:{},read:[],lastLesson:null,exam:{answers:{},started:null,finished:false},updated:null});
+const isSelfAssessed=q=>q.type==='written'||q.type==='drawing';
+const fresh=()=>({version:SCHEMA,subject:'chemie-teilchenmodell',answers:{},read:[],lastLesson:null,exam:{answers:{},started:null,finished:false},prepExam:{answers:{},started:null,finished:false},updated:null});
 function cleanTrace(value){
  const v=value&&typeof value==='object'?value:{};
  const strokes=Array.isArray(v.strokes)?v.strokes.slice(0,40).map(s=>Array.isArray(s)?s.slice(0,1200).filter(p=>Array.isArray(p)&&p.length===2&&p.every(Number.isFinite)&&p[0]>=0&&p[0]<=720&&p[1]>=0&&p[1]<=450).map(p=>[p[0],p[1]]):[]).filter(s=>s.length>=2):[];
@@ -1179,6 +1785,7 @@ function validateState(s,questions,lessons){
   const out={};if(!src||typeof src!=='object'||Array.isArray(src))return out;
   for(const q of qs){const a=src[q.id];if(!a||typeof a!=='object')continue;const x={};
    if(q.type==='written'){if(typeof a.value==='string')x.value=a.value.slice(0,12000);}
+   else if(q.type==='drawing')x.value=cleanDrawing(a.value,q);
    else if(q.type==='trace')x.value=cleanTrace(a.value);
    else if(q.type==='choice'){if(Number.isInteger(a.value)&&a.value>=0&&a.value<q.options.length)x.value=a.value;}
    else if(q.type==='match'||q.type==='label'){if(Array.isArray(a.value)&&a.value.length===q.labels.length)x.value=a.value.map(v=>Number.isInteger(v)&&v>=0&&v<q.options.length?v:null);}
@@ -1191,7 +1798,7 @@ function validateState(s,questions,lessons){
  result.answers=cleanAnswers(s.answers,questions.filter(q=>!q.id.startsWith('e')));
  result.read=Array.isArray(s.read)?[...new Set(s.read.filter(id=>lessons.some(l=>l.id===id)))]:[];
  result.lastLesson=lessons.some(l=>l.id===s.lastLesson)?s.lastLesson:null;
- const ex=s.exam||{};result.exam={answers:cleanAnswers(ex.answers,questions.filter(q=>q.id.startsWith('e'))),started:typeof ex.started==='number'&&Number.isFinite(ex.started)?ex.started:null,finished:ex.finished===true};
+ for(const key of ['exam','prepExam']){const ex=s[key]||{};result[key]={answers:cleanAnswers(ex.answers,questions.filter(q=>key==='prepExam'?q.id.startsWith('ep'):/^e\d/.test(q.id))),started:typeof ex.started==='number'&&Number.isFinite(ex.started)?ex.started:null,finished:ex.finished===true};}
  result.updated=typeof s.updated==='string'?s.updated:null;return result;
 }
 function grade(q,value){
@@ -1201,6 +1808,7 @@ function grade(q,value){
  return null;
 }
 function complete(q,value){
+ if(q.type==='drawing'){const v=cleanDrawing(value,q);return v.marks.length>0&&v.note.trim().length>0;}
  if(q.type==='written')return typeof value==='string'&&value.trim().length>0;
  if(q.type==='trace'){const v=cleanTrace(value);return v.strokes.some(s=>s.length>=2)||v.route.every(Number.isInteger);}
  if(q.type==='choice')return Number.isInteger(value)&&value>=0&&value<q.options.length;
@@ -1233,10 +1841,19 @@ function diagram(name,unlabelled=false){
   return wrap('Zwei Modellbilder mit einer beziehungsweise zwei Sorten von Stoffbausteinen',body,'Verschiedene Farben unterscheiden Stoffbausteine. Sie zeigen keine echten Teilchenfarben.');
  }
  if(name==='dissolving'){
-  let body=box(30,44,280,180)+box(410,44,280,180);const water=[[30,40],[65,30],[105,42],[150,31],[205,35],[235,65],[35,89],[86,81],[144,90],[190,77],[45,127],[225,128]];const sugar=grid(102,121,4,2,18);
-  body+=`<g transform="translate(30 44)">${circles(water,'#5e99d2')}${circles(sugar,'#d7a85b')}</g><g transform="translate(410 44)">${circles(water,'#5e99d2')}${circles([[78,53],[120,65],[172,55],[91,113],[142,131],[181,115],[211,102],[64,145]],'#d7a85b')}</g><path d="M335 134h51m-11-9 11 9-11 9" fill="none" stroke="#8492ba" stroke-width="3"/>${text(94,28,'Vor dem Lösen')}${text(475,28,'Nach dem Lösen')}${text(49,261,'Blau: Wasserbausteine · Gelb: Zuckerbausteine',15)}`;
-  return wrap('Zuckerbausteine als Verband und verteilt zwischen Wasserbausteinen',body,'Vorher und nachher jeweils 12 blaue und 8 gelbe Zeichen. Der Zucker bleibt im Modell erhalten.');
+  const water=Array.from({length:24},(_,i)=>[20+(i%6)*30+((Math.floor(i/6)%2)*5),30+Math.floor(i/6)*31+(i%3)*3]);
+  const cluster=Array.from({length:8},(_,i)=>[112+(i%4)*17,160+Math.floor(i/4)*17]);
+  const spread=[[37,43],[98,43],[158,47],[53,105],[117,103],[178,108],[83,139],[161,145]];let body='';
+  for(let stage=0;stage<3;stage++){const x=8+stage*239,remaining=stage===0?8:stage===1?4:0;
+   body+=text(x+12,25,['Beginn','Während des Lösens','Vollständig gelöst'][stage],14)+box(x,40,223,215)+`<g data-panel="dissolve-${stage}" transform="translate(${x} 40)">`;
+   body+=water.map(([a,b])=>modelSymbol(a,b,0,5)).join('');body+=Array.from({length:8},(_,i)=>{const p=i<remaining?cluster[i]:spread[i];return modelSymbol(p[0],p[1],1,5);}).join('');
+   body+='<path d="M45 30l8-7m55 47-9 6m60 50 8 4m-128 26-5-8" stroke="#546e8f" stroke-width="1.5"/>';
+   body+='</g>';
+  }return wrap('Kandis löst sich in drei Stufen',body,'Je Bild: 24 Kreise = Wasserteilchen; 8 Dreiecke = Zuckerteilchen. Größen und Anzahl bleiben gleich. Pfeile zeigen verschiedene Bewegungsrichtungen.');
  }
+ if(name==='compression'){let body='';for(let stage=0;stage<2;stage++){const x=20+stage*355,w=stage?155:310;body+=text(x+10,28,stage?'Zusammengedrückt':'Vorher',17)+box(x,45,325,185)+`<g data-panel="compression-${stage}">`+modelPoints.compressed.map(([a,b])=>modelSymbol(x+15+(a-40)/240*(w-28),55+(b-50)*.85)).join('')+'</g>';if(stage)body+=`<path d="M${x+w} 45V230m0-90h130" stroke="#485773" stroke-width="4"/>`;}return wrap('Zehn Gasteilchen vor und nach dem Zusammendrücken',body,'Beide Bilder: 10 gleich große Kreise. Der Gasraum links vom Kolben wird kleiner; die Teilchenzahl bleibt erhalten.');}
+ if(name==='membrane'){let body='';for(let st=0;st<2;st++){const x=25+st*355;body+=text(x+15,25,st?'Später im Modell':'Zu Beginn im Modell',17)+box(x,45,310,185)+`<g data-panel="membrane-${st}">`;for(let i=0;i<8;i++){const right=st&&i>=4;body+=modelSymbol(x+25+(right?160:0)+(i%4)*29,80+Math.floor(i/4)*55,0,5);}for(let i=0;i<4;i++)body+=modelSymbol(x+35+i*26,190,1,10);body+=`<path d="M${x+155} 45v45m0 15v45m0 15v65" stroke="#596b8a" stroke-width="5"/>`+'</g>';}return wrap('Modell einer selektiv durchlässigen Trennwand',body,'Kleine Kreise passieren Modellöffnungen; große Dreiecke nicht. Je Bild: 8 Kreise, 4 Dreiecke. Modellgrößen, keine Fotos von Teilchen.');}
+ if(name==='mixture-types'){let body='';for(let st=0;st<3;st++){const x=8+st*239;body+=text(x+14,25,['Reinstoff','Homogenes Gemisch','Heterogenes Gemisch'][st],14)+box(x,45,223,185)+`<g data-panel="mixture-${st}">`;for(let i=0;i<12;i++){const kind=st===0?0:st===1?i%2:i<6?0:1;const cx=x+25+(i%4)*51+((Math.floor(i/4)%2)*5),cy=80+Math.floor(i/4)*56;body+=modelSymbol(cx,cy,kind);}body+='</g>';}return wrap('Reinstoff, homogenes und heterogenes Gemisch',body,'Kreis = A; Dreieck = B. Homogen: durchmischt. Heterogen: Bereiche unterschiedlicher Zusammensetzung. Farbe allein entscheidet nicht.');}
  if(name==='heating')return wrap('Gleich große Teilchen mit unterschiedlicher Bewegung',box(35,50,275,175)+box(410,50,275,175)+circles([[95,100],[175,165],[245,110]],'#5d76ce',12)+circles([[470,100],[550,165],[620,110]],'#5d76ce',12)+`<g stroke="#a55bac" stroke-width="3" fill="none"><path d="m113 100 14-3m-2-4 2 4-3 4m66 64 13-4m-3-4 3 4-3 4m285-61 45-9m-7-5 7 5-5 7m55 59 43-18m-8-4 8 4-4 8"/></g>`+text(85,28,'Geringere Temperatur')+text(463,28,'Höhere Temperatur')+text(85,263,'Gleiche Kugelgröße – stärkere Bewegung im Mittel',16));
  if(name==='transitions')return wrap('Aggregatzustandsänderungen zwischen fest, flüssig und gasförmig',box(30,95,150,90)+box(285,95,150,90)+box(540,95,150,90)+text(79,147,'Fest',23)+text(317,147,'Flüssig',23)+text(563,147,'Gasförmig',20)+`<g stroke="#8093bc" stroke-width="2" fill="none"><path d="M185 115h94m-7-6 7 6-7 6m-84 44h85m-79-6-6 6 6 6m247-56h94m-7-6 7 6-7 6m-84 44h85m-79-6-6 6 6 6"/></g>`+text(182,88,'Schmelzen',13)+text(183,207,'Erstarren',13)+text(440,88,'Verdampfen',13)+text(438,207,'Kondensieren',13)+text(120,260,'Auch direkt: fest ⇄ gasförmig (Sublimieren / Resublimieren)',14));
  if(name==='filter')return wrap('Makroskopisches Filtermodell: Sandkörnchen bleiben zurück, Wasser läuft durch',`<path d="M160 50h400L389 194v40h-58v-40Z" fill="#e7edfc" stroke="#8b9dc2" stroke-width="3"/><path d="m190 65 145 121h50L530 65" fill="#faf5e8" stroke="#baae8f" stroke-width="2"/>${circles([[274,102],[305,118],[340,132],[376,120],[420,101]],'#c49b5d',10)}<path d="M312 248v28h100v-28" stroke="#88aad0" fill="#dbeeff" stroke-width="3"/><path d="m360 223-7 11q-4 9 7 11 11-2 7-11Z" fill="#6298cf"/>${text(18,33,'Sandkörnchen sind für Filterporen zu groß.',16)}${text(450,218,'Wasser läuft durch.',16)}`,'Hier sind ganze Sandkörnchen und Geräte dargestellt, keine einzelnen Stoffbausteine.');
@@ -1275,9 +1892,44 @@ function mountLabs(root){const stops=[];for(const host of root.querySelectorAll(
  paint();raf=requestAnimationFrame(tick);stops.push(()=>{stopped=true;cancelAnimationFrame(raf);});
  }return()=>stops.forEach(stop=>stop());}
 
+/* Zusätzliche Zeichen- und Gaswerkstätten, ohne externe Bibliotheken. */
+function cleanDrawing(value,q){
+ const src=value&&typeof value==='object'?value:{},used=new Set(),limit=q?.legend?.length||2;
+ const marks=(Array.isArray(src.marks)?src.marks:[]).slice(0,96).filter(m=>m&&Number.isInteger(m.cell)&&m.cell>=0&&m.cell<48&&Number.isInteger(m.kind)&&m.kind>=0&&m.kind<limit&&(!q||q.modelKind!=='compressed'||m.cell%8<4)&&!used.has(m.cell)&&used.add(m.cell)).map(m=>({cell:m.cell,kind:m.kind}));
+ return {marks,note:typeof src.note==='string'?src.note.slice(0,12000):''};
+}
+function currentExamConfig(scope=route.id){return scope==='preparation'?{questions:prepExam,key:'prepExam',path:'#/exam/preparation',title:'Prüfungstraining zum Vorbereitungszettel',minutes:'45–60'}:{questions:exam,key:'exam',path:'#/exam',title:'Vertiefungs-Probeklausur',minutes:'60–75'};}
+function currentExamState(scope){const cfg=currentExamConfig(scope);return state[cfg.key];}
+function drawingMarker(kind){return kind===1?'<svg viewBox="0 0 30 30" aria-hidden="true"><path d="M15 5 26 25H4Z" fill="#c28a34" stroke="#6a4e24" stroke-width="1.5"/></svg>':'<svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="10" fill="#749cdb" stroke="#345386" stroke-width="1.5"/></svg>';}
+function drawingHTML(q,value,locked){
+ const v=cleanDrawing(value,q),counts=q.legend.map((_,kind)=>v.marks.filter(m=>m.kind===kind).length),cells=new Map(v.marks.map(m=>[m.cell,m.kind]));
+ return `<section class="particle-editor" data-drawing="${q.id}"><p class="drawing-goal"><b>Zeichenvorgabe:</b> ${q.expected} Zeichen insgesamt${q.legend.length===2?' (6 Kreise und 6 Dreiecke)':''}. <span class="drawing-count" role="status">${v.marks.length} gesetzt; ${counts.map((n,i)=>`${i===0?'Kreise':'Dreiecke'}: ${n}`).join(' · ')}.</span></p><fieldset class="drawing-tools"><legend>Zeichen auswählen</legend>${q.legend.map((label,i)=>`<label><input type="radio" name="draw-tool-${q.id}" value="${i}" ${i===0?'checked':''} ${locked?'disabled':''}>${drawingMarker(i)} ${escape(label)}</label>`).join('')}<label><input type="radio" name="draw-tool-${q.id}" value="erase" ${locked?'disabled':''}>Radierer</label></fieldset><p class="question-help">Freies Feld anklicken: Zeichen setzen. Dasselbe Zeichen erneut anklicken: entfernen. Mit Tab und Leertaste auch per Tastatur bedienbar. Das Raster ist nur eine Zeichenhilfe.</p><div class="particle-editor-grid ${q.modelKind==='compressed'?'compressed-grid':''}" role="group" aria-label="Zeichenfläche: 8 Spalten und 6 Reihen">${Array.from({length:48},(_,cell)=>{const outside=q.modelKind==='compressed'&&cell%8>=4,kind=cells.get(cell);return `<button type="button" data-action="draw-cell" data-q="${q.id}" data-cell="${cell}" aria-label="Reihe ${Math.floor(cell/8)+1}, Spalte ${cell%8+1}: ${outside?'außerhalb des Gasraums':kind===undefined?'leer':kind===0?'Kreis':'Dreieck'}" ${locked||outside?'disabled':''}>${kind===undefined?'':drawingMarker(kind)}</button>`;}).join('')}</div>${q.modelKind==='compressed'?'<p class="question-help">Die senkrechte Grenze nach Spalte 4 steht für den Kolben. Rechts davon ist kein Gasraum.</p>':''}<button type="button" class="button small secondary" data-action="draw-clear" data-q="${q.id}" ${locked?'disabled':''}>Zeichnung leeren</button><label class="field-label" for="draw-note-${q.id}">Deine Erklärung zu Bewegung, Abständen und Legende</label><textarea id="draw-note-${q.id}" data-drawing-note="${q.id}" class="written-answer" maxlength="12000" ${locked?'readonly':''}>${escape(v.note)}</textarea></section>`;
+}
+const modelPoints={solid:Array.from({length:12},(_,i)=>[158+(i%4)*24,96+Math.floor(i/4)*24]),liquid:[[110,149],[140,146],[169,157],[201,148],[232,158],[260,145],[124,177],[158,183],[189,178],[220,185],[251,178],[281,184]],gas:[[75,67],[204,70],[331,64],[447,85],[565,64],[126,139],[286,139],[490,143],[79,200],[233,208],[410,205],[594,204]],compressed:[[72,70],[150,64],[231,76],[88,116],[184,111],[262,121],[65,172],[148,164],[236,181],[194,207]],homogeneous:[[80,77],[186,73],[291,82],[403,68],[520,83],[603,75],[112,152],[226,157],[345,143],[448,160],[554,149],[614,208]]};
+function modelSymbol(x,y,kind=0,r=7){return kind===1?`<path data-particle="b" d="M${x} ${y-r} ${x+r} ${y+r}H${x-r}Z" fill="#c28a34" stroke="#6a4e24"/>`:`<circle data-particle="a" cx="${x}" cy="${y}" r="${r}" fill="#749cdb" stroke="#345386"/>`;}
+function modelDrawing(q){const pts=modelPoints[q.modelKind]||modelPoints.gas;return wrap('Eine mögliche Modellzeichnung',box(30,40,660,190)+pts.map(([x,y],i)=>modelSymbol(x,y,q.modelKind==='homogeneous'?i%2:0)).join('')+(q.modelKind==='compressed'?'<path d="M335 40V230m0-95h200" stroke="#4c5870" stroke-width="4"/>':'')+text(40,270,q.legend.map((l,i)=>`${i===0?'Kreis':'Dreieck'} = ${l}`).join(' · '),14),'Eine mögliche Fassung. Andere passende Verteilungen sind richtig. Prüfe Anzahl, Zeichengröße, Anordnung, Abstand und deine Bewegungserklärung.');}
+function gasLabMarkup(){return `<section class="gas-workshop" data-gas-lab><h3>Ein Gas – drei Vergleichssituationen</h3><div class="gas-controls"><label>Behälter und Vorgang<select data-gas-mode><option value="rigid">Starres geschlossenes Gefäß erwärmen</option><option value="expand">Nachgiebigen Behälter erwärmen</option><option value="compress">Mit einem Kolben zusammendrücken</option></select></label><label>Bewegungsstufe <input data-gas-heat type="range" min="0" max="100" value="30"></label><label>Verfügbarer Gasraum <input data-gas-volume type="range" min="40" max="100" value="100" disabled></label></div><div data-gas-output aria-live="polite"></div><p class="question-help">Qualitatives Modell: keine °C-Skala, keine realen Druckmesswerte. Die zehn Zeichen, ihre Art und ihre Größe bleiben gleich. Die Pfeile zeigen mögliche Bewegungsrichtungen und Bewegungsstärke.</p></section>`;}
+function gasLabView(mode,heat,volume){
+ const width=mode==='rigid'?480:mode==='expand'?260+heat*2.2:volume*4.8;
+ const points=[[.1,.2],[.3,.12],[.55,.23],[.79,.17],[.18,.5],[.45,.46],[.72,.55],[.1,.8],[.4,.81],[.82,.83]],len=mode==='compress'?15:8+heat*.24;
+ const particles=points.map(([x,y],i)=>{const px=40+x*width,py=50+y*185,angle=i*2.3;return modelSymbol(px,py)+`<path d="M${px} ${py}l${Math.cos(angle)*len} ${Math.sin(angle)*len}" stroke="#8b528e" stroke-width="2"/>`;}).join('');
+ const note=mode==='rigid'?'Das Volumen bleibt gleich. Höhere Bewegungsstufe: im Mittel schnellere Teilchen, häufigere und heftigere Wandstöße – höherer Druck.':mode==='expand'?'Der nachgiebige Behälter bietet beim Erwärmen mehr Raum. Die mittleren Abstände können größer werden. Anzahl und Zeichengröße bleiben gleich.':'Der Kolben verkleinert den verfügbaren Gasraum. Die mittleren Abstände nehmen ab; die Teilchen selbst schrumpfen nicht.';
+ return frame('Zehn gleich große Modellteilchen im veränderbaren Gasraum',box(40,50,width,185)+particles+(mode==='compress'?`<path d="M${40+width} 50V235m0-95h80" stroke="#485773" stroke-width="4"/>`:'')+text(40,278,'10 Teilchen · gleiche Zeichengröße',16))+`<p class="callout">${note}</p>`;
+}
+function mountGasLabs(root){for(const host of root.querySelectorAll('[data-gas-lab]')){const mode=host.querySelector('[data-gas-mode]'),heat=host.querySelector('[data-gas-heat]'),volume=host.querySelector('[data-gas-volume]'),output=host.querySelector('[data-gas-output]');const update=()=>{heat.disabled=mode.value==='compress';volume.disabled=mode.value!=='compress';output.innerHTML=gasLabView(mode.value,Number(heat.value),Number(volume.value));};for(const input of [mode,heat,volume])input.addEventListener('input',update);update();}}
+function preparationView(){const topics=[['Modellzeichen, Grenzen und Beobachtung/Erklärung','modellregeln'],['Drei Zustände: Anordnung, Abstand, Bewegung, Anziehung','drei-zustaende'],['Teilchenbilder mit gleich vielen Zeichen zeichnen','teilchenbilder'],['Kandis: Herauslösen, Diffusion und Schmelzen unterscheiden','zuckerloesung'],['Fairer Temperaturvergleich und Grenzen der Schlussfolgerung','diffusion-temperatur'],['Duft: Eigenbewegung, Strömung und Bewegung ohne Ziel','diffusion-verstehen'],['Alle sechs Zustandsänderungen benennen','uebergaenge'],['Gas komprimieren, Erwärmen und Druck erklären','gase-druck'],['Reinstoffe, homogene und heterogene Gemische unterscheiden','reinstoff-gemisch'],['Zutatenlisten auswerten und Gemische mit Legende zeichnen','reinstoff-gemisch']];return `${bread([['Prüfungsvorbereitung']])}${intro('Passend zu deinem Vorbereitungszettel','Das solltest du erklären und zeichnen können.','Erst eine Erklärung selbst versuchen, dann gezielt nachlesen und üben. Die folgenden Lernziele wurden mit den hochgeladenen Lösungen und dem Erwartungshorizont abgeglichen.')}<div class="paper"><ol class="prep-list">${topics.map(([label,id])=>`<li><strong>${label}</strong><div class="button-row"><a href="#/lesson/${id}" class="button small secondary">Erklärung</a><a href="#/lesson/${id}?tab=practice" class="button small subtle">Üben</a></div></li>`).join('')}</ol></div><div class="callout"><b>Eine gute Teilchenerklärung nennt Ursache und Zusammenhang.</b> Zum Beispiel: „Die Teilchen sind weiter auseinander; deshalb lassen sich beim Gas die Abstände deutlich verkleinern.“ Schreibe nicht nur „wegen der Teilchen“.</div><div class="button-row"><a class="button" href="#/exam/preparation">Passendes Prüfungstraining · 60 Punkte →</a><a class="button secondary" href="#/exam">Bisherige Vertiefungs-Probeklausur</a></div><p class="foot-note">Eigene neue Aufgaben, keine Originalprüfung. Zeichnungen und freie Texte vergleichst du selbst mit Kriterien; automatisch geprüfte und selbst eingeschätzte Punkte werden getrennt gezeigt. Trennverfahren bleiben zusätzliche Vertiefung im Kurs.</p>`;}
+function examView(){
+ const cfg=currentExamConfig(),exam=cfg.questions,saved=currentExamState(),path=cfg.path,total=exam.reduce((n,q)=>n+q.points,0);
+ if(!saved.started)return `${bread([[cfg.title]])}${intro('In Ruhe anwenden',cfg.title,'Neue Situationen bearbeiten, Modelle zeichnen und Erklärungen begründen. Die Zeit ist ein Übungsvorschlag.')}<div class="paper exam-intro"><div><h2>So funktioniert’s</h2><ol class="exam-steps"><li>Alle Aufgaben sind direkt erreichbar. Dein Entwurf bleibt beim Neuladen erhalten.</li><li>Auswahl- und Zuordnungsaufgaben werden nach dem Abschließen geprüft.</li><li>Freie Texte und Teilchenbilder vergleichst du danach mit Musterlösung und Kriterien. Ihre Punkte schätzt du selbst ein.</li><li>Die beiden Prüfungen haben getrennte Entwürfe und Ergebnisse. Es gibt keinen Countdown und keine automatische Schulnote.</li></ol><button class="button" data-action="start-exam">Prüfung starten →</button></div><div class="exam-facts"><div><strong>${total}</strong><p>mögliche Punkte</p></div><div><strong>${exam.length}</strong><p>Aufgaben</p></div><div><strong>${cfg.minutes}</strong><p>Minuten als Orientierung</p></div></div></div><div class="lesson-bottom"><a href="#/preparation">Zur Prüfungsvorbereitung</a></div>`;
+ const step=Math.min(exam.length-1,Math.max(0,Number(route.step)||0)),summary=examSummary(exam,saved.answers);
+ if(route.result&&saved.finished){const autos=examSummary(exam.filter(q=>!isSelfAssessed(q)),saved.answers),selfs=examSummary(exam.filter(isSelfAssessed),saved.answers);return `${bread([[cfg.title,path],['Auswertung']])}${intro('Ergebnis und Rückblick','Vergleiche und begründe.',summary.pending?'Die geschlossenen Aufgaben sind geprüft. Freie Texte und Zeichnungen sind noch selbst einzuschätzen.':'Automatische und selbst eingeschätzte Punkte bleiben unterscheidbar.')}<div class="result-grid"><div class="result-tile"><strong>${autos.score} / ${autos.total}</strong><small>automatisch geprüft</small></div><div class="result-tile"><strong>${selfs.score} / ${selfs.total}</strong><small>selbst eingeschätzt · ${selfs.pending} mögliche Punkte noch offen</small></div><div class="result-tile"><strong>${summary.graded} / ${total}</strong><small>mögliche Punkte bereits bewertet; keine Schulnote</small></div></div><div class="paper">${exam.map((q,i)=>{const a=saved.answers[q.id];return `<div class="result-item"><div><a href="${path}?step=${i}">Aufgabe ${i+1} · ${q.type==='drawing'?'Teilchenbild':isSelfAssessed(q)?'Freier Text':'Geschlossene Aufgabe'}</a><small style="display:block">${isSelfAssessed(q)?'Selbsteinschätzung':'Automatisch geprüft'}</small></div><strong>${a?.checked?`${a.score} / ${q.points}`:'Noch einschätzen'}</strong></div>`;}).join('')}</div><div class="lesson-bottom"><a class="button secondary" href="#/preparation">Gezielt wiederholen</a><button class="button subtle" data-action="reset-exam">Nur diese Prüfung neu beginnen</button></div>`;}
+ const answered=exam.filter(q=>complete(q,answer(q,true).value)).length;
+ return `${bread([[cfg.title,path],['Aufgaben']])}<div class="exam-head"><div><strong>${saved.finished?'Deine Auswertung':cfg.title}</strong><small>${answered} / ${exam.length} Aufgaben beantwortet</small></div><nav class="exam-nav" aria-label="Prüfungsaufgaben">${exam.map((q,i)=>`<button class="${i===step?'active':''} ${complete(q,answer(q,true).value)?'answered':''}" data-action="exam-step" data-step="${i}" aria-label="Aufgabe ${i+1}" ${i===step?'aria-current="step"':''}>${i+1}</button>`).join('')}</nav></div>${questionCard(exam[step],step,true)}<div class="lesson-bottom">${step>0?`<a class="button secondary" href="${path}?step=${step-1}">← Zurück</a>`:`<a class="button secondary" href="#/preparation">Zur Vorbereitung</a>`}${step<exam.length-1?`<a class="button" href="${path}?step=${step+1}">Weiter →</a>`:saved.finished?`<a class="button" href="${path}?result=1">Zur Gesamtauswertung →</a>`:'<button class="button" data-action="finish-exam">Prüfung abschließen →</button>'}</div>${saved.finished?`<p><a href="${path}?result=1">Gesamtauswertung ansehen</a></p>`:'<p class="foot-note">Dein Entwurf wird lokal gespeichert. Lösungen erscheinen erst nach dem Abschließen.</p>'}`;
+}
+
 const $=(s,el=document)=>el.querySelector(s);
 const main=$('#main'),sidebar=$('#sidebar'),status=$('#saveStatus');
-const learningQuestions=allLessons.flatMap(l=>l.questions),allQuestions=[...learningQuestions,...exam];
+const learningQuestions=allLessons.flatMap(l=>l.questions),allQuestions=[...learningQuestions,...exam,...prepExam];
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let state=fresh(),readings={},storageOK=true,toastTimer,route={},stopLabs=()=>{};
 try{const raw=localStorage.getItem(STORAGE_KEY);if(raw)state=validateState(JSON.parse(raw),allQuestions,allLessons);}catch{storageOK=false;}
@@ -1286,42 +1938,40 @@ function shuffledIndexes(length,seed){let v=[...Array(length).keys()],n=[...seed
 function save(){state.updated=new Date().toISOString();try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));storageOK=true;status.textContent='Lokal gespeichert';}catch{storageOK=false;status.textContent='Sicherung nötig';} }
 function toast(message){clearTimeout(toastTimer);$('#toast').textContent=message;$('#toast').classList.add('show');toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),4000);}
 function stats(){const done=learningQuestions.filter(q=>state.answers[q.id]?.checked).length;const good=learningQuestions.filter(q=>state.answers[q.id]?.checked&&state.answers[q.id].score===q.points).length;return{done,good,total:learningQuestions.length,percent:Math.round(done/learningQuestions.length*100)};}
-function answer(q,isExam=false){const src=isExam?state.exam.answers:state.answers;return src[q.id]||{value:q.type==='written'?'':(q.type==='match'||q.type==='label')?q.labels.map(()=>null):q.type==='order'?shuffledIndexes(q.items.length,q.id):null,checked:false};}
-function setAnswer(qid,up,isExam=false){const q=allQuestions.find(x=>x.id===qid);const dest=isExam?state.exam.answers:state.answers;dest[qid]={...answer(q,isExam),...up};save();renderSidebar();}
+function answer(q,isExam=false){const src=isExam?currentExamState().answers:state.answers;return src[q.id]||{value:q.type==='written'?'':(q.type==='match'||q.type==='label')?q.labels.map(()=>null):q.type==='order'?shuffledIndexes(q.items.length,q.id):null,checked:false};}
+function setAnswer(qid,up,isExam=false){const q=allQuestions.find(x=>x.id===qid);const dest=isExam?currentExamState().answers:state.answers;dest[qid]={...answer(q,isExam),...up};save();renderSidebar();}
 function progressBar(percent){return `<div class="progress-track" role="progressbar" aria-label="Bearbeiteter Lernstoff" aria-valuenow="${percent}" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:${percent}%"></div></div>`;}
-function renderSidebar(){const s=stats();sidebar.innerHTML=`<div><div class="nav-section-label">Deine Lernwelt</div><a class="nav-link ${route.page==='home'?'active':''}" href="#/"><span class="nav-symbol">⌂</span>Übersicht</a><a class="nav-link ${route.page==='progress'?'active':''}" href="#/progress"><span class="nav-symbol">◒</span>Mein Lernstand</a></div><nav aria-label="Lernbereiche"><div class="nav-section-label">Deine Chemiethemen</div>${chapters.map((c,i)=>{const done=c.lessons.filter(l=>lessonProgress(l,state.answers).percent===100).length;return `<a class="nav-link ${route.chapter===c.id?'active':''}" style="${theme(c)}" href="#/chapter/${c.id}"><span class="nav-num">${i+1}</span><span>${c.title}</span><span class="nav-progress">${done}/${c.lessons.length}</span></a>`}).join('')}</nav><div><div class="nav-section-label">Deine Werkzeuge</div><a class="nav-link ${route.page==='exam'?'active':''}" href="#/exam"><span class="nav-symbol">✎</span>Probeklausur</a><a class="nav-link ${route.page==='glossary'?'active':''}" href="#/glossary"><span class="nav-symbol">▤</span>Wörterbuch</a><a class="nav-link ${route.page==='save'?'active':''}" href="#/save"><span class="nav-symbol">↥</span>Sichern & Laden</a></div><div class="side-progress"><strong>Dein Wissen verbindet sich ✦</strong>${progressBar(s.percent)}<p>${s.done} von ${s.total} Aufgaben bearbeitet</p></div><div class="side-bottom">In deinem Tempo. Schritt für Schritt.<br/><a href="#/about">Über diese Lernwelt</a></div>`;}
+function renderSidebar(){const s=stats();sidebar.innerHTML=`<div><div class="nav-section-label">Deine Lernwelt</div><a class="nav-link ${route.page==='home'?'active':''}" href="#/"><span class="nav-symbol">⌂</span>Übersicht</a><a class="nav-link ${route.page==='progress'?'active':''}" href="#/progress"><span class="nav-symbol">◒</span>Mein Lernstand</a></div><nav aria-label="Lernbereiche"><div class="nav-section-label">Deine Chemiethemen</div>${chapters.map((c,i)=>{const done=c.lessons.filter(l=>lessonProgress(l,state.answers).percent===100).length;return `<a class="nav-link ${route.chapter===c.id?'active':''}" style="${theme(c)}" href="#/chapter/${c.id}"><span class="nav-num">${i+1}</span><span>${c.title}</span><span class="nav-progress">${done}/${c.lessons.length}</span></a>`}).join('')}</nav><div><div class="nav-section-label">Deine Werkzeuge</div><a class="nav-link ${route.page==='preparation'?'active':''}" href="#/preparation"><span class="nav-symbol">✓</span>Prüfungsvorbereitung</a><a class="nav-link ${route.page==='exam'&&route.id==='preparation'?'active':''}" href="#/exam/preparation"><span class="nav-symbol">✎</span>Passendes Prüfungstraining</a><a class="nav-link ${route.page==='exam'?'active':''}" href="#/exam"><span class="nav-symbol">✎</span>Vertiefungs-Probeklausur</a><a class="nav-link ${route.page==='glossary'?'active':''}" href="#/glossary"><span class="nav-symbol">▤</span>Wörterbuch</a><a class="nav-link ${route.page==='save'?'active':''}" href="#/save"><span class="nav-symbol">↥</span>Sichern & Laden</a></div><div class="side-progress"><strong>Dein Wissen verbindet sich ✦</strong>${progressBar(s.percent)}<p>${s.done} von ${s.total} Aufgaben bearbeitet</p></div><div class="side-bottom">In deinem Tempo. Schritt für Schritt.<br/><a href="#/about">Über diese Lernwelt</a></div>`;}
 function bread(items=[]){return `<div class="breadcrumb"><a href="#/">Übersicht</a>${items.map(([label,url])=>`<span>›</span>${url?`<a href="${url}">${escape(label)}</a>`:`<span>${escape(label)}</span>`}`).join('')}</div>`;}
 function intro(eye,title,copy){return `<div class="page-intro"><div class="eyebrow">${eye}</div><h1>${title}</h1>${copy?`<p>${copy}</p>`:''}</div>`;}
-function home(){const s=stats();const continueLesson=allLessons.find(l=>l.id===state.lastLesson)||allLessons[0];return `<section class="hero"><div class="hero-copy"><div class="eyebrow">Deine Chemie-Lernwelt</div><h1>Kleine Teilchen.<br/><em>Große Aha-Momente.</em></h1><p>Warum schmilzt Eis? Wohin geht gelöster Zucker? Entdecke die unsichtbare Welt mit Erklärungen, beweglichen Modellen und Übungen für Klasse 6.</p><a class="button" href="#/lesson/${continueLesson.id}">${state.lastLesson?'Weiterlernen':'Los geht’s'} <span aria-hidden="true">→</span></a></div><div class="hero-art">${heroArt}<span class="hero-tag one">🧪 Entdecken, verstehen, ausprobieren</span><span class="hero-tag two">Kleine Schritte. Große Aha-Momente.</span></div></section><div class="mini-stats"><div class="mini-stat"><span class="stat-icon">📚</span><div><strong>${chapters.length} Bereiche</strong><span class="label">ein roter Faden</span></div></div><div class="mini-stat"><span class="stat-icon">✦</span><div><strong>${s.done} / ${s.total}</strong><span class="label">Aufgaben bearbeitet</span></div></div><div class="mini-stat"><span class="stat-icon">🌿</span><div><strong>${allLessons.length} Lerneinheiten</strong><span class="label">in deinem Tempo</span></div></div></div><div class="section-heading"><div><h2>Was möchtest du entdecken?</h2><p>Schwerpunkt Teilchenmodell – mit den passenden Grundlagen und Anwendungen.</p></div><small>GRUNDLAGEN → ÜBEN → PRÜFEN</small></div><div class="chapter-grid">${chapters.map((c,i)=>{const qs=c.lessons.flatMap(l=>l.questions),done=qs.filter(q=>state.answers[q.id]?.checked).length;const pct=Math.round(done/qs.length*100);return `<a href="#/chapter/${c.id}" class="chapter-card" style="${theme(c)}"><div class="card-top"><span class="chapter-icon">${c.icon}</span><span class="chapter-number">THEMA 0${i+1}</span></div><h3>${c.title}</h3><p>${c.subtitle}</p><div class="chapter-meta"><span>${c.lessons.length} Lerneinheiten</span><span>${qs.length} Aufgaben</span></div><div class="card-progress">${progressBar(pct)}<span>${pct}%</span></div></a>`}).join('')}<a href="#/exam" class="chapter-card exam-card"><div class="card-top"><span class="chapter-icon">✏️</span><span class="chapter-number">DEIN WISSENSCHECK</span></div><h3>Bereit für die Probeklausur?</h3><p>Die wichtigsten Zusammenhänge. Ohne Tipps. Und danach weißt du, was schon richtig gut sitzt.</p><div class="chapter-meta"><span>60 Punkte</span><span>ca. 60–75 Min.</span></div><span class="button small">Zur Probeklausur →</span></a></div><p class="foot-note">🔒 Dein Lernstand bleibt in diesem Browser. Unter „Sichern & Laden“ kannst du ihn als Datei mitnehmen. Es werden keine Antworten an einen Server gesendet.</p>${!storageOK?'<div class="callout warning">Automatisches Speichern ist gerade nicht verfügbar. Sichere deinen Stand regelmäßig unter „Sichern & Laden“.</div>':''}`;}
+function home(){const s=stats();const continueLesson=allLessons.find(l=>l.id===state.lastLesson)||allLessons[0];return `<section class="hero"><div class="hero-copy"><div class="eyebrow">Deine Chemie-Lernwelt</div><h1>Kleine Teilchen.<br/><em>Große Aha-Momente.</em></h1><p>Warum schmilzt Eis? Wohin geht gelöster Zucker? Entdecke die unsichtbare Welt mit Erklärungen, beweglichen Modellen und Übungen für Klasse 6.</p><a class="button" href="#/lesson/${continueLesson.id}">${state.lastLesson?'Weiterlernen':'Los geht’s'} <span aria-hidden="true">→</span></a></div><div class="hero-art">${heroArt}<span class="hero-tag one">🧪 Entdecken, verstehen, ausprobieren</span><span class="hero-tag two">Kleine Schritte. Große Aha-Momente.</span></div></section><div class="mini-stats"><div class="mini-stat"><span class="stat-icon">📚</span><div><strong>${chapters.length} Bereiche</strong><span class="label">ein roter Faden</span></div></div><div class="mini-stat"><span class="stat-icon">✦</span><div><strong>${s.done} / ${s.total}</strong><span class="label">Aufgaben bearbeitet</span></div></div><div class="mini-stat"><span class="stat-icon">🌿</span><div><strong>${allLessons.length} Lerneinheiten</strong><span class="label">in deinem Tempo</span></div></div></div><section class="callout prep-callout"><h2>Vorbereitung auf deine Chemieprüfung</h2><p>Alle Lernziele aus deinem Zettel: Teilchenbilder, Kandis, Temperaturvergleiche, Gasdruck und Gemische.</p><a class="button" href="#/preparation">Lernziele & Prüfungstraining öffnen →</a></section><div class="section-heading"><div><h2>Was möchtest du entdecken?</h2><p>Schwerpunkt Teilchenmodell – mit den passenden Grundlagen und Anwendungen.</p></div><small>GRUNDLAGEN → ÜBEN → PRÜFEN</small></div><div class="chapter-grid">${chapters.map((c,i)=>{const qs=c.lessons.flatMap(l=>l.questions),done=qs.filter(q=>state.answers[q.id]?.checked).length;const pct=Math.round(done/qs.length*100);return `<a href="#/chapter/${c.id}" class="chapter-card" style="${theme(c)}"><div class="card-top"><span class="chapter-icon">${c.icon}</span><span class="chapter-number">THEMA 0${i+1}</span></div><h3>${c.title}</h3><p>${c.subtitle}</p><div class="chapter-meta"><span>${c.lessons.length} Lerneinheiten</span><span>${qs.length} Aufgaben</span></div><div class="card-progress">${progressBar(pct)}<span>${pct}%</span></div></a>`}).join('')}<a href="#/exam" class="chapter-card exam-card"><div class="card-top"><span class="chapter-icon">✏️</span><span class="chapter-number">DEIN WISSENSCHECK</span></div><h3>Zusätzliche Vertiefungs-Probeklausur</h3><p>Die wichtigsten Zusammenhänge. Ohne Tipps. Und danach weißt du, was schon richtig gut sitzt.</p><div class="chapter-meta"><span>60 Punkte</span><span>ca. 60–75 Min.</span></div><span class="button small">Zur Probeklausur →</span></a></div><p class="foot-note">🔒 Dein Lernstand bleibt in diesem Browser. Unter „Sichern & Laden“ kannst du ihn als Datei mitnehmen. Es werden keine Antworten an einen Server gesendet.</p>${!storageOK?'<div class="callout warning">Automatisches Speichern ist gerade nicht verfügbar. Sichere deinen Stand regelmäßig unter „Sichern & Laden“.</div>':''}`;}
 function chapterView(c){return `${bread([[c.title]])}<section class="chapter-banner"><span class="chapter-icon">${c.icon}</span><div><div class="eyebrow">Thema ${chapters.indexOf(c)+1} von ${chapters.length}</div><h1>${c.title}</h1><p>${c.subtitle}. Erst verstehen, dann selbst ausprobieren.</p></div></section><div class="section-heading"><div><h2>Dein Weg durch dieses Thema</h2><p>Jede Einheit hat einen Erklärteil und passende Aufgaben.</p></div></div><div class="lesson-list">${c.lessons.map((l,i)=>{const pr=lessonProgress(l,state.answers);return `<a class="lesson-list-item" href="#/lesson/${l.id}"><span class="lesson-index">${pr.percent===100?'✓':i+1}</span><div class="lesson-item-copy"><h2>${l.title}</h2><p>ca. ${l.time} Minuten · ${l.questions.length} Aufgaben · ${pr.done} bearbeitet${state.read.includes(l.id)?' · gelesen':''}</p></div><span class="lesson-arrow">→</span></a>`}).join('')}</div><div class="callout">💡 Du musst nicht alles auf einmal schaffen. Deine Antworten bleiben beim nächsten Besuch erhalten.</div>`;}
 function renderTable(headers,rows){return `<div class="table-wrap"><table><thead><tr>${headers.map(t=>`<th scope="col">${t}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map((t,i)=>`<${i===0?'th scope="row"':'td'}>${t}</${i===0?'th':'td'}>`).join('')}</tr>`).join('')}</tbody></table></div>`;}
-function readingView(l){const reading=readings[l.page];return reading.blocks.map(b=>b.type==='heading'?`<h2>${b.html}</h2>`:b.type==='text'?`<p>${b.html}</p>`:b.type==='callout'?`<div class="callout">${b.html}</div>`:b.type==='table'?renderTable(b.rows[0],b.rows.slice(1)):b.type==='diagram'?focusDiagram(b.name):b.type==='lab'?labMarkup(b.kind):'').join('');}
+function readingView(l){const reading=readings[l.page];return reading.blocks.map(b=>b.type==='heading'?`<h2>${b.html}</h2>`:b.type==='text'?`<p>${b.html}</p>`:b.type==='callout'?`<div class="callout">${b.html}</div>`:b.type==='table'?renderTable(b.rows[0],b.rows.slice(1)):b.type==='diagram'?focusDiagram(b.name):b.type==='lab'?labMarkup(b.kind):b.type==='gaslab'?gasLabMarkup():'').join('');}
 function questionCard(q,index,isExam=false){
- const a=answer(q,isExam),locked=isExam?state.exam.finished:a.checked||a.modelShown,show=isExam?state.exam.finished:(a.checked||a.modelShown);let control='';
+ const a=answer(q,isExam),locked=isExam?currentExamState().finished:a.checked||a.modelShown,show=isExam?currentExamState().finished:(a.checked||a.modelShown);let control='';
  if(q.type==='choice')control=`<fieldset><legend>Wähle eine Antwort.</legend>${shuffledIndexes(q.options.length,q.id).map(i=>`<label class="choice ${a.value===i?'selected':''} ${show&&i===q.answer?'correct':''} ${show&&a.value===i&&i!==q.answer?'incorrect':''}"><input type="radio" name="q-${q.id}" value="${i}" data-answer="${q.id}" ${a.value===i?'checked':''} ${locked?'disabled':''}><span>${escape(q.options[i])}</span></label>`).join('')}</fieldset>`;
  if(q.type==='match'||q.type==='label')control=(q.type==='label'?labelledDiagram(q.diagram):'')+q.labels.map((text,i)=>`<div class="match-row"><label for="${q.id}-${i}">${escape(text)}</label><select id="${q.id}-${i}" data-answer="${q.id}" data-index="${i}" ${locked?'disabled':''}><option value="">Bitte zuordnen …</option>${shuffledIndexes(q.options.length,q.id).map(j=>`<option value="${j}" ${a.value?.[i]===j?'selected':''}>${escape(q.options[j])}</option>`).join('')}</select></div>`).join('');
  if(q.type==='order')control=`<p class="question-help">Nutze die Pfeile und ordne die Schritte von oben nach unten.</p><ol class="order-list">${a.value.map((id,i)=>`<li class="order-item"><span class="order-position">${i+1}</span><span class="order-text">${escape(q.items[id])}</span><span class="order-buttons"><button data-action="move" data-q="${q.id}" data-position="${i}" data-dir="-1" aria-label="Schritt ${i+1} nach oben verschieben" ${i===0||locked?'disabled':''}>↑</button><button data-action="move" data-q="${q.id}" data-position="${i}" data-dir="1" aria-label="Schritt ${i+1} nach unten verschieben" ${i===a.value.length-1||locked?'disabled':''}>↓</button></span></li>`).join('')}</ol>`;
+ if(q.type==='drawing')control=drawingHTML(q,a.value,locked);
  if(q.type==='written')control=`<label class="field-label" for="text-${q.id}">Deine Antwort in eigenen Worten</label><textarea id="text-${q.id}" class="written-answer" data-answer="${q.id}" maxlength="12000" ${locked?'readonly':''} placeholder="Erkläre, was du verstanden hast …">${escape(a.value)}</textarea><p class="question-help">${isExam?'Nach dem Abschließen vergleichst du deine Antwort mit der Musterlösung.':'Keine automatische Textbenotung: Vergleiche anschließend mit der Musterlösung und schätze dich selbst ein.'}</p>`;
  const actions=!isExam?`<div class="question-actions">${!a.checked&&!a.modelShown?`<button class="button small" data-action="check" data-q="${q.id}">${isSelfAssessed(q)?'Mit Musterlösung vergleichen':'Antwort prüfen'}</button>`:`<button class="button small secondary" data-action="retry" data-q="${q.id}">Noch einmal versuchen</button>`}</div>`:'';
- let feedback='';if(show){if(isSelfAssessed(q))feedback=`<div class="feedback model" tabindex="-1" id="feedback-${q.id}"><strong>💭 Musterlösung · eigene Formulierungen sind richtig</strong><p>${escape(q.model)}</p><ul>${q.rubric.map(r=>`<li>${escape(r)}</li>`).join('')}</ul><div class="self-label">Wie viele der ${q.points} Punkte passen zu deiner Lösung?</div><div class="score-select" role="group" aria-label="Selbsteinschätzung in Punkten">${Array.from({length:q.points+1},(_,i)=>`<button data-action="selfscore" data-q="${q.id}" data-score="${i}" aria-label="${i} von ${q.points} Punkten" aria-pressed="${a.checked&&a.score===i}">${i}</button>`).join('')}</div><p class="question-help">${a.checked?`Selbst eingeschätzt: ${a.score} / ${q.points} Punkte.`:'Erst mit deiner Einschätzung zählt die Aufgabe als bearbeitet.'}</p></div>`;
+ let feedback='';if(show){if(isSelfAssessed(q))feedback=`<div class="feedback model" tabindex="-1" id="feedback-${q.id}"><strong>💭 Musterlösung · eigene Formulierungen sind richtig</strong>${q.type==='drawing'?modelDrawing(q):''}<p>${escape(q.model)}</p><ul>${q.rubric.map(r=>`<li>${escape(r)}</li>`).join('')}</ul><div class="self-label">Wie viele der ${q.points} Punkte passen zu deiner Lösung?</div><div class="score-select" role="group" aria-label="Selbsteinschätzung in Punkten">${Array.from({length:q.points+1},(_,i)=>`<button data-action="selfscore" data-q="${q.id}" data-score="${i}" aria-label="${i} von ${q.points} Punkten" aria-pressed="${a.checked&&a.score===i}">${i}</button>`).join('')}</div><p class="question-help">${a.checked?`Selbst eingeschätzt: ${a.score} / ${q.points} Punkte.`:'Erst mit deiner Einschätzung zählt die Aufgabe als bearbeitet.'}</p></div>`;
  else {const full=a.score===q.points;feedback=`<div class="feedback ${full?'':'retry'}" tabindex="-1" id="feedback-${q.id}"><strong>${full?'✓ Gut gemacht!':a.score>0?'◔ Zum Teil richtig – schau noch einmal genau hin.':'↻ Noch nicht ganz. Du kannst es erneut versuchen.'}</strong><p>${escape(q.explain)}</p>${q.type==='match'||q.type==='label'?q.labels.map((text,i)=>`<span class="solution-line">${a.value?.[i]===q.answer[i]?'✓':'○'} ${escape(text)} → <b>${escape(q.options[q.answer[i]])}</b></span>`).join(''):q.type==='order'?`<ol>${q.answer.map(id=>`<li>${escape(q.items[id])}</li>`).join('')}</ol>`:''}<p class="question-help">${a.score} / ${q.points} Punkte</p></div>`;}}
  if(q.figure)control=diagram(q.figure)+control;
  return `<article class="question-card" id="question-${q.id}" data-question="${q.id}" data-exam="${isExam}"><div class="question-top"><span class="question-index">${isExam?'Aufgabe':'Übung'} ${index+1}${isSelfAssessed(q)?' · Selbsteinschätzung':''}</span><span class="question-points">${q.points} ${q.points===1?'Punkt':'Punkte'}</span></div><h3>${escape(q.prompt)}</h3>${control}${actions}${feedback}</article>`;
 }
 function lessonView(l,c){const practicing=route.tab==='practice',pr=lessonProgress(l,state.answers),ix=allLessons.findIndex(a=>a.id===l.id),next=allLessons[ix+1];return `${bread([[c.title,`#/chapter/${c.id}`],[l.title]])}${intro(`Lerneinheit ${c.lessons.findIndex(x=>x.id===l.id)+1} · ca. ${l.time} Minuten`,l.title,'Lesen, verstehen und dann selbst ausprobieren. Du kannst jederzeit zwischen Erklärung und Übungen wechseln.')}<div class="lesson-layout"><div><div class="tabs" role="tablist" aria-label="Lerneinheit"><button role="tab" aria-selected="${!practicing}" class="${!practicing?'active':''}" data-action="tab" data-tab="read">📖 Verstehen</button><button role="tab" aria-selected="${practicing}" class="${practicing?'active':''}" data-action="tab" data-tab="practice">✏️ Üben <span class="count">${pr.done}/${pr.total}</span></button></div><section role="tabpanel" aria-label="${practicing?'Übungen':'Erklärung'}">${practicing?`${pr.percent===100?`<div class="complete-banner"><h2>Diese Einheit ist bearbeitet! ✦</h2><p>Auch Fehler helfen beim Lernen. Wiederhole Aufgaben, bei denen du noch unsicher bist.</p></div>`:''}${l.questions.map((q,i)=>questionCard(q,i)).join('')}`:`<div class="paper reading">${readingView(l)}</div>`}</section><div class="lesson-bottom"><a class="button secondary" href="#/chapter/${c.id}">← Themenübersicht</a>${!practicing?`<button class="button" data-action="read-done">${state.read.includes(l.id)?'Zu den Übungen':'Verstanden – jetzt üben'} →</button>`:next?`<a class="button" href="#/lesson/${next.id}">Nächste Einheit →</a>`:'<a class="button" href="#/exam">Zur Probeklausur →</a>'}</div></div><aside class="lesson-rail"><h2>In diesem Thema</h2>${c.lessons.map((x,i)=>`<a class="rail-item ${x.id===l.id?'active':''}" href="#/lesson/${x.id}">${i+1}. ${x.title}</a>`).join('')}${progressBar(pr.percent)}<p class="rail-meta">${pr.done} von ${pr.total} Aufgaben bearbeitet<br/>${state.read.includes(l.id)?'✓ Erklärung gelesen':'Erklärung noch nicht markiert'}</p></aside></div>`;}
-function examView(){if(!state.exam.started)return `${bread([['Probeklausur']])}${intro('Dein großer Wissenscheck','Zeig, was du schon kannst.','Dein Wissenscheck zum Teilchenmodell und seinen Anwendungen. In Ruhe nachdenken, Fragen beantworten und zum Schluss gemeinsam auswerten.')}<div class="paper exam-intro"><div><h2>So funktioniert’s</h2><ol class="exam-steps"><li>Arbeite möglichst ohne Erklärseiten und Hilfen. Du kannst zwischen den Aufgaben wechseln.</li><li>Auswahl- und Zuordnungsfragen werden nach dem Abschließen automatisch geprüft.</li><li>Freie Antworten vergleichst du anschließend mit Musterlösung und Punkthinweisen. Diese Punkte schätzt du selbst ein.</li><li>Antworten bleiben beim Neuladen erhalten. Die Zeit ist eine Orientierung, kein Countdown.</li></ol><button class="button" data-action="start-exam">Probeklausur starten →</button></div><div class="exam-facts"><div><strong>60</strong><p>mögliche Punkte</p></div><div><strong>${exam.length}</strong><p>Aufgaben</p></div><div><strong>60–75</strong><p>Minuten als Orientierung</p></div></div></div>`;
- const step=Math.min(exam.length-1,Math.max(0,Number(route.step)||0)),summary=examSummary(exam,state.exam.answers);
- if(route.result&&state.exam.finished){const auto=exam.filter(q=>!isSelfAssessed(q)),autos=examSummary(auto,state.exam.answers),self=exam.filter(q=>isSelfAssessed(q)),selfs=examSummary(self,state.exam.answers);return `${bread([['Probeklausur','#/exam'],['Auswertung']])}${intro('Geschafft!','Dein Ergebnis wächst mit dir.',summary.pending?'Die Auswahlaufgaben sind geprüft. Vergleiche jetzt deine freien Antworten und trage deine Selbsteinschätzung ein.':'Alle Aufgaben sind ausgewertet. Die Gesamtpunktzahl enthält deine Selbsteinschätzung der freien Antworten.')}<div class="result-grid"><div class="result-tile"><strong>${summary.score} / 60</strong><small>${summary.pending?'bisher bewertete Punkte':'Punkte insgesamt'}</small></div><div class="result-tile"><strong>${autos.score} / ${autos.total}</strong><small>automatisch geprüft</small></div><div class="result-tile"><strong>${selfs.score} / ${selfs.total}</strong><small>selbst eingeschätzt${summary.pending?' · noch offen':''}</small></div></div>${summary.pending?`<div class="callout warning">Noch ${summary.pending} mögliche Punkte sind nicht eingeschätzt. Öffne die freien Aufgaben und vergleiche deine Antwort mit den Punkthinweisen.</div>`:''}<div class="paper">${exam.map((q,i)=>{const a=state.exam.answers[q.id];return `<div class="result-item"><div><a href="#/exam?step=${i}">Aufgabe ${i+1} · ${isSelfAssessed(q)?'Freie Antwort':(q.type==='label'?'Beschriften':q.type==='order'?'Reihenfolge':'Zuordnen')}</a><small style="display:block">${isSelfAssessed(q)?'Selbsteinschätzung':'Automatisch ausgewertet'}</small></div><strong>${a?.checked?`${a.score} / ${q.points}`:'Noch einschätzen'}</strong></div>`}).join('')}</div><div class="lesson-bottom"><a class="button secondary" href="#/progress">Zum Lernstand</a><button class="button subtle" data-action="reset-exam">Neue Probeklausur beginnen</button></div><p class="foot-note">Es gibt keinen verbindlichen Notenschlüssel. Wiederhole gezielt die Themen, bei denen du unsicher bist.</p>`;}
- const answered=exam.filter(q=>complete(q,answer(q,true).value)).length;return `${bread([['Probeklausur','#/exam'],[state.exam.finished?'Antworten vergleichen':'Aufgaben bearbeiten']])}<div class="exam-head"><div><strong>${state.exam.finished?'🔍 Deine Auswertung':'✏️ Probeklausur'}</strong><small>${state.exam.finished?`${summary.score} Punkte bisher bewertet`:`${answered} / ${exam.length} Aufgaben beantwortet`}</small></div><nav class="exam-nav" aria-label="Prüfungsaufgaben">${exam.map((q,i)=>`<button class="${i===step?'active':''} ${complete(q,answer(q,true).value)?'answered':''}" data-action="exam-step" data-step="${i}" aria-label="Aufgabe ${i+1}" ${i===step?'aria-current="step"':''}>${i+1}</button>`).join('')}</nav></div>${questionCard(exam[step],step,true)}<div class="lesson-bottom">${step>0?`<a class="button secondary" href="#/exam?step=${step-1}">← Zurück</a>`:'<a class="button secondary" href="#/">Zur Übersicht</a>'}${step<exam.length-1?`<a class="button" href="#/exam?step=${step+1}">Weiter →</a>`:state.exam.finished?'<a class="button" href="#/exam?result=1">Zur Gesamtauswertung →</a>':'<button class="button" data-action="finish-exam">Probeklausur abschließen →</button>'}</div>${state.exam.finished?'<div class="lesson-bottom"><a class="button link" href="#/exam?result=1">Gesamtauswertung ansehen</a></div>':'<p class="foot-note">Deine Antworten werden lokal zwischengespeichert. Du kannst die Seite schließen und später fortsetzen.</p>'}`;}
+
 function progressView(){const s=stats();return `${bread([['Mein Lernstand']])}${intro('Jeder Schritt zählt','Schau, wie dein Wissen wächst.','Hier siehst du, was du schon bearbeitet hast und wo du weiterüben kannst. „Bearbeitet“ heißt geprüft oder selbst eingeschätzt – auch Fehler gehören dazu.')}<div class="summary-top"><div class="score-ring" style="--value:${s.percent}"><strong>${s.percent}%</strong></div><div><h2>${s.done} von ${s.total} Aufgaben bearbeitet</h2><p>${s.good} aktuell mit voller Punktzahl · ${state.read.length} Erklärungen als gelesen markiert</p></div></div>${chapters.map(c=>`<section class="progress-chapter" style="${theme(c)}"><div class="section-heading"><h2>${c.icon} ${c.title}</h2><a class="button link small" href="#/chapter/${c.id}">Öffnen →</a></div>${c.lessons.map(l=>{const pr=lessonProgress(l,state.answers);return `<div class="progress-lesson"><a href="#/lesson/${l.id}?tab=practice">${pr.percent===100?'✓':'○'} ${l.title}</a><small>${pr.done}/${pr.total} bearbeitet</small></div>`}).join('')}</section>`).join('')}<div class="callout">🧪 Lernidee: Erkläre einen Zusammenhang laut in eigenen Worten. Wenn du ins Stocken gerätst, lies nur die fehlende Stelle nach und probiere es noch einmal.</div>`;}
-function saveView(){const s=stats();return `${bread([['Sichern & Laden']])}${intro('Dein Fortschritt gehört dir','Heute lernen. Morgen weitermachen.','Im selben Browser bleibt dein Lernstand automatisch erhalten. Mit einer Sicherungsdatei kannst du ihn auch auf einem anderen Gerät oder in einem anderen Browser laden.')}<div class="settings-grid"><section class="paper"><h2>↥ Lernstand sichern</h2><p>Lade eine kleine JSON-Datei mit Antworten, Fortschritt und Probeklausur herunter. Hebe sie auf oder übertrage sie auf dein anderes Gerät.</p><p><strong>${s.done} bearbeitete Aufgaben</strong><br/>${state.updated?'Zuletzt gespeichert: '+new Date(state.updated).toLocaleString('de-DE'):'Du kannst jederzeit die erste Sicherung anlegen.'}</p><div class="button-row"><button class="button" data-action="export">Sicherung herunterladen</button></div></section><section class="paper"><h2>↧ Lernstand laden</h2><p>Wähle eine zuvor gespeicherte Sicherungsdatei der Chemie-Lernwelt. Biologie-Lernstände werden getrennt gespeichert und gehören zu einer anderen Lernseite. Nach deiner Bestätigung ersetzt sie den aktuellen Stand.</p><p>Die Datei wird direkt in diesem Browser gelesen. Sie wird nicht hochgeladen.</p><div class="button-row"><button class="button secondary" data-action="import">Sicherungsdatei auswählen</button></div></section><section class="paper full-width"><h2>🔒 So wird gespeichert</h2><p>Die automatische Speicherung gilt nur für dieses Gerät, diesen Browser und diese Webseitenadresse. Im privaten Modus oder nach dem Löschen der Browserdaten kann sie verloren gehen. Es gibt keine Anmeldung, keine Cloud-Synchronisation und keine Übertragung deiner Antworten an einen Server.</p>${!storageOK?'<div class="callout warning">Dein Browser erlaubt gerade kein zuverlässiges automatisches Speichern. Nutze bitte den Datei-Export.</div>':''}<div class="button-row"><button class="button secondary" data-action="reset-exam">Nur Probeklausur zurücksetzen</button><button class="button secondary" data-action="reset-all">Gesamten Lernstand zurücksetzen</button></div></section></div>`;}
+function saveView(){const s=stats();return `${bread([['Sichern & Laden']])}${intro('Dein Fortschritt gehört dir','Heute lernen. Morgen weitermachen.','Im selben Browser bleibt dein Lernstand automatisch erhalten. Mit einer Sicherungsdatei kannst du ihn auch auf einem anderen Gerät oder in einem anderen Browser laden.')}<div class="settings-grid"><section class="paper"><h2>↥ Lernstand sichern</h2><p>Lade eine kleine JSON-Datei mit Antworten, Zeichnungen, Fortschritt und beiden Prüfungen herunter. Hebe sie auf oder übertrage sie auf dein anderes Gerät.</p><p><strong>${s.done} bearbeitete Aufgaben</strong><br/>${state.updated?'Zuletzt gespeichert: '+new Date(state.updated).toLocaleString('de-DE'):'Du kannst jederzeit die erste Sicherung anlegen.'}</p><div class="button-row"><button class="button" data-action="export">Sicherung herunterladen</button></div></section><section class="paper"><h2>↧ Lernstand laden</h2><p>Wähle eine zuvor gespeicherte Sicherungsdatei der Chemie-Lernwelt. Biologie-Lernstände werden getrennt gespeichert und gehören zu einer anderen Lernseite. Nach deiner Bestätigung ersetzt sie den aktuellen Stand.</p><p>Die Datei wird direkt in diesem Browser gelesen. Sie wird nicht hochgeladen.</p><div class="button-row"><button class="button secondary" data-action="import">Sicherungsdatei auswählen</button></div></section><section class="paper full-width"><h2>🔒 So wird gespeichert</h2><p>Die automatische Speicherung gilt nur für dieses Gerät, diesen Browser und diese Webseitenadresse. Im privaten Modus oder nach dem Löschen der Browserdaten kann sie verloren gehen. Es gibt keine Anmeldung, keine Cloud-Synchronisation und keine Übertragung deiner Antworten an einen Server.</p>${!storageOK?'<div class="callout warning">Dein Browser erlaubt gerade kein zuverlässiges automatisches Speichern. Nutze bitte den Datei-Export.</div>':''}<div class="button-row"><button class="button secondary" data-action="reset-exam" data-scope="general">Nur Vertiefungs-Probeklausur zurücksetzen</button><button class="button secondary" data-action="reset-exam" data-scope="preparation">Nur passendes Prüfungstraining zurücksetzen</button><button class="button secondary" data-action="reset-all">Gesamten Lernstand zurücksetzen</button></div></section></div>`;}
 function glossaryView(){return `${bread([['Wörterbuch']])}${intro('Die wichtigsten Fachbegriffe','Ein Wort – ein Aha-Moment.','Schlage einen Begriff nach. Eine kurze Erklärung hilft dir, ihn mit dem richtigen Zusammenhang zu verbinden.')}<label class="field-label" for="glossarySearch">Fachbegriff oder Erklärung durchsuchen</label><input id="glossarySearch" class="search-input" type="search" placeholder="Zum Beispiel: Diffusion, Verdunsten oder Reinstoff …"><div id="glossaryResults" class="glossary-grid">${glossaryCards('')}</div>`;}
 function glossaryCards(term){const matches=glossary.filter(([a,b])=>(a+' '+b).toLocaleLowerCase('de').includes(term.toLocaleLowerCase('de')));return matches.length?matches.map(([a,b])=>`<article class="glossary-card"><h2>${escape(a)}</h2><p>${escape(b)}</p></article>`).join(''):'<p>Kein passender Begriff gefunden. Versuche einen kürzeren Suchbegriff.</p>';}
-function aboutView(){return `${bread([['Über die Lernwelt']])}${intro('Unsichtbares verständlich machen','Über Chemie-Entdecker','Teilchenmodell und seine Anwendungen für Chemie Klasse 6.')}<div class="paper reading"><h2>Was wurde nachgeschlagen?</h2><p>Im niedersächsischen Kerncurriculum für das Gymnasium stehen im Doppeljahrgang 5/6 das Teilchenmodell, Aggregatzustände und Diffusion auf Stoff- und Teilchenebene. Dazu gehören auch Stoffe und Körper, Reinstoffe, Gemische und Trennverfahren. Diese Seite konzentriert sich auf das Teilchenmodell und passende Anwendungen. Eine konkrete Themenabgrenzung eurer Lehrkraft liegt für Chemie noch nicht vor. Die Reihenfolge im Unterricht legt die Schule fest.</p><h2>Was zeigt das Modell?</h2><p>Farben unterscheiden Modellbausteine. Kugelgrößen, Abstände und Zeitabläufe sind nicht maßstabsgetreu. Die Animation ist qualitativ und simuliert keine echte Temperaturmessung. Das Innere von Atomen wird hier noch nicht behandelt. Eigenschaften wie die besondere Ausdehnung von Wasser beim Gefrieren werden vom einfachen Bild nicht genau erklärt.</p><h2>Wie wird geübt?</h2><p>Auswahlfragen, Bildzuordnungen und Reihenfolgen werden automatisch geprüft. Freie Antworten vergleichst du mit Musterlösungen und schätzt die passenden Punkte selbst ein. Die Gesamtpunktzahl enthält diese Selbsteinschätzung. „Bearbeitet“ bedeutet nicht automatisch sicher beherrscht.</p><h2>Quellen</h2><ul class="source-list"><li><a href="https://cuvo.nibis.de/index.php?p=download&amp;upload=18" target="_blank" rel="noopener">Niedersächsisches Kultusministerium: Kerncurriculum Gymnasium 5–10, Naturwissenschaften, Teil Chemie, gedruckte Seiten 51–52</a></li><li><a href="https://bildungsportal-niedersachsen.de/unterricht-mehr/unterrichtsfaecher/chemie" target="_blank" rel="noopener">Bildungsportal Niedersachsen: Chemie und geltende curriculare Vorgaben</a></li><li><a href="https://www.fkg-goettingen.de/schulorganisation/fachbereiche/chemie/sekundarstude-i/" target="_blank" rel="noopener">Felix-Klein-Gymnasium Göttingen: Umsetzung für die Jahrgänge 5/6</a></li></ul><p>Curriculare Einordnung geprüft am 28. Oktober 2026. Die Aufgaben und Modelle wurden eigens erstellt. Rechen- und Modellzahlen sind Übungsbeispiele. Diese Seite erklärt Verfahren, ersetzt aber keine Sicherheitsanleitung für reale Experimente.</p><h2>Dein Lernstand</h2><p>Antworten bleiben in diesem Browser. Unter „Sichern &amp; Laden“ kannst du sie als Datei sichern und auf einem anderen Gerät laden. Es gibt keine Anmeldung, keine Analyse- oder Werbedienste und keine Übertragung deiner Antworten an einen Server. Die Seite lädt keine externen Schriften. Bei lokalen Dateien kann die automatische Speicherung je nach Browser eingeschränkt sein; nutze dann eine Sicherungsdatei.</p><a class="button" href="#/">Zur Lernübersicht →</a></div>`;}
+function aboutView(){return `${bread([['Über die Lernwelt']])}${intro('Unsichtbares verständlich machen','Über Chemie-Entdecker','Teilchenmodell und seine Anwendungen für Chemie Klasse 6.')}<div class="paper reading"><h2>Was wurde nachgeschlagen?</h2><p>Im niedersächsischen Kerncurriculum für das Gymnasium stehen im Doppeljahrgang 5/6 das Teilchenmodell, Aggregatzustände und Diffusion auf Stoff- und Teilchenebene. Dazu gehören auch Stoffe und Körper, Reinstoffe, Gemische und Trennverfahren. Diese Seite konzentriert sich auf das Teilchenmodell und passende Anwendungen. Am 11. November 2026 wurde der Kurs mit den bereitgestellten Lösungen und dem Erwartungshorizont abgeglichen. Die Prüfungsvorbereitung führt gezielt zu diesen Lernzielen; Trennverfahren bleiben zusätzliche Vertiefung. Die Reihenfolge im Unterricht legt die Schule fest.</p><h2>Was zeigt das Modell?</h2><p>Farben unterscheiden Modellbausteine. Kugelgrößen, Abstände und Zeitabläufe sind nicht maßstabsgetreu. Die Animation ist qualitativ und simuliert keine echte Temperaturmessung. Das Innere von Atomen wird hier noch nicht behandelt. Eigenschaften wie die besondere Ausdehnung von Wasser beim Gefrieren werden vom einfachen Bild nicht genau erklärt.</p><h2>Wie wird geübt?</h2><p>Auswahlfragen, Bildzuordnungen und Reihenfolgen werden automatisch geprüft. Freie Antworten und eigene Teilchenbilder vergleichst du mit Musterlösungen und schätzt die passenden Punkte selbst ein. Automatische und selbst eingeschätzte Punkte werden getrennt gezeigt. Es wird weder eine automatische Sprach- noch eine automatische Zeichnungsbewertung behauptet. „Bearbeitet“ bedeutet nicht automatisch sicher beherrscht.</p><h2>Abgleich mit der Prüfungsvorbereitung</h2><p>Grundlage: die privat bereitgestellte Datei „04_Loesungen_und_Erwartungshorizont.pdf“, insbesondere die zehn Übungen und fünf Aufgabenbereiche der Übungsklassenarbeit. Diese Datei enthält Lösungen; neue Lernaufgaben wurden eigenständig formuliert. Die PDF und Namen beziehungsweise Schulkennzeichen werden nicht veröffentlicht. Neu: selektive Trennwand, Herauslösen gegenüber Diffusion, Erwärmen in starren und nachgiebigen Behältern, Gasdruck, homogene/heterogene Gemische, Zutatenlisten und eigene Modellzeichnungen.</p><h2>Quellen</h2><ul class="source-list"><li><a href="https://cuvo.nibis.de/index.php?p=download&amp;upload=18" target="_blank" rel="noopener">Niedersächsisches Kultusministerium: Kerncurriculum Gymnasium 5–10, Naturwissenschaften, Teil Chemie, gedruckte Seiten 51–52</a></li><li><a href="https://bildungsportal-niedersachsen.de/unterricht-mehr/unterrichtsfaecher/chemie" target="_blank" rel="noopener">Bildungsportal Niedersachsen: Chemie und geltende curriculare Vorgaben</a></li><li><a href="https://www.fkg-goettingen.de/schulorganisation/fachbereiche/chemie/sekundarstude-i/" target="_blank" rel="noopener">Felix-Klein-Gymnasium Göttingen: Umsetzung für die Jahrgänge 5/6</a></li></ul><p>Curriculare Einordnung geprüft am 28. Oktober 2026. Die Aufgaben und Modelle wurden eigens erstellt. Rechen- und Modellzahlen sind Übungsbeispiele. Diese Seite erklärt Verfahren, ersetzt aber keine Sicherheitsanleitung für reale Experimente.</p><h2>Dein Lernstand</h2><p>Antworten bleiben in diesem Browser. Unter „Sichern &amp; Laden“ kannst du sie als Datei sichern und auf einem anderen Gerät laden. Es gibt keine Anmeldung, keine Analyse- oder Werbedienste und keine Übertragung deiner Antworten an einen Server. Die Seite lädt keine externen Schriften. Bei lokalen Dateien kann die automatische Speicherung je nach Browser eingeschränkt sein; nutze dann eine Sicherungsdatei.</p><a class="button" href="#/">Zur Lernübersicht →</a></div>`;}
 function getRoute(){const [path,query]=(location.hash.slice(1)||'/').split('?'),parts=path.split('/').filter(Boolean),params=new URLSearchParams(query||'');const page=parts[0]||'home';let chapter=page==='chapter'?parts[1]:null;if(page==='lesson')chapter=allLessons.find(l=>l.id===parts[1])?.chapter;return{page,id:parts[1],chapter,tab:params.get('tab'),step:params.get('step'),result:params.get('result')};}
 function render(scroll=true,focusFeedback=null){route=getRoute();const c=chapters.find(c=>c.id===route.chapter),l=allLessons.find(l=>l.id===route.id);main.style.setProperty('--accent',c?.color||'#5367c6');main.style.setProperty('--tint',c?.tint||'#e9edff');let html='';
- if(route.page==='home')html=home();else if(route.page==='chapter'&&c)html=chapterView(c);else if(route.page==='lesson'&&l){state.lastLesson=l.id;save();html=lessonView(l,c);}else if(route.page==='exam')html=examView();else if(route.page==='progress')html=progressView();else if(route.page==='save')html=saveView();else if(route.page==='glossary')html=glossaryView();else if(route.page==='about')html=aboutView();else html=`<div class="paper"><h1>Diese Seite wurde nicht gefunden.</h1><p>Diese Seite wurde nicht gefunden.</p><a class="button" href="#/">Zur Übersicht</a></div>`;
- const pos=window.scrollY;stopLabs();main.innerHTML=html;renderSidebar();stopLabs=mountLabs(main);document.title=`${route.page==='lesson'&&l?l.title:route.page==='chapter'&&c?c.title:route.page==='exam'?'Probeklausur':'Chemie-Entdecker'} · Chemie 6`;
+ if(route.page==='home')html=home();else if(route.page==='chapter'&&c)html=chapterView(c);else if(route.page==='lesson'&&l){state.lastLesson=l.id;save();html=lessonView(l,c);}else if(route.page==='exam')html=examView();else if(route.page==='preparation')html=preparationView();else if(route.page==='progress')html=progressView();else if(route.page==='save')html=saveView();else if(route.page==='glossary')html=glossaryView();else if(route.page==='about')html=aboutView();else html=`<div class="paper"><h1>Diese Seite wurde nicht gefunden.</h1><p>Diese Seite wurde nicht gefunden.</p><a class="button" href="#/">Zur Übersicht</a></div>`;
+ const pos=window.scrollY;stopLabs();main.innerHTML=html;renderSidebar();stopLabs=mountLabs(main);mountGasLabs(main);document.title=`${route.page==='lesson'&&l?l.title:route.page==='chapter'&&c?c.title:route.page==='exam'?'Probeklausur':'Chemie-Entdecker'} · Chemie 6`;
  if(scroll){window.scrollTo({top:0,behavior:'instant'});main.focus({preventScroll:true});}else window.scrollTo({top:pos,behavior:'instant'});
  if(focusFeedback)$(`#feedback-${focusFeedback}`)?.focus({preventScroll:true});
 }
@@ -1329,22 +1979,32 @@ async function confirmAction(title,text,yes='Ja, zurücksetzen'){const dialog=$(
 function closeMenu(){sidebar.classList.remove('open');$('#backdrop').hidden=true;$('#menuButton').setAttribute('aria-expanded','false');}
 $('.skip').addEventListener('click',e=>{e.preventDefault();main.focus();main.scrollIntoView({block:'start'});});
 $('#menuButton').addEventListener('click',()=>{const open=!sidebar.classList.contains('open');sidebar.classList.toggle('open',open);$('#backdrop').hidden=!open;$('#menuButton').setAttribute('aria-expanded',String(open));});$('#backdrop').addEventListener('click',closeMenu);document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});sidebar.addEventListener('click',e=>{if(e.target.closest('a'))closeMenu();});
-main.addEventListener('input',e=>{const input=e.target;if(input.id==='glossarySearch'){$('#glossaryResults').innerHTML=glossaryCards(input.value);return;}if(input.tagName==='TEXTAREA'&&input.dataset.answer){const isExam=input.closest('[data-exam]').dataset.exam==='true';if(isExam&&state.exam.finished)return;setAnswer(input.dataset.answer,{value:input.value,checked:false},isExam);}});
-main.addEventListener('change',e=>{const input=e.target;const qid=input.dataset.answer;if(!qid||input.tagName==='TEXTAREA')return;const isExam=input.closest('[data-exam]').dataset.exam==='true';if(isExam&&state.exam.finished)return;const q=allQuestions.find(x=>x.id===qid);if(input.tagName==='SELECT'){const value=[...answer(q,isExam).value];value[Number(input.dataset.index)]=input.value===''?null:Number(input.value);setAnswer(qid,{value,checked:false},isExam);}else{setAnswer(qid,{value:Number(input.value),checked:false},isExam);input.closest('fieldset').querySelectorAll('.choice').forEach(el=>el.classList.toggle('selected',$('input',el).checked));}});
+main.addEventListener('input',e=>{const input=e.target;if(input.dataset.drawingNote){const q=allQuestions.find(q=>q.id===input.dataset.drawingNote),isExam=input.closest('[data-exam]').dataset.exam==='true';if(isExam&&currentExamState().finished)return;const v=cleanDrawing(answer(q,isExam).value,q);setAnswer(q.id,{value:{...v,note:input.value},checked:false},isExam);return;}if(input.id==='glossarySearch'){$('#glossaryResults').innerHTML=glossaryCards(input.value);return;}if(input.tagName==='TEXTAREA'&&input.dataset.answer){const isExam=input.closest('[data-exam]').dataset.exam==='true';if(isExam&&currentExamState().finished)return;setAnswer(input.dataset.answer,{value:input.value,checked:false},isExam);}});
+main.addEventListener('change',e=>{const input=e.target;const qid=input.dataset.answer;if(!qid||input.tagName==='TEXTAREA')return;const isExam=input.closest('[data-exam]').dataset.exam==='true';if(isExam&&currentExamState().finished)return;const q=allQuestions.find(x=>x.id===qid);if(input.tagName==='SELECT'){const value=[...answer(q,isExam).value];value[Number(input.dataset.index)]=input.value===''?null:Number(input.value);setAnswer(qid,{value,checked:false},isExam);}else{setAnswer(qid,{value:Number(input.value),checked:false},isExam);input.closest('fieldset').querySelectorAll('.choice').forEach(el=>el.classList.toggle('selected',$('input',el).checked));}});
 main.addEventListener('click',async e=>{const b=e.target.closest('[data-action]');if(!b)return;const action=b.dataset.action,q=allQuestions.find(q=>q.id===b.dataset.q),isExam=q?.id.startsWith('e');
+ if(action==='draw-cell'||action==='draw-clear'){
+  const a=answer(q,isExam);if((isExam&&currentExamState().finished)||a.checked||a.modelShown)return;
+  const v=cleanDrawing(a.value,q),editor=b.closest('[data-drawing]');
+  if(action==='draw-clear'){setAnswer(q.id,{value:{...v,marks:[]},checked:false},isExam);render(false);return;}
+  const cell=Number(b.dataset.cell),tool=editor.querySelector('input[type=radio]:checked')?.value||'0',old=v.marks.find(m=>m.cell===cell);let marks=v.marks.filter(m=>m.cell!==cell);
+  if(tool!=='erase'&&(!old||old.kind!==Number(tool)))marks.push({cell,kind:Number(tool)});
+  const value=cleanDrawing({...v,marks},q);setAnswer(q.id,{value,checked:false},isExam);const mark=value.marks.find(m=>m.cell===cell);b.innerHTML=mark?drawingMarker(mark.kind):'';b.setAttribute('aria-label',`Reihe ${Math.floor(cell/8)+1}, Spalte ${cell%8+1}: ${mark?(mark.kind===0?'Kreis':'Dreieck'):'leer'}`);editor.querySelector('.drawing-count').textContent=value.marks.length+' gesetzt; '+q.legend.map((_,i)=>(i===0?'Kreise: ':'Dreiecke: ')+value.marks.filter(m=>m.kind===i).length).join(' · ');return;
+ }
  if(action==='tab'){location.hash=`/lesson/${route.id}${b.dataset.tab==='practice'?'?tab=practice':''}`;}
  if(action==='read-done'){if(!state.read.includes(route.id))state.read.push(route.id);save();location.hash=`/lesson/${route.id}?tab=practice`;}
- if(action==='check'){const a=answer(q);if(!complete(q,a.value)){toast(q.type==='written'?'Schreibe zuerst deine eigene Antwort.':'Beantworte bitte alle Teile der Aufgabe.');return;}if(isSelfAssessed(q))setAnswer(q.id,{modelShown:true});else setAnswer(q.id,{checked:true,score:grade(q,a.value)});render(false,q.id);}
+ if(action==='check'){const a=answer(q);if(!complete(q,a.value)){toast(isSelfAssessed(q)?'Gib zuerst deine eigene Antwort ein; ergänze bei einer Zeichnung auch eine Erklärung.':'Beantworte bitte alle Teile der Aufgabe.');return;}if(isSelfAssessed(q))setAnswer(q.id,{modelShown:true});else setAnswer(q.id,{checked:true,score:grade(q,a.value)});render(false,q.id);}
  if(action==='retry'){setAnswer(q.id,{checked:false,modelShown:false,score:undefined});render(false);$(`#question-${q.id} input, #question-${q.id} select, #question-${q.id} textarea, #question-${q.id} button`)?.focus({preventScroll:true});}
- if(action==='selfscore'){if(isExam&&!state.exam.finished)return;if(Number(b.dataset.score)>0&&!complete(q,answer(q,isExam).value)){toast('Eine leere Antwort kann nur mit 0 Punkten eingeschätzt werden.');return;}setAnswer(q.id,{checked:true,modelShown:true,score:Number(b.dataset.score)},isExam);render(false,q.id);}
- if(action==='move'){const a=answer(q,isExam);if((isExam&&state.exam.finished)||a.checked)return;const value=[...a.value],i=Number(b.dataset.position),j=i+Number(b.dataset.dir);if(j<0||j>=value.length)return;[value[i],value[j]]=[value[j],value[i]];setAnswer(q.id,{value},isExam);render(false);$(`[data-action="move"][data-q="${q.id}"][data-position="${j}"][data-dir="${b.dataset.dir}"]`)?.focus({preventScroll:true});}
- if(action==='start-exam'){state.exam={answers:{},started:Date.now(),finished:false};save();location.hash='/exam?step=0';render();}
- if(action==='exam-step'){location.hash=`/exam?step=${b.dataset.step}`;}
- if(action==='finish-exam'){const missing=exam.filter(q=>!complete(q,answer(q,true).value));const ok=await confirmAction('Probeklausur abschließen?',missing.length?`${missing.length} Aufgaben sind noch nicht vollständig beantwortet. Du kannst sie vorher ergänzen oder jetzt mit der Auswertung beginnen.`:'Danach werden Auswahlfragen geprüft und du kannst deine freien Antworten mit den Musterlösungen vergleichen.','Ja, auswerten');if(!ok)return;for(const q of exam){const a=answer(q,true);if(isSelfAssessed(q))state.exam.answers[q.id]={...a,modelShown:true,checked:false};else state.exam.answers[q.id]={...a,checked:true,score:grade(q,a.value)};}state.exam.finished=true;save();location.hash='/exam?result=1';}
+ if(action==='selfscore'){if(isExam&&!currentExamState().finished)return;if(Number(b.dataset.score)>0&&!complete(q,answer(q,isExam).value)){toast('Eine leere Antwort kann nur mit 0 Punkten eingeschätzt werden.');return;}setAnswer(q.id,{checked:true,modelShown:true,score:Number(b.dataset.score)},isExam);render(false,q.id);}
+ if(action==='move'){const a=answer(q,isExam);if((isExam&&currentExamState().finished)||a.checked)return;const value=[...a.value],i=Number(b.dataset.position),j=i+Number(b.dataset.dir);if(j<0||j>=value.length)return;[value[i],value[j]]=[value[j],value[i]];setAnswer(q.id,{value},isExam);render(false);$(`[data-action="move"][data-q="${q.id}"][data-position="${j}"][data-dir="${b.dataset.dir}"]`)?.focus({preventScroll:true});}
+ if(action==='start-exam'){const cfg=currentExamConfig();state[cfg.key]={answers:{},started:Date.now(),finished:false};save();location.hash=cfg.path.slice(1)+'?step=0';render();}
+ if(action==='exam-step'){location.hash=currentExamConfig().path.slice(1)+`?step=${b.dataset.step}`;}
+ if(action==='finish-exam'){const cfg=currentExamConfig(),exam=cfg.questions,saved=currentExamState(),missing=exam.filter(q=>!complete(q,answer(q,true).value));const ok=await confirmAction('Prüfung abschließen?',missing.length?`${missing.length} Aufgaben sind noch nicht vollständig beantwortet. Du kannst sie ergänzen oder mit der Auswertung beginnen.`:'Geschlossene Aufgaben werden geprüft; freie Texte und Zeichnungen schätzt du danach mit Kriterien ein.','Ja, auswerten');if(!ok)return;for(const q of exam){const a=answer(q,true);saved.answers[q.id]=isSelfAssessed(q)?{...a,modelShown:true,checked:false}:{...a,checked:true,score:grade(q,a.value)};}saved.finished=true;save();location.hash=cfg.path.slice(1)+'?result=1';}
+
  if(action==='export'){save();const data=JSON.stringify(state,null,2),blob=new Blob([data],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`Chemie-Lernstand-${new Date().toISOString().slice(0,10)}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Deine Sicherungsdatei ist bereit.');}
  if(action==='import')$('#importFile').click();
  if(action==='reset-all'){if(!await confirmAction('Gesamten Lernstand zurücksetzen?','Alle Antworten, Lese-Markierungen und die Probeklausur werden in diesem Browser zurückgesetzt. Du kannst vorher eine Sicherung herunterladen.'))return;state=fresh();save();render(false);toast('Dein Lernstand wurde zurückgesetzt.');}
- if(action==='reset-exam'){if(!await confirmAction('Probeklausur zurücksetzen?','Nur die Antworten und Ergebnisse der Probeklausur werden entfernt. Dein Fortschritt in den vier Lernbereichen bleibt erhalten.'))return;state.exam=fresh().exam;save();location.hash='/exam';render();toast('Die Probeklausur ist wieder bereit.');}
+ if(action==='reset-exam'){const cfg=currentExamConfig(b.dataset.scope||route.id);if(!await confirmAction('Nur diese Prüfung zurücksetzen?',cfg.title+': Nur dieser Entwurf und seine Auswertung werden zurückgesetzt. Lernaufgaben und die andere Prüfung bleiben erhalten.'))return;state[cfg.key]={answers:{},started:null,finished:false};save();location.hash=cfg.path.slice(1);render();toast('Diese Prüfung ist wieder bereit.');}
+
 });
 $('#importFile').addEventListener('change',async e=>{const file=e.target.files[0];e.target.value='';if(!file)return;try{if(file.size>2*1024*1024)throw Error('Die Datei ist zu groß. Bitte wähle eine Lernstand-Datei bis 2 MB.');const data=validateState(JSON.parse(await file.text()),allQuestions,allLessons);if(!await confirmAction('Gesicherten Lernstand laden?','Diese Sicherung ersetzt den aktuellen Stand in diesem Browser. Deine bisherigen Antworten werden dabei überschrieben.','Ja, Lernstand laden'))return;state=data;save();render(false);toast('Dein Lernstand wurde geladen.');}catch(err){toast('Die Datei konnte nicht geladen werden: '+err.message);}});
 window.addEventListener('hashchange',()=>{closeMenu();render();});
@@ -1446,6 +2106,30 @@ try{readings={
       {
         "type": "text",
         "html": "Einen Reinstoff stellen wir hier vereinfacht durch eine einheitliche Sorte von Stoffbausteinen dar. Der genaue Aufbau solcher Bausteine wird später genauer untersucht. Eigenschaften wie die Farbe eines Stoffes darfst du nicht einfach auf eine einzelne Kugel übertragen."
+      },
+      {
+        "type": "heading",
+        "html": "Leerer Raum ist kein weiterer Stoff"
+      },
+      {
+        "type": "text",
+        "html": "Zwischen den Modellteilchen liegt <b>leerer Raum</b>. Dort zeichnest du weder einen Füllstoff noch winzige Luftblasen. Luft ist selbst ein Gemisch aus Stoffen und besteht ebenfalls aus Teilchen. Zeichenform und Farbe helfen beim Unterscheiden; sie zeigen nicht das wirkliche Aussehen."
+      },
+      {
+        "type": "heading",
+        "html": "Durch eine feine Trennwand: Beobachtung und Modell"
+      },
+      {
+        "type": "diagram",
+        "name": "membrane"
+      },
+      {
+        "type": "text",
+        "html": "<b>Beobachtung im beschriebenen Versuch:</b> Ein zuvor auf eine Seite begrenzter Stoff lässt sich später auch auf der anderen Seite nachweisen; ein anderer bleibt zurück. <b>Modellerklärung:</b> Kleine Teilchen passen durch die Öffnungen, größere nicht. Die durchlässige Wand ist ein vereinfachtes Modell. Aus dem Versuch erhältst du kein Foto und keine genaue Teilchengröße."
+      },
+      {
+        "type": "callout",
+        "html": "Im Modell gelten Art, Anzahl und Zeichengröße innerhalb derselben Stoffportion als erhalten. Eine Legende erklärt, wofür die Zeichen stehen. „Im Modell vermute ich …“ ist etwas anderes als „Ich sehe einzelne Teilchen …“."
       }
     ]
   },
@@ -1482,6 +2166,47 @@ try{readings={
             "Gasförmig",
             "Große mittlere Abstände; freie ungeordnete Bewegung.",
             "Füllt den verfügbaren Raum; gut zusammendrückbar."
+          ]
+        ]
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Merkmal",
+            "Fest",
+            "Flüssig",
+            "Gasförmig"
+          ],
+          [
+            "Anordnung",
+            "Im einfachen Modell regelmäßig",
+            "Ungeordnet",
+            "Ungeordnet"
+          ],
+          [
+            "Abstand",
+            "Sehr klein",
+            "Klein",
+            "Sehr groß"
+          ],
+          [
+            "Bewegung",
+            "Schwingen am festen Platz",
+            "Aneinander vorbei, Plätze wechseln",
+            "Frei im verfügbaren Raum"
+          ],
+          [
+            "Anziehung",
+            "Starker Zusammenhalt",
+            "Zusammenhalt bei Beweglichkeit",
+            "Im einfachen Gasmodell vernachlässigt"
+          ],
+          [
+            "Form und Volumen",
+            "Beides weitgehend erhalten",
+            "Form passt sich an; Volumen weitgehend erhalten",
+            "Füllt verfügbaren Raum aus"
           ]
         ]
       },
@@ -1702,6 +2427,18 @@ try{readings={
       {
         "type": "text",
         "html": "Nutze im virtuellen Gasmodell denselben Startzustand und ändere nur die Bewegungsstufe. Die Darstellung ist qualitativ: Sie liefert keine echten Diffusionszeiten und keine Messwerte eines bestimmten Stoffs."
+      },
+      {
+        "type": "heading",
+        "html": "Was zeigt der Farbvergleich wirklich?"
+      },
+      {
+        "type": "text",
+        "html": "In A und B ist derselbe Farbstoff <b>bereits gelöst</b>. Beide Gefäße enthalten dieselbe Wassermenge, dieselbe Farbstoffmenge und dieselbe Anfangsverteilung. Es wird nicht gerührt. Nach zwei Minuten ist die Färbung im wärmeren B weiter ausgebreitet. Dazu passt: Höhere Temperatur bedeutet im Mittel schnellere Bewegung und kann die Verteilung beschleunigen. Wasserströmungen können zusätzlich mitwirken."
+      },
+      {
+        "type": "callout",
+        "html": "Daraus folgt <b>nicht</b>: „Bei Wärme löst sich von jedem Stoff mehr.“ Beobachtet wurde die Ausbreitung, nicht die maximal lösbare Menge. Nur die Temperatur wird gezielt verändert; Gefäß, Mengen, Stoffart, Anfangsverteilung, Zeit und Rühren bleiben vergleichbar."
       }
     ]
   },
@@ -1709,32 +2446,61 @@ try{readings={
     "title": "Weg – oder nur nicht mehr sichtbar?",
     "blocks": [
       {
+        "type": "heading",
+        "html": "Zwei Vorgänge wirken zusammen"
+      },
+      {
         "type": "text",
-        "html": "Ein Zuckerstück kann nach einiger Zeit im Wasser unsichtbar werden. Es ist dann nicht vernichtet: Zuckerbausteine verteilen sich zwischen den Wasserteilchen. Die Mischung heißt <b>Zuckerlösung</b>. Wasser ist hier das Lösungsmittel."
+        "html": "<b>Beobachtung:</b> Das Kandisstück wird kleiner und ist später nicht mehr sichtbar. Nun folgt die Erklärung: <b>Herauslösen</b> bedeutet, dass Zuckerteilchen den festen Verband verlassen und von Wasserteilchen umgeben werden. <b>Diffusion</b> bedeutet, dass sich bereits gelöste Zuckerteilchen durch ihre ständige ungeordnete Eigenbewegung zwischen den Wasserteilchen verteilen. Beide Vorgänge können gleichzeitig stattfinden."
       },
       {
         "type": "diagram",
         "name": "dissolving"
       },
       {
+        "type": "text",
+        "html": "In jedem Bild bleiben <b>24 Wasserzeichen und 8 Zuckerzeichen</b> erhalten. Anfangs liegen die Zuckerzeichen dicht und geordnet zusammen. Im mittleren Bild sind vier noch im Verband und vier bereits gelöst. Am Ende sind alle acht verteilt. Wasserzeichen liegen in allen Bildern dicht und ungeordnet. Bewegungspfeile zeigen verschiedene Richtungen, keine zielgerichtete Reise."
+      },
+      {
         "type": "callout",
-        "html": "Beim Lösen von Zucker bleiben Zucker und Wasser vorhanden. <b>Unsichtbar ist nicht dasselbe wie nicht vorhanden.</b> Wir verwenden hier Zucker als einfaches Beispiel; nicht jeder Stoff löst sich gleich, und nicht jeder Stoff löst sich überhaupt in Wasser."
+        "html": "Unsichtbar ist nicht vernichtet: Die Zuckerteilchen sind weiterhin zwischen den Wasserteilchen vorhanden. Eine bloße Aussage „Der Zucker ist noch da“ erklärt noch nicht, wo er im Modell ist."
       },
       {
         "type": "heading",
-        "html": "Masse mitdenken"
+        "html": "Lösen ist nicht Schmelzen"
       },
       {
-        "type": "text",
-        "html": "Bleibt alles in einem geschlossenen System, bleibt beim bloßen Lösen die Gesamtmasse erhalten. Ein Gefäß mit 150 g Wasser samt Gefäß und zusätzlich 10 g Zucker wiegt ohne Verluste danach 160 g. Das ist eine Rechenaufgabe, keine Aufforderung zum Probieren unbekannter Stoffe."
+        "type": "table",
+        "rows": [
+          [
+            "Lösen von Zucker",
+            "Schmelzen eines Reinstoffs"
+          ],
+          [
+            "Zucker und Wasser bilden eine Mischung. Wasser ist das Lösungsmittel.",
+            "Ein fester Stoff geht in den flüssigen Zustand über."
+          ],
+          [
+            "Teilchen verlassen den Zuckerverband und werden im Wasser verteilt.",
+            "Ein Lösungsmittel ist für diesen Zustandswechsel nicht nötig."
+          ],
+          [
+            "Zucker löst sich auch unterhalb seiner Schmelztemperatur.",
+            "Ein Eiswürfel wird beim Schmelzen zu flüssigem Wasser."
+          ]
+        ]
       },
       {
         "type": "heading",
-        "html": "Lösen hat Grenzen"
+        "html": "Masse und Löslichkeit"
       },
       {
         "type": "text",
-        "html": "Bei gegebenen Bedingungen kann sich nur eine bestimmte Menge Zucker in einer bestimmten Wassermenge lösen. Bleibt weiterer Zucker liegen, kann die Lösung gesättigt sein. Mehr Rühren garantiert dann nicht, dass sich beliebig viel zusätzlicher Zucker löst."
+        "html": "Bleibt alles in einem geschlossenen System, bleibt beim bloßen Lösen die Gesamtmasse erhalten. 150 g Wasser samt Gefäß und 10 g zugegebener Zucker ergeben ohne Verluste 160 g. Bei vorgegebener Temperatur und Wassermenge lässt sich nur eine begrenzte Menge Zucker lösen. Bleibt weiterer Zucker liegen, kann die Lösung gesättigt sein. Rühren macht nicht beliebig viel zusätzlichen Zucker löslich."
+      },
+      {
+        "type": "callout",
+        "html": "Unterscheide <b>Lösegeschwindigkeit</b>, <b>Verteilung bereits gelöster Teilchen</b> und <b>maximal lösbare Menge</b>. Ein Verteilungsversuch zeigt nicht automatisch alle drei Größen."
       }
     ]
   },
@@ -1786,6 +2552,90 @@ try{readings={
       {
         "type": "text",
         "html": "Die inneren Strukturen von Stoffbausteinen und die genaue Unterscheidung von Atomen, Molekülen und Ionen werden später behandelt. Für diese Lernseite genügt das einfache Modell."
+      },
+      {
+        "type": "heading",
+        "html": "Homogen oder heterogen?"
+      },
+      {
+        "type": "diagram",
+        "name": "mixture-types"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Einordnung",
+            "Auf Stoffebene",
+            "Im einfachen Teilchenbild"
+          ],
+          [
+            "Reinstoff (R)",
+            "Ein einziger Stoff",
+            "Eine Teilchenart"
+          ],
+          [
+            "Homogenes Gemisch (H)",
+            "Mehrere Stoffe; einheitlich erscheinend",
+            "Mindestens zwei Teilchenarten in einem einheitlichen Bereich durchmischt"
+          ],
+          [
+            "Heterogenes Gemisch (G)",
+            "Unterschiedliche Bestandteile oder Bereiche erkennbar",
+            "Bereiche mit unterschiedlicher Zusammensetzung"
+          ]
+        ]
+      },
+      {
+        "type": "text",
+        "html": "Ein homogenes Gemisch muss nicht exakt abwechselnd angeordnete Zeichen haben. Entscheidend ist die Durchmischung, nicht die Farbe. Heterogen bedeutet nicht bloß „zwei Farben“: Auch ein homogenes Modell braucht zwei unterscheidbare Zeichenarten."
+      },
+      {
+        "type": "heading",
+        "html": "Beispiele mit klaren Bedingungen"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Material",
+            "Zuordnung",
+            "Warum?"
+          ],
+          [
+            "Reiner Zucker; reiner Sauerstoff",
+            "R",
+            "Jeweils nur ein Stoff."
+          ],
+          [
+            "Luft ohne Staub und Tröpfchen",
+            "H",
+            "Mehrere Gase, einheitlich vermischt."
+          ],
+          [
+            "Klares Meerwasser ohne Schwebstoffe",
+            "H",
+            "Wasser und gelöste Salze."
+          ],
+          [
+            "Wasser mit vollständig gelöstem Zucker",
+            "H",
+            "Zucker und Wasser, einheitlich vermischt."
+          ],
+          [
+            "Müsli mit Flocken und Rosinen",
+            "G",
+            "Unterschiedliche Bestandteile erkennbar."
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "html": "Die Zutatenliste entscheidet mit"
+      },
+      {
+        "type": "text",
+        "html": "Ein klares Getränk mit Wasser, Zucker und gelöster Zitronensäure enthält mehrere Stoffe. Im beschriebenen Fall ohne Tröpfchen, Bläschen oder Schwebstoffe ist es ein <b>homogenes Gemisch</b>. „Sieht überall gleich aus“ beweist keinen Reinstoff. Enthält ein als „Salz“ verkauftes Produkt zusätzlich einen Hilfsstoff, ist diese Probe ein Gemisch. Reines Kochsalz wäre ein Reinstoff. Der Produktname allein beweist die Reinheit nicht."
       }
     ]
   },
@@ -1838,6 +2688,76 @@ try{readings={
       {
         "type": "callout",
         "html": "Ein Papierfilter macht aus einer Zuckerlösung kein reines Wasser. Gelöste Bausteine passieren mit dem Wasser die Poren. <b>Filtriert ist daher nicht automatisch rein oder trinkbar.</b>"
+      }
+    ]
+  },
+  "teilchenbilder": {
+    "title": "Teilchenbilder selbst zeichnen",
+    "blocks": [
+      {
+        "type": "text",
+        "html": "Ein Teilchenbild ist eine <b>begründete Modellzeichnung</b>. Lege zuerst fest, wofür Kreis und Dreieck stehen. Zeichne für dieselbe Stoffportion gleich viele und gleich große Zeichen. Zustand und Volumen verändern vor allem Anordnung und Abstand, nicht die Zeichengröße."
+      },
+      {
+        "type": "diagram",
+        "name": "states"
+      },
+      {
+        "type": "callout",
+        "html": "Prüfe vier Dinge: <b>Anzahl – Größe – Anordnung – Abstand</b>. Beschreibe zusätzlich die Bewegung in Worten. Ein Standbild allein zeigt keine Bewegung."
+      },
+      {
+        "type": "text",
+        "html": "In den Zeichenaufgaben wählst du eine Teilchenart und setzt Zeichen in freie Felder. Derselbe Knopf entfernt ein Zeichen wieder. Das Raster ist eine Zeichenhilfe und kein regelmäßiges Gitter im echten Gas. Nutze für Flüssigkeiten und Gase versetzte, unterschiedlich verteilte Felder. „Mit Musterlösung vergleichen“ öffnet erst nach deiner Zeichnung eine mögliche Fassung. Andere passende Verteilungen sind richtig."
+      }
+    ]
+  },
+  "gase-druck": {
+    "title": "Gas zusammendrücken und erwärmen",
+    "blocks": [
+      {
+        "type": "heading",
+        "html": "Zusammendrücken verändert die Abstände"
+      },
+      {
+        "type": "diagram",
+        "name": "compression"
+      },
+      {
+        "type": "text",
+        "html": "In beiden Bildern gibt es genau <b>10 gleich große Gasteilchen</b>. Der Kolben verkleinert nur den verfügbaren Raum. Die mittleren Abstände werden kleiner. Im Wasser sind die Teilchen schon dicht beieinander; es ist deshalb kaum komprimierbar."
+      },
+      {
+        "type": "heading",
+        "html": "Beim Erwärmen zählt der Behälter"
+      },
+      {
+        "type": "gaslab"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Situation",
+            "Was passiert im Modell?"
+          ],
+          [
+            "Nachgiebiger Behälter",
+            "Die Teilchen bewegen sich im Mittel schneller. Das Gas kann sich ausdehnen; die mittleren Abstände werden größer."
+          ],
+          [
+            "Starres geschlossenes Gefäß",
+            "Das Volumen bleibt gleich. Schnellere Teilchen stoßen im Mittel häufiger und heftiger an die Wand. Der Druck steigt."
+          ],
+          [
+            "Eisenstab erwärmen",
+            "Die Teilchen schwingen stärker; bei der üblichen Wärmeausdehnung werden die mittleren Abstände größer."
+          ]
+        ]
+      },
+      {
+        "type": "callout",
+        "html": "<b>Druck bedeutet Kraft pro Fläche.</b> Gasteilchen übertragen bei Wandstößen Kräfte. Mehr Bewegung bedeutet im starren Gefäß höheren Druck. Erwärmen erzeugt keine zusätzlichen Teilchen und bläht die einzelnen Zeichen nicht auf."
       }
     ]
   }
