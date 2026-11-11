@@ -33,4 +33,20 @@ Stand: 11. November 2026. Grundlage ist die privat bereitgestellte Datei `04_Loe
 
 Die Gaswerkstatt ist qualitativ. Sie liefert keine realen Druckmesswerte und keine °C-Skala. Physischer Ausdruck und konkrete echte Mobilgeräte müssen getrennt betrachtet werden. Die HTML-Datei bleibt eigenständig ohne externe Skripte, Schriftarten oder Stylesheets.
 
-Browserprüfung und Veröffentlichungsnachweis werden nach der Auslieferung ergänzt.
+## Browserprüfung
+
+Die öffentliche Anwendung wurde in Chromium geprüft:
+
+- Alle 13 Erklärseiten und alle 13 Übungsseiten erreichbar; zusammen 62 Lernaufgaben.
+- Gaswerkstatt: nachgiebiger Behälter mit 260 bis 480 Modelleinheiten Breite, starres Gefäß unverändert 480, zusammengedrückter Raum 192; in allen geprüften Einstellungen zehn gleich große Zeichen. Die Werte sind reine Zeicheneinheiten, keine Messwerte.
+- Gemischzeichnung mit sechs Kreisen und sechs Dreiecken, Erklärungstext und Selbstbewertung 4/4 eingegeben; nach Neuladen erhalten.
+- Neues Prüfungstraining mit sämtlichen 15 Aufgaben beantwortet und abgegeben. Ein absichtlich falscher geschlossener Teil ergibt 18/20 automatische Punkte mit passender Erklärung. Freie Aufgaben bleiben zunächst 0/40 mit 40 unbewerteten möglichen Punkten. Danach zwei Zeichnungen mit zusammen 6/40 selbst eingeschätzt; nach Neuladen erhalten.
+- Start und Entwurf der bisherigen Vertiefungsprüfung verändern den Stand des neuen Trainings nicht.
+- JSON-Sicherung mit beiden Prüfungsständen und Zeichnung exportiert. Eine Zeichnungsnotiz geändert. Import derselben Sicherung nach Bestätigung stellt Zeichnung, ursprünglichen Text und Selbstbewertung wieder her.
+- Bei 375 Pixeln innerer Rahmenbreite: 360 Pixel Dokumentbreite, Zeichenraster 290 Pixel breit, kein horizontaler Dokumentüberlauf. Kleine Modellgrafiken wurden für diese Ansicht zusätzlich als seitlich verschiebbare Grafiken mit lesbarer Mindestbreite aufbereitet.
+- Die dreistufige Kandisgrafik visuell geprüft; Zeichen und Beschriftungen bleiben innerhalb der Gefäße beziehungsweise Bildfelder.
+
+Der erste inhaltliche Veröffentlichungsstand ist Commit `62847d4522e3ea8f057bb787e67a3b3c5c00c256`. Die abschließende Fassung ergänzt die Mobil-Darstellung der Grafiken und korrigiert die gleichzeitige Hervorhebung beider Prüfungslinks. GitHub Pages veröffentlicht dieselbe eigenständige `chemie.html`, die auch als Offline-Datei dient.
+
+
+Geprüfte Abschlussdatei `chemie.html`, SHA-256: `d4dd69888c01c6866af9c0421c206b0ce77186eb9cf9e7687a4eb0c3b2173141`.
