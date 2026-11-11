@@ -1,6 +1,8 @@
 # Französisch · Arbeitsstand
 
-Stand: 9. November 2026. **Schritt 6 umgesetzt, veröffentlicht und öffentlich geprüft. Nächste Etappe: Schritt 7, abschließende Gesamtprüfung.**
+Stand: 11. November 2026. **Schritt 7: technische Gesamtprüfung durchgeführt. Der Kurs ist für den vorgesehenen Anfangsstoff einsatzbereit.**
+
+Prüfumfang, Ergebnisse und Grenzen stehen in [PRUEFBERICHT.md](PRUEFBERICHT.md). 33 automatische Tests bestanden; alle 336 Lernschritte und 15 Prüfungen öffentlich geöffnet; Klausurabgabe, getrennte Selbstbewertung, Zeichenleiste und Export/Import im Browser geprüft. Angaben zu Schritt 6 unten bleiben als Verlauf erhalten.
 
 ## Fertiger Umfang
 
@@ -52,11 +54,15 @@ Im Repository-Stamm:
 
 33 Kernprüfungen; drei zusätzliche lokale Portalprüfungen ergeben 36. Testdaten erfunden.
 
-## Nächste Etappe
+## Abschluss von Schritt 7
 
-**Schritt 7:** gesamte Lernwelt abschließend prüfen, Stichproben über alle neun Module und Prüfungsformate; Links, Zeichenleiste, Ausdruck, Einstieg über das Portal, Offline-Paket sowie Sicherung/Import und Updates. Gefundene Fehler korrigieren und den tatsächlich geprüften Abschluss dokumentieren. Portal und Offline-Datei sind bereits integriert. Keine weiteren Fachmodule oder neuen Grammatikthemen erfinden, nicht bei M1 neu anfangen. Keine weiteren Fotos erforderlich.
+Technische Abschlussprüfung am 11. November 2026: siehe [PRUEFBERICHT.md](PRUEFBERICHT.md). Kleine Korrektur in sechs freien Abschlussaufgaben: fünf statt vier Bewertungskriterien. Kursinformation und README aktualisiert, Offline-Paket und Dateiversionen neu erzeugt. Keine Änderung am Speicherschlüssel, Schema, Aufgaben-IDs oder automatischen Punkten. Die vorhandenen Fächer bleiben unverändert.
+
+Alle sieben geplanten Etappen sind damit bearbeitet. Es gibt keine weitere verpflichtende Ausbauetappe. Weitere Inhalte nur nach neuem Auftrag ergänzen. Hörtexte/Audiobibliothek und ein vollständiger Jahreskurs gehören nicht zum abgeschlossenen Umfang. Physischer Ausdruck und echte Mobilgeräte wurden nicht separat geprüft.
 
 ## Öffentliche Veröffentlichung
+
+Der folgende Nachweis dokumentiert die vorherige Veröffentlichung von Schritt 6. Der Abschlussstand von Schritt 7 wird über denselben Pages-Prozess veröffentlicht und anschließend geprüft.
 
 Quellcommit 2c46a0ab66029c07c6611f773cc177b8e6ded62e; GitHub-Pages-Lauf 42695166388 erfolgreich. Öffentliche Auswahl mit allen drei Abschlusskarten geprüft. Probeklausur A und B mit je 20 Aufgaben und 40 + 20 getrennten Punkten geöffnet; Gesamtabfrage mit 24 Aufgaben geöffnet. Öffentlicher Link #exams bestätigt.
 
