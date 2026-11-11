@@ -19,7 +19,7 @@ Der Kurs ist für den vorgesehenen Anfangsstoff einsatzbereit. Die technische Ab
 | Sicherung | JSON-Datei über „Sichern & Laden“ exportiert. Eine Antwort anschließend geändert. Dieselbe Sicherung über Dateiauswahl, Vorschau und Bestätigung importiert: ursprüngliche Antwort sowie Klausurstand wiederhergestellt. |
 | Zeichenleiste | In einer Texteingabe aus caf durch den é-Knopf café erzeugt; Zeichen nach Neuladen erhalten. Der DOM-Wert eines bereits gerenderten value-Attributs wurde dabei nicht mit dem aktuellen Eingabewert verwechselt. |
 | Schmale Ansicht | Öffentliche Testansicht mit 375-Pixel-Rahmen, zunächst 373 Pixel innerer Breite und 358 Pixel Inhalt wegen Rand/Scrollbar. Alle neun Modulübersichten einschließlich ihrer Werkstätten über die normale Navigation geöffnet; kein horizontal überlaufendes Dokument. M1/M2-Lektionsschritte zusätzlich stichprobenartig geöffnet und die Startansicht visuell kontrolliert. |
-| Offline-Paket | Automatische Tests prüfen eigenständiges HTML ohne externe Skript-/Stylesheet-Dateien, identische Inhaltsmodule und gültige enthaltene Skripte. Nach der Korrektur neu gebündelt und erneut geprüft. |
+| Offline-Paket | Die veröffentlichte eigenständige HTML-Fassung geöffnet; Startansicht funktioniert, keine externen Skript- oder Stylesheet-Dateien. Automatische Tests prüfen eigenständiges HTML ohne externe Skript-/Stylesheet-Dateien, identische Inhaltsmodule und gültige enthaltene Skripte. Nach der Korrektur neu gebündelt und erneut geprüft. |
 | Druck | Druck-Schaltfläche der ausgefüllten Probeklausur ausgelöst und Druck-CSS für Merkkarten/Auswertung geprüft. Ein physischer Ausdruck und eine seitenweise PDF-Druckvorschau wurden nicht nachgewiesen. |
 | Fachliche Stichprobe | Merkkarten aus allen neun Modulen geprüft: Gesprächsrolle, Genus/Anzahl, c’est, Subjekt, Intonationsfrage, Herkunft/Aufenthalt, il y a, bestimmte Artikel bei Vorlieben sowie Buchstabieren. Das ersetzt keine externe vollständige fachredaktionelle Prüfung aller Texte. |
 
@@ -42,3 +42,11 @@ node --test franzoesisch/tests/core.test.cjs
 ```
 
 Danach Navigation, Aufgabenrückmeldung, eine Klausurabgabe und Sicherung/Import im Browser wiederholen. Für schmale Ansichten `tests/viewports.html` öffnen und die gewünschte Breite sowie Online-/Offline-Fassung auswählen. Der aktuelle Veröffentlichungsnachweis steht in `STATUS.md`.
+
+## Prüfung nach der Veröffentlichung
+
+Quellcommit `7e5b2d4c705e61007b13a94f49c0d96e3e90b5eb`, Pages-Lauf `43026095964` erfolgreich. Online-Einstieg, Anwendungscode, Abschlussinhalte, Offline-Paket und Testansicht sind öffentlich mit HTTP 200 und identischen Bytes ausgeliefert. Alle 336 Lernschritte danach erneut mit Warten auf die jeweils passende aktive Schritt-Route geöffnet. Der alte Klausurstand 40/40 plus 3/20 Selbstbewertung blieb erhalten, die Erklärung nennt jetzt fünf Kriterien.
+
+In der endgültigen Testansicht hat der Rahmen tatsächlich 375 Pixel innere Breite; die Klausurauswertung mit allen zehn Kriterien benötigt 360 Pixel Dokumentbreite. Bei 390 Pixeln innerer Breite benötigt sie 375 Pixel Dokumentbreite. Die Offline-Startansicht bei 390 Pixeln läuft ebenfalls ohne horizontalen Dokumentüberlauf. Diese Unterschiede entstehen durch die vertikale Browser-Scrollbar.
+
+Der Rückweg über „Alle Fächer“ zeigt die vier Fachkarten einschließlich Französisch und der Offline-Links. 27 interne Dateiverweise in Portal, Kurseinstieg und Offline-Paket auf vorhandene Ziele geprüft. Biologie, Chemie und Werte und Normen sind gegenüber dem Ausgangsstand bytegleich.

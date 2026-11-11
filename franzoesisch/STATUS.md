@@ -62,7 +62,9 @@ Alle sieben geplanten Etappen sind damit bearbeitet. Es gibt keine weitere verpf
 
 ## Öffentliche Veröffentlichung
 
-Der folgende Nachweis dokumentiert die vorherige Veröffentlichung von Schritt 6. Der Abschlussstand von Schritt 7 wird über denselben Pages-Prozess veröffentlicht und anschließend geprüft.
+**Schritt 7 veröffentlicht und öffentlich geprüft:** Quellcommit `7e5b2d4c705e61007b13a94f49c0d96e3e90b5eb`; GitHub-Pages-Lauf [43026095964](https://github.com/Arne188/Arbeitsbl-tter/actions/runs/43026095964) erfolgreich. Die ausgelieferten Dateien index.html, app.js, modules/abschluss.js, offline.html und tests/viewports.html wurden per HTTP 200 bytegenau mit der geprüften Fassung verglichen. Im Browser ist „Schritt 7“ sichtbar, die korrigierten fünf Kriterien sind bestätigt; der vorhandene Klausurstand bleibt erhalten. Alle 336 Lernschritte nach dem Update erneut mit passender aktiver Route geöffnet. Online-Klausurauswertung bei 375/390 Pixeln und Offline-Start bei 390 Pixeln ohne Dokumentüberlauf geprüft.
+
+Der folgende ältere Nachweis dokumentiert die vorherige Veröffentlichung von Schritt 6.
 
 Quellcommit 2c46a0ab66029c07c6611f773cc177b8e6ded62e; GitHub-Pages-Lauf 42695166388 erfolgreich. Öffentliche Auswahl mit allen drei Abschlusskarten geprüft. Probeklausur A und B mit je 20 Aufgaben und 40 + 20 getrennten Punkten geöffnet; Gesamtabfrage mit 24 Aufgaben geöffnet. Öffentlicher Link #exams bestätigt.
 
